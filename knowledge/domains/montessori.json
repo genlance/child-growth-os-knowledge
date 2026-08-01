@@ -8,7 +8,7 @@
     "extended_usage": "0-18岁家庭观察方法、环境调整思路和独立性培养原则",
     "source_notes": [
       "由晖爸 0-18 岁成长知识库整理。",
-      "结构设计参考公开项目 eeailab-skills/montessori，并结合 Baby Growth OS 的记录、照片资产和知识推送场景重新组织。",
+      "结构设计参考公开项目 eeailab-skills/montessori，并结合 child-growth-os 的记录、照片资产和知识推送场景重新组织。",
       "部分月龄活动参考旧版 Coze 育儿助手包中的蒙氏敏感期和活动数据，已重新清洗、压缩和改写。"
     ],
     "safety": {

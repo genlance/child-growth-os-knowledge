@@ -28,7 +28,7 @@ The goal is to help parents turn scattered interests, records, and observations 
 
 ## Workflow
 
-1. Read the child's age and recent Baby Growth OS records when available.
+1. Read the child's age and recent child-growth-os records when available.
 2. Identify current strengths, interests, and friction points.
 3. Choose no more than 2-3 focus dimensions for the next month.
 4. Propose small family projects instead of abstract goals.

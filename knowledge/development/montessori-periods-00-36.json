@@ -3,7 +3,7 @@
     "id": "montessori-periods-00-36",
     "name": "0-36个月蒙氏敏感期与家庭观察索引",
     "version": "2026.08.02-preview",
-    "scope": "用于 Baby Growth OS 月龄推送、家长问答、照片/事件知识映射",
+    "scope": "用于 child-growth-os 月龄推送、家长问答、照片/事件知识映射",
     "important_note": "敏感期是观察线索，不是诊断标签。孩子发展存在个体差异，不应制造焦虑。"
   },
   "periods": [

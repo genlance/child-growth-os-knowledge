@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/YOUR_NAME/child-growth-os-knowledge/knowledge/schemas/viewpoint-evaluation.schema.json",
+  "$id": "https://github.com/genlance/child-growth-os-knowledge/knowledge/schemas/viewpoint-evaluation.schema.json",
   "title": "Huiba Parenting Viewpoint Evaluation",
   "type": "object",
   "required": [

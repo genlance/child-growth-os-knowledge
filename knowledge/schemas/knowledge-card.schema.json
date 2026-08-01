@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/YOUR_NAME/child-growth-os-knowledge/knowledge/schemas/knowledge-card.schema.json",
+  "$id": "https://github.com/genlance/child-growth-os-knowledge/knowledge/schemas/knowledge-card.schema.json",
   "title": "Huiba Child Growth Knowledge Card",
   "type": "object",
   "required": [

@@ -6,15 +6,15 @@
 child-growth-os-knowledge
 ```
 
-它服务于 **Baby Growth OS / 育儿AI成长系统**，用于给 QClaw/OpenClaw/WorkBuddy 技能提供可持续更新的育儿知识推送，也用于公开分发按年龄阶段逐步启用的家庭成长子技能。
+它服务于 **child-growth-os / 育儿AI成长系统**，用于给 QClaw/OpenClaw/WorkBuddy 技能提供可持续更新的育儿知识推送，也用于公开分发按年龄阶段逐步启用的家庭成长子技能。
 
 ## 维护者
 
 - 维护者：晖爸
-- 品牌：Baby Growth OS / 育儿AI成长系统
-- GitHub：https://github.com/YOUR_NAME/child-growth-os-knowledge
+- 品牌：child-growth-os / 育儿AI成长系统
+- GitHub：https://github.com/genlance/child-growth-os-knowledge
 - 公众号/自媒体：晖爸育儿代码
-- 微信：YOUR_WECHAT
+- 微信：huibayuerdaima
 
 ## 分发原则
 
@@ -26,6 +26,6 @@ child-growth-os-knowledge
 
 ```text
 更多内容：晖爸 0-18 岁成长知识库
-https://github.com/YOUR_NAME/child-growth-os-knowledge
+https://github.com/genlance/child-growth-os-knowledge
 维护者：晖爸
 ```

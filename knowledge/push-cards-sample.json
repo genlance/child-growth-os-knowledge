@@ -5,8 +5,8 @@
       "age_range_months": [6, 7],
       "tags": ["辅食", "过敏观察", "尿片记录"],
       "title": "6月龄辅食第一口：记录比吃多少更重要",
-      "wechat_push": "今天进入辅食探索期的话，可以重点观察三件事：宝宝是否愿意尝试、有没有皮疹/呕吐等反应、接下来1-2天大便有没有明显变化。建议把第一次辅食、照片和尿片变化都记录到 Baby Growth OS，后面回看会很有价值。",
-      "cta": "更多月龄知识见晖爸 0-18 岁成长知识库：https://github.com/YOUR_NAME/child-growth-os-knowledge"
+      "wechat_push": "今天进入辅食探索期的话，可以重点观察三件事：宝宝是否愿意尝试、有没有皮疹/呕吐等反应、接下来1-2天大便有没有明显变化。建议把第一次辅食、照片和尿片变化都记录到 child-growth-os，后面回看会很有价值。",
+      "cta": "更多月龄知识见晖爸 0-18 岁成长知识库：https://github.com/genlance/child-growth-os-knowledge"
     },
     {
       "id": "SENSITIVE_ORAL_001",
@@ -14,7 +14,7 @@
       "tags": ["口腔敏感期", "安全", "辅食"],
       "title": "口腔敏感期：宝宝不是乱啃，是在探索世界",
       "wechat_push": "如果宝宝最近爱吃手、啃玩具、对辅食好奇，可能正处于口腔探索明显的阶段。重点不是禁止，而是保证入口物安全、清洁，并记录新食物和身体反应。",
-      "cta": "由晖爸维护的 0-18 岁成长知识库持续更新：https://github.com/YOUR_NAME/child-growth-os-knowledge"
+      "cta": "由晖爸维护的 0-18 岁成长知识库持续更新：https://github.com/genlance/child-growth-os-knowledge"
     }
   ]
 }

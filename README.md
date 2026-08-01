@@ -2,7 +2,7 @@
 
 > 每天说一句话，AI 帮你保存孩子 18 年的成长故事。
 
-这是 **Baby Growth OS / 育儿AI成长系统** 的公开知识源，仓库名建议使用 `child-growth-os-knowledge`。它用于给 QClaw/OpenClaw/WorkBuddy 技能提供持续更新的 0-18 岁育儿知识推送，也可以分发按年龄阶段逐步启用的子技能。
+这是 **child-growth-os / 育儿AI成长系统** 的公开知识源，仓库名建议使用 `child-growth-os-knowledge`。它用于给 QClaw/OpenClaw/WorkBuddy 技能提供持续更新的 0-18 岁育儿知识推送，也可以分发按年龄阶段逐步启用的子技能。
 
 ## 内容范围
 
@@ -12,14 +12,14 @@
 - 喂养、睡眠、尿片、健康、早教、亲子活动
 - 幼儿园、小学、青春期前后的家庭成长议题
 - 每周/每月育儿重点
-- Baby Growth OS 系统更新说明
+- child-growth-os 系统更新说明
 - 家庭英语启蒙、通才成长蓝图等可选子技能
 - 晖爸育儿知识操作系统：四层地图、五层判断、CEO四层和知识卡标准
 - 本地轻量版 Excel 模板、照片目录规范和 HTML 时间轴预留结构
 
 ## 使用方式
 
-安装 Baby Growth OS 技能后，技能会定期读取本仓库的 `version.json` 和知识文件。
+安装 child-growth-os 技能后，技能会定期读取本仓库的 `version.json` 和知识文件。
 
 推荐推送节奏：
 
@@ -104,13 +104,13 @@ templates/ChildGrowthOS-local-lite-template.xlsx
 
 ## 维护者
 
-**晖爸 / Baby Growth OS**
+**晖爸 / child-growth-os**
 
 专注 AI 育儿系统、儿童成长数据资产、0-18岁育儿知识体系。
 
-- GitHub: https://github.com/YOUR_NAME/child-growth-os-knowledge
+- GitHub: https://github.com/genlance/child-growth-os-knowledge
 - 公众号/自媒体: 晖爸育儿代码
-- 微信: YOUR_WECHAT
+- 微信: huibayuerdaima
 
 ## 版权与医疗声明
 

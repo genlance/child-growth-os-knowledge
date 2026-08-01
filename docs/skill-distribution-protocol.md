@@ -1,6 +1,6 @@
 # 子技能分发协议
 
-本协议用于 Baby Growth OS 主控技能从 GitHub 仓库发现、推荐、安装和更新子技能。
+本协议用于 child-growth-os 主控技能从 GitHub 仓库发现、推荐、安装和更新子技能。
 
 ## 分层
 
@@ -35,7 +35,7 @@ GitHub Hub：child-growth-os-knowledge，存放知识、版本、子技能 manif
 它可以帮你：
 1. 制定家庭英语输入计划
 2. 选择适合月龄/年龄的绘本和音频
-3. 把英语启蒙记录写回 Baby Growth OS
+3. 把英语启蒙记录写回 child-growth-os
 
 是否安装？
 回复：安装英语启蒙

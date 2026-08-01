@@ -1,6 +1,6 @@
 # 安全与医疗边界
 
-本仓库内容仅用于育儿记录、家庭观察、知识学习和 Baby Growth OS 的个性化提醒，不替代儿科医生、心理医生、营养师或其他专业人士的诊断与治疗建议。
+本仓库内容仅用于育儿记录、家庭观察、知识学习和 child-growth-os 的个性化提醒，不替代儿科医生、心理医生、营养师或其他专业人士的诊断与治疗建议。
 
 ## 医疗安全
 
@@ -36,5 +36,5 @@
 仓库地址：
 
 ```text
-https://github.com/YOUR_NAME/child-growth-os-knowledge
+https://github.com/genlance/child-growth-os-knowledge
 ```
