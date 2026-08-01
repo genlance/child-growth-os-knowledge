@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/YOUR_NAME/child-growth-os-knowledge/knowledge/schemas/viewpoint-evaluation.schema.json",
+  "title": "Huiba Parenting Viewpoint Evaluation",
+  "type": "object",
+  "required": [
+    "id",
+    "viewpoint",
+    "solves_which_layer",
+    "risk_of_overreach",
+    "evidence_level",
+    "suitable_for",
+    "not_suitable_for",
+    "huiba_conclusion"
+  ],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-_.]+$"},
+    "viewpoint": {"type": "string"},
+    "school_or_source": {"type": "string"},
+    "solves_which_layer": {
+      "type": "object",
+      "properties": {
+        "four_layer": {"type": "array", "items": {"enum": ["生理", "安全", "发展", "文化"]}},
+        "five_layer": {"type": "array", "items": {"enum": ["底线", "节律", "关系", "能力", "生态"]}}
+      }
+    },
+    "risk_of_overreach": {"type": "array", "items": {"type": "string"}},
+    "evidence_level": {"type": "string"},
+    "suitable_for": {"type": "array", "items": {"type": "string"}},
+    "not_suitable_for": {"type": "array", "items": {"type": "string"}},
+    "decision": {
+      "type": "object",
+      "properties": {
+        "must_do": {"type": "array", "items": {"type": "string"}},
+        "recommended": {"type": "array", "items": {"type": "string"}},
+        "optional": {"type": "array", "items": {"type": "string"}},
+        "avoid_or_be_careful": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "huiba_conclusion": {"type": "string"},
+    "knowledge_base_placement": {
+      "type": "object",
+      "properties": {
+        "age_band": {"type": "string"},
+        "domain": {"type": "string"},
+        "tags": {"type": "array", "items": {"type": "string"}},
+        "possible_cards": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

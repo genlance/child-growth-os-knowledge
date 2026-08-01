@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "id": "huiba-parenting-knowledge-os",
+    "name": "晖爸育儿知识操作系统",
+    "version": "2026.08.02-preview",
+    "public_name": "晖爸 0-18 岁成长知识库 - 知识总控框架",
+    "purpose": "为 Child Growth OS 的知识分类、知识卡生成、观点评估、书籍内化和父母问答提供统一方法论。",
+    "core_formula": "Huiba Parenting Knowledge OS = four-layer map + five-layer judgment + CEO four-layer deep dive"
+  },
+  "four_layer_map": {
+    "purpose": "横向分类：判断一个育儿主题属于什么知识领域。",
+    "layers": [
+      {
+        "id": "physiology",
+        "name": "生理层",
+        "definition": "吃喝拉撒睡、身体成长、日常护理等维持孩子身体运行的基础议题。",
+        "topics": ["feeding", "hydration", "elimination", "sleep", "growth", "daily_care", "oral_care", "skin_care"]
+      },
+      {
+        "id": "safety",
+        "name": "安全层",
+        "definition": "疾病、疫苗、急救、居家安全、出行安全、食品安全等不能越过底线的议题。",
+        "topics": ["health", "vaccination", "emergency", "home_safety", "travel_safety", "food_safety", "digital_safety"]
+      },
+      {
+        "id": "development",
+        "name": "发展层",
+        "definition": "运动、感官、认知、语言、情绪、社交、游戏、学习能力等发展议题。",
+        "topics": ["gross_motor", "fine_motor", "sensory", "cognition", "language", "emotion", "social", "play", "learning"]
+      },
+      {
+        "id": "culture",
+        "name": "文化层",
+        "definition": "育儿理念、家庭角色、隔代冲突、教育选择、价值观、信息筛选和时代环境。",
+        "topics": ["parenting_philosophy", "family_roles", "intergenerational_conflict", "school_choice", "values", "media_literacy", "ai_age"]
+      }
+    ],
+    "routing_question": "这个育儿主题主要属于哪一层？是否跨层？"
+  },
+  "five_layer_judgment": {
+    "purpose": "纵向判断：确定优先级，避免任何单一流派越界。",
+    "layers": [
+      {
+        "id": "bottom_line",
+        "name": "底线层",
+        "definition": "健康、营养、睡眠安全、人身安全、疫苗、急症处理等必须优先保障的底线。",
+        "rule": "底线层不能被任何育儿理念、教育目标或家庭偏好牺牲。"
+      },
+      {
+        "id": "rhythm",
+        "name": "节律层",
+        "definition": "饮食、睡眠、运动、排泄、情绪节律和日常作息。",
+        "rule": "孩子很多行为问题先检查节律，不急着归因到性格或教育失败。"
+      },
+      {
+        "id": "relationship",
+        "name": "关系层",
+        "definition": "安全依恋、回应式互动、亲子游戏、共读、共同调节。",
+        "rule": "方法要服务关系，而不是为了方法破坏连接。"
+      },
+      {
+        "id": "capability",
+        "name": "能力层",
+        "definition": "语言、运动、认知、社交、执行功能、自主性、身份认同等长期能力。",
+        "rule": "能力发展依赖年龄、练习机会和环境支持，不能只靠要求。"
+      },
+      {
+        "id": "ecology",
+        "name": "生态层",
+        "definition": "家庭系统、照护者状态、经济时间约束、教育选择、文化价值、数字时代环境。",
+        "rule": "育儿方案必须能被这个家庭长期执行。"
+      }
+    ],
+    "routing_question": "这条建议优先保护哪一层？有没有牺牲更底层的风险？"
+  },
+  "ceo_four_layer_model": {
+    "purpose": "深度学习：把一个主题讲透、做成文章、课程或知识卡。",
+    "layers": [
+      {
+        "id": "principle",
+        "name": "原理",
+        "definition": "稳定的发展规律、科学原则、心理机制或领域底层逻辑。"
+      },
+      {
+        "id": "model",
+        "name": "模型",
+        "definition": "可视化心智工具，如矩阵、阶梯、循环、决策树、尺度表。"
+      },
+      {
+        "id": "operation",
+        "name": "操作",
+        "definition": "父母今天能做的 SOP、清单、话术、观察步骤和记录方法。"
+      },
+      {
+        "id": "experience",
+        "name": "经验",
+        "definition": "真实案例、常见误区、边界条件、家庭约束和执行经验。"
+      }
+    ],
+    "routing_question": "这个主题现在缺原理、模型、操作还是经验？"
+  },
+  "evidence_ladder": [
+    {"rank": 1, "id": "official_guideline", "name": "官方临床/公共卫生指南或共识"},
+    {"rank": 2, "id": "systematic_review", "name": "系统综述或元分析"},
+    {"rank": 3, "id": "rct", "name": "随机对照研究"},
+    {"rank": 4, "id": "longitudinal", "name": "纵向研究"},
+    {"rank": 5, "id": "peer_reviewed", "name": "同行评议相关研究"},
+    {"rank": 6, "id": "clinical_observation", "name": "临床观察"},
+    {"rank": 7, "id": "expert_experience", "name": "专家经验"},
+    {"rank": 8, "id": "anecdote", "name": "个案或经验故事"}
+  ],
+  "integration_rules": [
+    "所有知识卡必须标注 age_band、four_layer、five_layer、evidence_level 和 safety_boundary。",
+    "高风险医疗、安全主题必须先走底线层，不允许用育儿流派覆盖医学建议。",
+    "蒙氏、正面管教、依恋理论、华德福、行为主义、脑科学、家庭系统理论都作为工具，不作为身份站队。",
+    "所有推送卡都应给出 child_signals、parent_actions、observe_metrics，而不是只讲道理。",
+    "知识必须能绑定到 Child Growth OS 的真实记录、照片资产、成长时间轴或知识映射表。"
+  ]
+}

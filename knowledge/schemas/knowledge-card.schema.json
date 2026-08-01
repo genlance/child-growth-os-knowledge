@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/YOUR_NAME/child-growth-os-knowledge/knowledge/schemas/knowledge-card.schema.json",
+  "title": "Huiba Child Growth Knowledge Card",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "age_band",
+    "four_layer",
+    "five_layer",
+    "ceo_layer",
+    "evidence_level",
+    "child_signals",
+    "parent_actions",
+    "observe_metrics",
+    "safety_boundary",
+    "source_note"
+  ],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-_.]+$"},
+    "title": {"type": "string"},
+    "summary": {"type": "string"},
+    "age_band": {
+      "type": "object",
+      "required": ["label", "min_months", "max_months"],
+      "properties": {
+        "label": {"type": "string"},
+        "min_months": {"type": "integer", "minimum": 0},
+        "max_months": {"type": "integer", "minimum": 0}
+      }
+    },
+    "four_layer": {
+      "type": "array",
+      "items": {"enum": ["生理", "安全", "发展", "文化"]},
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "five_layer": {
+      "type": "array",
+      "items": {"enum": ["底线", "节律", "关系", "能力", "生态"]},
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "ceo_layer": {
+      "type": "array",
+      "items": {"enum": ["原理", "模型", "操作", "经验"]},
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "evidence_level": {
+      "enum": [
+        "official_guideline",
+        "systematic_review",
+        "rct",
+        "longitudinal",
+        "peer_reviewed",
+        "clinical_observation",
+        "expert_experience",
+        "anecdote",
+        "mixed",
+        "unknown"
+      ]
+    },
+    "child_signals": {"type": "array", "items": {"type": "string"}},
+    "parent_actions": {"type": "array", "items": {"type": "string"}},
+    "observe_metrics": {"type": "array", "items": {"type": "string"}},
+    "safety_boundary": {"type": "string"},
+    "source_note": {"type": "string"},
+    "content_angle": {"type": "string"},
+    "related_tables": {
+      "type": "array",
+      "items": {"enum": ["宝宝档案", "每日成长日记", "照片资产库", "成长时间轴", "喂养记录", "睡眠记录", "尿片记录", "健康档案", "身体成长曲线", "知识映射", "行为情绪观察", "生活能力记录"]}
+    },
+    "tags": {"type": "array", "items": {"type": "string"}},
+    "push_copy": {"type": "string"}
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "repo_name": "child-growth-os-knowledge",
+  "public_name": "晖爸 0-18 岁成长知识库",
+  "knowledge_version": "2026.08.02",
+  "last_updated": "2026-08-02",
+  "author": {
+    "name": "晖爸",
+    "brand": "Baby Growth OS / 育儿AI成长系统",
+    "github": "https://github.com/YOUR_NAME/child-growth-os-knowledge",
+    "wechat_public_account": "晖爸育儿代码",
+    "wechat_id": "YOUR_WECHAT"
+  },
+  "min_skill_version": "1.0.0",
+  "files": [
+    {
+      "path": "releases/latest.json",
+      "description": "最新版知识与子技能发布信息"
+    },
+    {
+      "path": "skills-manifest.json",
+      "description": "可推荐/可安装子技能清单"
+    },
+    {
+      "path": "knowledge-manifest.json",
+      "description": "公开知识库文件清单与用途说明"
+    },
+    {
+      "path": "ORIGIN.md",
+      "description": "来源、作者与分发说明"
+    },
+    {
+      "path": "SECURITY.md",
+      "description": "安全边界、医疗声明与问题反馈方式"
+    },
+    {
+      "path": "monthly/month-00-36-index.json",
+      "description": "0-36个月月龄推送索引"
+    },
+    {
+      "path": "sensitive-periods/sensitive-periods-index.json",
+      "description": "敏感期推送索引"
+    },
+    {
+      "path": "knowledge/push-cards-sample.json",
+      "description": "推送卡片示例"
+    },
+    {
+      "path": "knowledge/frameworks/huiba-parenting-knowledge-os.json",
+      "description": "晖爸育儿知识操作系统：四层地图、五层判断、CEO四层和证据等级"
+    },
+    {
+      "path": "knowledge/maps/age-band-four-layer-map.json",
+      "description": "0-18岁四层育儿知识地图"
+    },
+    {
+      "path": "knowledge/schemas/knowledge-card.schema.json",
+      "description": "育儿知识卡 JSON Schema"
+    },
+    {
+      "path": "knowledge/schemas/viewpoint-evaluation.schema.json",
+      "description": "育儿观点评估 JSON Schema"
+    },
+    {
+      "path": "knowledge/domains/montessori.json",
+      "description": "家庭蒙氏观察与环境支持知识域"
+    },
+    {
+      "path": "knowledge/development/montessori-periods-00-36.json",
+      "description": "0-36个月蒙氏敏感期与家庭观察索引"
+    },
+    {
+      "path": "knowledge/push-cards/montessori-00-06.json",
+      "description": "0-6岁家庭蒙氏微信推送卡"
+    },
+    {
+      "path": "skills/english/SKILL.md",
+      "description": "家庭英语启蒙规划与管理教练预览版"
+    },
+    {
+      "path": "skills/blueprint/SKILL.md",
+      "description": "AI时代通才成长蓝图教练预览版"
+    },
+    {
+      "path": "skills/montessori/SKILL.md",
+      "description": "家庭蒙氏观察与环境教练预览版"
+    },
+    {
+      "path": "skills/huiba-parenting-os/SKILL.md",
+      "description": "晖爸育儿知识操作系统预览版"
+    },
+    {
+      "path": "docs/local-lite-storage-plan.md",
+      "description": "本地轻量版存储方案：Excel、照片文件夹、JSONL和HTML时间轴预留"
+    },
+    {
+      "path": "templates/ChildGrowthOS-local-lite-template.xlsx",
+      "description": "本地轻量版Excel模板"
+    }
+  ],
+  "changelog": "新增晖爸育儿知识操作系统，补充四层地图、五层判断、CEO四层、0-18岁知识地图、知识卡Schema和观点评估Schema。"
+}

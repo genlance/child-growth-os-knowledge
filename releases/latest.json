@@ -1,0 +1,62 @@
+{
+  "repo_name": "child-growth-os-knowledge",
+  "public_name": "晖爸 0-18 岁成长知识库",
+  "release": "2026.08.02-preview",
+  "released_at": "2026-08-02",
+  "minimum_starter_skill_version": "1.1.0",
+  "knowledge": {
+    "version": "2026.08.02",
+    "files": [
+      "version.json",
+      "knowledge-manifest.json",
+      "docs/local-lite-storage-plan.md",
+      "templates/ChildGrowthOS-local-lite-template.xlsx",
+      "monthly/month-00-36-index.json",
+      "sensitive-periods/sensitive-periods-index.json",
+      "knowledge/push-cards-sample.json",
+      "knowledge/frameworks/huiba-parenting-knowledge-os.json",
+      "knowledge/maps/age-band-four-layer-map.json",
+      "knowledge/schemas/knowledge-card.schema.json",
+      "knowledge/schemas/viewpoint-evaluation.schema.json",
+      "knowledge/domains/montessori.json",
+      "knowledge/development/montessori-periods-00-36.json",
+      "knowledge/push-cards/montessori-00-06.json"
+    ]
+  },
+  "skills": {
+    "manifest": "skills-manifest.json",
+    "available": [
+      {
+        "id": "huiba-parenting-os",
+        "version": "0.1.0",
+        "status": "preview"
+      },
+      {
+        "id": "english",
+        "version": "0.1.0",
+        "status": "preview"
+      },
+      {
+        "id": "blueprint",
+        "version": "0.1.0",
+        "status": "preview"
+      },
+      {
+        "id": "montessori",
+        "version": "0.1.0",
+        "status": "preview"
+      }
+    ]
+  },
+  "changelog": [
+    "新增晖爸育儿知识操作系统预览版，作为知识总控层。",
+    "新增四层地图、五层判断、CEO四层、证据等级和0-18岁知识地图。",
+    "新增知识卡Schema和育儿观点评估Schema，方便后续从书籍、文章、案例沉淀结构化知识。",
+    "新增家庭蒙氏观察与环境教练预览版。",
+    "新增蒙氏理念知识域、0-36个月敏感期观察索引和0-6岁微信推送卡。",
+    "新增子技能分发机制：skills-manifest.json。",
+    "新增家庭英语启蒙与AI时代通才成长蓝图两个预览子技能。",
+    "新增微信确认安装/更新策略，知识内容可自动同步，技能安装必须经用户确认。",
+    "新增本地轻量版：Excel工作簿、照片文件夹、JSONL数据和HTML时间轴预留结构。"
+  ]
+}

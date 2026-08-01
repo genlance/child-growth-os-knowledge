@@ -1,0 +1,88 @@
+{
+  "repo_name": "child-growth-os-knowledge",
+  "public_name": "晖爸 0-18 岁成长知识库",
+  "manifest_version": "2026.08.02",
+  "updated_at": "2026-08-02",
+  "canonical_repo": "https://github.com/YOUR_NAME/child-growth-os-knowledge",
+  "installation_policy": {
+    "auto_update_knowledge": true,
+    "auto_install_skills": false,
+    "user_confirmation_required": true,
+    "wechat_install_phrase": "安装{skill_name}",
+    "wechat_update_phrase": "更新{skill_name}"
+  },
+  "skills": [
+    {
+      "id": "huiba-parenting-os",
+      "name": "晖爸育儿知识操作系统",
+      "path": "skills/huiba-parenting-os",
+      "entry": "skills/huiba-parenting-os/SKILL.md",
+      "version": "0.1.0",
+      "status": "preview",
+      "recommended_age": {
+        "min_months": 0,
+        "max_months": 216,
+        "label": "0-18岁"
+      },
+      "triggers": ["育儿知识操作系统", "四层地图", "五层判断", "CEO四层", "育儿知识卡", "观点评估", "书籍内化", "0-18知识地图"],
+      "wechat_recommendation": "如果你想把零散育儿问题系统化，可以启用「晖爸育儿知识操作系统」。回复：安装晖爸育儿OS",
+      "permissions": ["read_child_profile", "read_growth_records", "write_knowledge_cards", "write_observation_notes"],
+      "requires": ["baby-growth-os"],
+      "attribution": "由晖爸 0-18 岁成长知识库提供"
+    },
+    {
+      "id": "english",
+      "name": "家庭英语启蒙规划与管理教练",
+      "path": "skills/english",
+      "entry": "skills/english/SKILL.md",
+      "version": "0.1.0",
+      "status": "preview",
+      "recommended_age": {
+        "min_months": 24,
+        "max_months": 120,
+        "label": "2-10岁"
+      },
+      "triggers": ["英语启蒙", "英文绘本", "家庭英语计划", "自然拼读", "英语输入"],
+      "wechat_recommendation": "孩子已经适合开始家庭英语启蒙了。是否安装「家庭英语启蒙规划与管理教练」？回复：安装英语启蒙",
+      "permissions": ["read_child_profile", "read_growth_records", "write_plans"],
+      "requires": ["baby-growth-os"],
+      "attribution": "由晖爸 0-18 岁成长知识库提供"
+    },
+    {
+      "id": "blueprint",
+      "name": "AI时代通才成长蓝图教练",
+      "path": "skills/blueprint",
+      "entry": "skills/blueprint/SKILL.md",
+      "version": "0.1.0",
+      "status": "preview",
+      "recommended_age": {
+        "min_months": 36,
+        "max_months": 216,
+        "label": "3-18岁"
+      },
+      "triggers": ["通才成长", "项目制学习", "AI素养", "长期能力规划", "成长蓝图"],
+      "wechat_recommendation": "孩子进入更丰富的探索阶段后，可以启用「AI时代通才成长蓝图教练」。回复：安装成长蓝图",
+      "permissions": ["read_child_profile", "read_growth_records", "write_growth_blueprint"],
+      "requires": ["baby-growth-os"],
+      "attribution": "由晖爸 0-18 岁成长知识库提供"
+    },
+    {
+      "id": "montessori",
+      "name": "家庭蒙氏观察与环境教练",
+      "path": "skills/montessori",
+      "entry": "skills/montessori/SKILL.md",
+      "version": "0.1.0",
+      "status": "preview",
+      "recommended_age": {
+        "min_months": 12,
+        "max_months": 72,
+        "label": "1-6岁"
+      },
+      "triggers": ["蒙氏", "蒙台梭利", "敏感期", "秩序感", "独立性", "家庭环境", "专注", "倒水", "收玩具"],
+      "wechat_recommendation": "孩子开始出现秩序感、独立探索、反复练习和敏感期信号时，可以启用「家庭蒙氏观察与环境教练」。回复：安装蒙氏观察",
+      "permissions": ["read_child_profile", "read_growth_records", "write_observation_notes"],
+      "requires": ["baby-growth-os"],
+      "attribution": "由晖爸 0-18 岁成长知识库提供"
+    }
+  ]
+}

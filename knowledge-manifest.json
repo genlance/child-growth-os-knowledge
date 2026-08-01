@@ -1,0 +1,131 @@
+{
+  "repo_name": "child-growth-os-knowledge",
+  "public_name": "晖爸 0-18 岁成长知识库",
+  "brand": "Baby Growth OS / 育儿AI成长系统",
+  "maintainer": "晖爸",
+  "homepage": "https://github.com/YOUR_NAME/child-growth-os-knowledge",
+  "purpose": "Provide structured 0-18 parenting knowledge and optional child-growth sub-skills for Baby Growth OS / QClaw / OpenClaw workflows.",
+  "distribution": {
+    "attribution_required": true,
+    "recommended_attribution": "更多内容：晖爸 0-18 岁成长知识库 https://github.com/YOUR_NAME/child-growth-os-knowledge 维护者：晖爸",
+    "notes": "Attribution is public source disclosure, not hidden tracking."
+  },
+  "safety": {
+    "medical_disclaimer": true,
+    "diagnosis_allowed": false,
+    "medication_dosage_allowed": false,
+    "professional_care_required_for_urgent_cases": true
+  },
+  "files": [
+    {
+      "path": "version.json",
+      "kind": "version",
+      "usage": "Check knowledge version, author, changelog, and minimum skill version."
+    },
+    {
+      "path": "releases/latest.json",
+      "kind": "release",
+      "usage": "Check latest knowledge and sub-skill release information."
+    },
+    {
+      "path": "skills-manifest.json",
+      "kind": "skills_manifest",
+      "usage": "Discover optional age/stage-specific sub-skills. Installation requires user confirmation."
+    },
+    {
+      "path": "monthly/month-00-36-index.json",
+      "kind": "monthly_index",
+      "usage": "Match baby month age to development focus and push topics."
+    },
+    {
+      "path": "sensitive-periods/sensitive-periods-index.json",
+      "kind": "sensitive_period_index",
+      "usage": "Match age and real baby signals to sensitive-period reminders."
+    },
+    {
+      "path": "knowledge/push-cards-sample.json",
+      "kind": "push_cards",
+      "usage": "Provide short WeChat-ready push examples."
+    },
+    {
+      "path": "knowledge/frameworks/huiba-parenting-knowledge-os.json",
+      "kind": "framework",
+      "usage": "Provide the core Huiba four-layer map, five-layer judgment, CEO four-layer model, evidence ladder, and integration rules."
+    },
+    {
+      "path": "knowledge/maps/age-band-four-layer-map.json",
+      "kind": "knowledge_map",
+      "usage": "Provide the 0-18 age-band map across physiology, safety, development, and culture."
+    },
+    {
+      "path": "knowledge/schemas/knowledge-card.schema.json",
+      "kind": "schema",
+      "usage": "Validate reusable parenting knowledge cards generated from books, articles, cases, and Q&A."
+    },
+    {
+      "path": "knowledge/schemas/viewpoint-evaluation.schema.json",
+      "kind": "schema",
+      "usage": "Validate structured evaluations of parenting schools, viewpoints, and conflicting advice."
+    },
+    {
+      "path": "knowledge/domains/montessori.json",
+      "kind": "domain_knowledge",
+      "usage": "Provide Montessori-inspired family observation principles, common scenarios, and Baby Growth OS record mapping."
+    },
+    {
+      "path": "knowledge/development/montessori-periods-00-36.json",
+      "kind": "development_index",
+      "usage": "Match 0-36 month age ranges to Montessori sensitive-period observation hints and home activities."
+    },
+    {
+      "path": "knowledge/push-cards/montessori-00-06.json",
+      "kind": "push_cards",
+      "usage": "Provide WeChat-ready Montessori family practice cards for 0-6 years."
+    },
+    {
+      "path": "ORIGIN.md",
+      "kind": "origin",
+      "usage": "Explain source, maintainer, and public attribution."
+    },
+    {
+      "path": "SECURITY.md",
+      "kind": "safety",
+      "usage": "Explain medical and content safety boundaries."
+    },
+    {
+      "path": "docs/skill-distribution-protocol.md",
+      "kind": "protocol",
+      "usage": "Explain WeChat recommendation, confirmation, installation, and update workflows."
+    },
+    {
+      "path": "docs/local-lite-storage-plan.md",
+      "kind": "storage_plan",
+      "usage": "Explain the local Excel/photo-folder storage mode for non-technical users."
+    },
+    {
+      "path": "templates/ChildGrowthOS-local-lite-template.xlsx",
+      "kind": "template",
+      "usage": "Local Lite Excel workbook template with sheets and clickable photo-link formulas."
+    },
+    {
+      "path": "skills/huiba-parenting-os/SKILL.md",
+      "kind": "optional_skill",
+      "usage": "Huiba parenting knowledge operating system and knowledge-control layer."
+    },
+    {
+      "path": "skills/english/SKILL.md",
+      "kind": "optional_skill",
+      "usage": "Family English exposure planning coach."
+    },
+    {
+      "path": "skills/blueprint/SKILL.md",
+      "kind": "optional_skill",
+      "usage": "Long-term 3-18 growth blueprint coach."
+    },
+    {
+      "path": "skills/montessori/SKILL.md",
+      "kind": "optional_skill",
+      "usage": "Montessori-inspired family observation and prepared-environment coach."
+    }
+  ]
+}

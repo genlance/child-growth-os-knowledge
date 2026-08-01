@@ -1,0 +1,208 @@
+{
+  "metadata": {
+    "id": "montessori-family-practice",
+    "name": "家庭蒙氏观察与环境支持",
+    "version": "2026.08.02-preview",
+    "public_name": "晖爸 0-18 岁成长知识库 - 蒙氏家庭实践",
+    "core_age_range_months": [0, 72],
+    "extended_usage": "0-18岁家庭观察方法、环境调整思路和独立性培养原则",
+    "source_notes": [
+      "由晖爸 0-18 岁成长知识库整理。",
+      "结构设计参考公开项目 eeailab-skills/montessori，并结合 Baby Growth OS 的记录、照片资产和知识推送场景重新组织。",
+      "部分月龄活动参考旧版 Coze 育儿助手包中的蒙氏敏感期和活动数据，已重新清洗、压缩和改写。"
+    ],
+    "safety": {
+      "not_medical_or_developmental_diagnosis": true,
+      "avoid_anxiety_about_sensitive_periods": true,
+      "do_not_claim_montessori_is_the_only_correct_method": true,
+      "professional_help_when": [
+        "家长担心孩子明显发育倒退",
+        "语言、运动、社交等发展迟缓疑似持续存在",
+        "行为伴随伤害自己或他人的高风险",
+        "涉及疾病、疼痛、睡眠呼吸、进食困难等医学问题"
+      ]
+    }
+  },
+  "positioning": {
+    "one_sentence": "蒙氏家庭实践不是买一套教具，而是用观察、环境和可执行的小任务，支持孩子在真实生活里发展秩序感、专注、独立和自我控制。",
+    "for_baby_growth_os": "当家长上传照片、视频或自然语言记录时，系统可以识别其中的蒙氏观察线索，并把知识卡挂到成长日记、成长时间轴、健康/行为事件或照片资产上。",
+    "not_this": [
+      "不是把所有行为都解释成敏感期",
+      "不是要求家庭布置成机构教室",
+      "不是用温柔话术替代边界",
+      "不是放任孩子想做什么就做什么",
+      "不是给父母制造错过关键期的焦虑"
+    ]
+  },
+  "core_principles": [
+    {
+      "id": "observe-before-intervene",
+      "name": "先观察，再介入",
+      "explain": "成人先记录事实：孩子做了什么、重复了几次、环境里有什么、成人是否打断。等看清需求后，再决定是否帮助、示范或调整环境。",
+      "family_actions": [
+        "用30秒到3分钟观察孩子正在专注什么",
+        "把评价词换成事实描述，例如“把水倒了4次”",
+        "只在安全、伤害、明显求助或规则边界需要时介入"
+      ],
+      "record_suggestion": "写入观察记录：行为事实、持续时间、环境线索、成人回应、孩子反馈。",
+      "photo_link_hint": "如果有照片或视频截图，关联到成长时间轴或行为观察事件。"
+    },
+    {
+      "id": "prepared-environment",
+      "name": "有准备的环境",
+      "explain": "孩子的很多问题不是意志问题，而是环境没有给出清楚、可独立完成的路径。家庭环境要让孩子看得见、够得着、放得回。",
+      "family_actions": [
+        "把常用物品放在孩子安全可及的位置",
+        "减少同一时间可选物品数量",
+        "为倒水、穿鞋、收玩具、洗手设置固定位置和步骤"
+      ],
+      "record_suggestion": "记录一次环境调整前后孩子行为的变化。",
+      "photo_link_hint": "可以给环境布置拍照，存入照片资产库并关联到蒙氏观察记录。"
+    },
+    {
+      "id": "freedom-with-boundaries",
+      "name": "自由与边界一起存在",
+      "explain": "蒙氏里的自由不是没有规则，而是在安全、尊重和秩序的边界内，让孩子有选择、重复和自我修正的空间。",
+      "family_actions": [
+        "给两个可接受选择，而不是无限选择",
+        "边界用短句表达，例如“水在桌上倒，不能倒在地上”",
+        "边界后提供替代活动，例如给孩子一个可倒水的小托盘"
+      ],
+      "record_suggestion": "记录触发点、边界句、替代活动和孩子是否能回到活动。",
+      "photo_link_hint": "如有活动照片，链接到对应规则/生活能力事件。"
+    },
+    {
+      "id": "demonstrate-before-expect",
+      "name": "先示范，再期待",
+      "explain": "孩子不会因为听懂道理就会完成动作。成人需要慢动作示范，减少语言，给孩子重复练习的机会。",
+      "family_actions": [
+        "一次只示范一个动作",
+        "动作慢一点，语言少一点",
+        "示范后把手交给孩子，不急着纠正"
+      ],
+      "record_suggestion": "记录孩子模仿了哪一步、卡在哪一步、下次是否需要拆小。",
+      "photo_link_hint": "适合关联穿衣、刷牙、倒水、收纳等生活照片。"
+    },
+    {
+      "id": "respect-concentration",
+      "name": "保护专注",
+      "explain": "孩子反复做同一件小事，可能是在练习动作、秩序、因果或感官整合。只要安全且不妨碍他人，成人尽量减少打断。",
+      "family_actions": [
+        "孩子专注时先不夸、不问、不教学",
+        "需要结束时提前预告并给收尾动作",
+        "观察活动结束后的情绪和自理状态"
+      ],
+      "record_suggestion": "记录专注活动、持续时间、重复次数和结束方式。",
+      "photo_link_hint": "可作为成长时间轴里的“专注瞬间”。"
+    },
+    {
+      "id": "daily-life-as-work",
+      "name": "真实生活就是工作",
+      "explain": "蒙氏强调孩子通过真实生活动作发展手眼协调、顺序感、责任感和自信。家务不是表演，而是让孩子参与真实家庭生活。",
+      "family_actions": [
+        "邀请孩子参与擦桌子、递衣服、剥水果、浇花、收袜子",
+        "准备孩子尺寸合适的工具",
+        "允许慢、允许不完美，成人负责安全和收尾"
+      ],
+      "record_suggestion": "记录孩子参与的生活动作、能独立完成的步骤和需要帮助的步骤。",
+      "photo_link_hint": "生活能力照片可同时关联到成长日记和能力观察。"
+    }
+  ],
+  "response_patterns": {
+    "quick_parent_qa": [
+      "先给一句明确判断：这更像什么发展需求或环境问题。",
+      "用蒙氏视角解释，但不把它说成唯一答案。",
+      "给1-3个今晚就能做的小调整。",
+      "列出1个观察任务。",
+      "提醒哪些情况需要专业帮助或暂停活动。"
+    ],
+    "learning_mode": [
+      "一次只讲一个概念。",
+      "用家庭场景解释概念。",
+      "给一个低成本活动。",
+      "让家长记录一个事实，而不是写心得。"
+    ],
+    "photo_or_video_observation": [
+      "只描述画面事实，避免给孩子贴标签。",
+      "推测可能的发展需求，并标注为推测。",
+      "指出环境中的支持点和阻碍点。",
+      "给成人下一次回应脚本。",
+      "建议把照片链接到对应成长事件。"
+    ]
+  },
+  "high_frequency_scenarios": [
+    {
+      "id": "repeat-pouring-water",
+      "title": "反复倒水",
+      "possible_need": "手眼协调、因果探索、秩序感和重复练习。",
+      "adult_response": "准备托盘、小水壶、小杯子和擦布，把倒水限定在桌面或地垫上。",
+      "avoid": "不要只说“别玩水”，也不要在孩子刚进入练习时频繁纠正。",
+      "record_tags": ["蒙氏", "生活能力", "手眼协调", "秩序感"]
+    },
+    {
+      "id": "not-cleaning-toys",
+      "title": "不愿意收玩具",
+      "possible_need": "收纳路径不清楚、玩具过多、结束过渡困难。",
+      "adult_response": "减少同时出现的玩具，使用开放低矮收纳位，先示范“拿一个、玩一个、放回一个”。",
+      "avoid": "不要把收玩具变成道德评价。",
+      "record_tags": ["蒙氏", "秩序感", "家庭环境"]
+    },
+    {
+      "id": "throws-objects",
+      "title": "喜欢扔东西",
+      "possible_need": "大运动、因果、声音和边界探索。",
+      "adult_response": "明确不能扔人的边界，提供可扔的软球、篮筐或户外投掷活动。",
+      "avoid": "不要简单贴“调皮”“故意捣乱”的标签。",
+      "record_tags": ["蒙氏", "大运动", "边界"]
+    },
+    {
+      "id": "refuses-shoes",
+      "title": "不肯穿鞋",
+      "possible_need": "独立性、选择权、动作难度或过渡压力。",
+      "adult_response": "给两双可选鞋，拆成坐下、拿鞋、找脚、拉魔术贴几个小步骤，提前预留时间。",
+      "avoid": "不要在赶时间时临时训练复杂动作。",
+      "record_tags": ["蒙氏", "独立性", "自理"]
+    },
+    {
+      "id": "interrupts-adults",
+      "title": "打断大人说话",
+      "possible_need": "语言表达、连接需求、等待能力尚在发展。",
+      "adult_response": "给一个固定信号，例如手放在大人手臂上；大人短回应“我看到你了，等我说完这句”。",
+      "avoid": "不要期待幼儿长时间等待。",
+      "record_tags": ["蒙氏", "社交", "规则"]
+    },
+    {
+      "id": "focused-child",
+      "title": "孩子正在专注",
+      "possible_need": "深度重复、动作整合或自我建构。",
+      "adult_response": "先不打断；如果需要转换活动，用预告、收尾动作和固定流程帮助结束。",
+      "avoid": "不要为了拍照、夸奖或教学频繁打断。",
+      "record_tags": ["蒙氏", "专注", "成长瞬间"]
+    }
+  ],
+  "baby_growth_os_integration": {
+    "recommended_tables": [
+      "成长时间轴",
+      "每日成长日记",
+      "行为情绪观察",
+      "生活能力记录",
+      "照片资产库",
+      "知识映射"
+    ],
+    "knowledge_mapping_fields": [
+      "knowledge_domain",
+      "principle_id",
+      "scenario_id",
+      "child_age_months",
+      "trigger_record_id",
+      "related_photo_ids",
+      "parent_action",
+      "next_observation_task",
+      "follow_up_date"
+    ],
+    "wechat_reply_style": {
+      "first_ack": "收到，这更像是一个蒙氏观察场景。我先帮你记下：{summary}，照片也会挂到对应事件上。",
+      "after_write": "已同步到成长档案，并关联到蒙氏观察：{principle_or_scenario}。今晚复盘时我会提醒你补充孩子后续反应。"
+    }
+  }
+}
