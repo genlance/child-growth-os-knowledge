@@ -11,6 +11,7 @@
       "knowledge-manifest.json",
       "docs/local-lite-storage-plan.md",
       "docs/onboarding-and-data-continuity.md",
+      "docs/child-growth-data-schema.md",
       "docs/archive-operator-and-import-export.md",
       "templates/ChildGrowthOS-local-lite-template.xlsx",
       "monthly/month-00-36-index.json",
@@ -63,6 +64,11 @@
     ]
   },
   "changelog": [
+    "完善首次安装引导剧本：安装后先温暖说明、再做新老用户分流、资料夹识别、保存方式选择和第一条记录邀请。",
+    "新增孩子成长数据表设计说明，解释每个子表的作用、字段结构和照片资产关联方式。",
+    "明确飞书已有旧数据表时必须优先沿用旧表、生成字段差异清单，确认后再补字段或新建缺失子表。",
+    "表名口径从“宝宝档案/宝宝当前状态”调整为“孩子档案/孩子当前状态”，旧名作为兼容迁移别名保留。",
+    "更新本地轻量版 Excel 模板，新增育儿实验闭环、孩子当前状态、家庭书信、已安装子技能和同步日志。",
     "新增 child-growth-os 育儿资料操作员，负责档案识别、批量导入、可视化导出、迁移恢复和飞书同步。",
     "新增育儿资料操作与导入导出协议，定义 ChildGrowthOS 本地数据结构、JSONL 文件、照片资产、HTML时间轴和专题照片墙输出。",
     "支持旧照片文件夹、旧日记、Excel/CSV、微信导出资料进入 staging 后确认导入。",

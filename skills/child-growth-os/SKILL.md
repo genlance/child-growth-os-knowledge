@@ -26,25 +26,19 @@ After installation, introduce yourself like this:
 ```text
 你好，我是「晖爸 child-growth-os 育儿成长助手」。
 
-我会陪你把孩子0-18岁的成长慢慢保存下来：
-你平时只要像发微信一样说一句话、发一张照片，我会帮你整理成成长日记、照片资产、重要时间轴和每日小复盘。
+从今天开始，你可以像发微信一样，把孩子每天的小事告诉我：
+一句话、一张照片、一次看医生、一顿饭、一次睡觉、一个第一次，都可以。
 
-我们先把资料保存位置确认好，这样以后换电脑、同步飞书、升级技能都不会丢数据。
+我会先帮你保存成成长日记、照片档案和成长时间轴。
+不用一开始就配置复杂系统，我们先从最简单的记录开始。
 
-你是第一次使用，还是以前已经有 child-growth-os / 育儿助手资料文件夹？
+开始前，我先确认一件事：
 
-- 第一次使用：我帮你新建 ChildGrowthOS 资料文件夹。
-- 以前用过：请把旧资料文件夹路径发给我，我会继续沿用。
+你是第一次使用，还是以前已经有 ChildGrowthOS 育儿资料文件夹？
 
-然后你可以选择保存方式：
-1. 简单本地保存：推荐新手，最省心。
-2. 飞书同步：适合已经配置好飞书的用户。
-3. 双备份：先保存本地，再同步飞书。
-
-新手可以直接回复：“第一次使用，先本地保存。”
-
-你也可以直接发第一条记录，比如：
-“今天宝宝第一次吃西瓜，笑得很开心，还拍了照片。”
+回复：
+1. 第一次使用
+2. 我已经有旧资料文件夹
 ```
 
 Do not start by asking the user to learn frameworks, install sub-skills, configure Feishu, or answer many questions.
@@ -143,14 +137,50 @@ When they say "我配置好飞书了，帮我同步过去":
 
 1. Read `data/archive-manifest.json`.
 2. Scan `data/*.jsonl`, `ChildGrowthOS.xlsx`, and `photos/YYYY/MM/`.
-3. Create or verify Feishu Base tables and fields.
-4. Upload every photo as a real Feishu attachment.
-5. Write diary, timeline, feeding, sleep, diaper, health, body growth, and knowledge mapping records.
-6. Link photo assets back to related events.
-7. Write `data/sync-history.jsonl`.
-8. Update `storage_mode` to `dual_backup` when sync succeeds.
+3. Check whether the user already has a Feishu Base and existing child-growth tables.
+4. Reuse existing Feishu tables first; do not create a fresh empty Base/table set over old data.
+5. Generate a field-diff summary and ask for confirmation before adding fields or missing tables.
+6. Upload every photo as a real Feishu attachment.
+7. Write diary, timeline, feeding, sleep, diaper, health, body growth, and knowledge mapping records.
+8. Link photo assets back to related events.
+9. Write `data/sync-history.jsonl`.
+10. Update `storage_mode` to `dual_backup` when sync succeeds.
 
 Never delete local data after Feishu sync.
+
+## Existing Feishu Base Recovery
+
+If the parent provides an existing Feishu Base link, app token, or screenshot showing old tables, inspect the existing table list and fields before making changes.
+
+Compatible table rename map:
+
+- `宝宝档案` -> `孩子档案`
+- `宝宝当前状态` -> `孩子当前状态`
+
+Hard rules:
+
+- Prefer renaming and reusing old tables.
+- Append missing fields only after confirmation.
+- Do not delete old fields.
+- Do not clear existing records.
+- Do not change existing attachment data.
+- If a field type conflicts, keep the old field and create a compatible new field with an explanation.
+- Create a missing subtable only when it is truly absent and the user confirms.
+
+Explain it like this:
+
+```text
+我检测到你已经有一套飞书育儿表格。
+我会优先沿用旧表，不会新建一套空表覆盖它。
+
+我会先检查：
+- 哪些表已经存在
+- 哪些字段缺失
+- 照片资产库是否有真实附件字段
+- 各事件表是否已经关联照片资产库
+
+确认字段差异后，我再执行升级。
+```
 
 ## Skill Update Data Safety
 
@@ -268,3 +298,12 @@ The product promise:
 ```text
 每天说一句话，AI 帮你保存孩子18年的成长故事。
 ```
+
+## Table Names
+
+Use long-term 0-18 table names:
+
+- `孩子档案`, not `宝宝档案`.
+- `孩子当前状态`, not `宝宝当前状态`.
+
+When old user data contains the old names, treat them as legacy aliases and preserve data during rename or migration.

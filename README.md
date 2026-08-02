@@ -19,6 +19,7 @@
 - 晖爸育儿知识操作系统：四层地图、五层判断、CEO四层和知识卡标准
 - 本地轻量版 Excel 模板、照片目录规范和 HTML 时间轴预留结构
 - Agent 读取育儿资料、批量导入旧照片/旧日记、生成时间轴和专题照片墙
+- 孩子成长数据表设计、飞书旧表延续升级和子表作用说明
 
 ## 首次安装
 
@@ -91,6 +92,34 @@ https://github.com/genlance/child-growth-os-knowledge/tree/main/skills/child-gro
 - `knowledge/maps/age-band-four-layer-map.json`
 - `knowledge/schemas/knowledge-card.schema.json`
 - `knowledge/schemas/viewpoint-evaluation.schema.json`
+
+## 数据表设计
+
+本系统面向 0-18 岁长期使用，核心表名统一为 `孩子档案`，不再使用只适合婴幼儿阶段的 `宝宝档案`。
+
+数据表说明：
+
+- `docs/child-growth-data-schema.md`
+
+核心子表包括：
+
+- 孩子档案
+- 每日成长日记
+- 照片资产库
+- 成长时间轴
+- 喂养记录
+- 睡眠记录
+- 尿片记录
+- 健康档案
+- 身体成长曲线
+- 育儿知识映射
+- 育儿实验闭环
+- 孩子当前状态
+- 家庭书信
+- 已安装子技能
+- 同步日志
+
+如果用户已经有飞书旧表，agent 必须优先沿用旧表并生成字段差异清单，确认后再补字段。旧表 `宝宝档案`、`宝宝当前状态` 应作为兼容别名迁移为 `孩子档案`、`孩子当前状态`，不得重复新建空表覆盖旧数据。
 
 ## 本地轻量版
 

@@ -108,6 +108,11 @@
       "usage": "Explain first-install guidance, storage choice, existing archive recovery, local-to-Feishu migration, computer migration, and data protection during skill updates."
     },
     {
+      "path": "docs/child-growth-data-schema.md",
+      "kind": "data_schema",
+      "usage": "Explain ChildGrowthOS local Excel and Feishu table purposes, fields, photo-linking rules, and legacy table upgrade rules such as 宝宝档案 to 孩子档案."
+    },
+    {
       "path": "docs/archive-operator-and-import-export.md",
       "kind": "archive_protocol",
       "usage": "Explain the ChildGrowthOS archive data interface, batch import, HTML timeline, topic photo wall, report export, and local-to-Feishu sync workflows for agents."
