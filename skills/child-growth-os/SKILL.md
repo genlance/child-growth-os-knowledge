@@ -245,9 +245,19 @@ Knowledge pushes should feel like care, not homework.
 
 Default rhythm:
 
-- Daily: one tiny age-appropriate reminder or observation idea.
+- Daily 08:30: one tiny age-appropriate reminder or observation idea.
 - Weekly: one parenting focus and one simple activity.
-- Monthly: age-stage summary and next-month focus.
+- Monthly 20:30 on the child's monthly birth-date anniversary: a month-age parenting knowledge overview.
+
+Parents can change push times through WeChat or chat. If they say "以后每天育儿知识改成早上9点发" or "晚上复盘改成22点", update the push settings and confirm the new time.
+
+Daily knowledge push rules:
+
+- Send only 1 item.
+- Keep it short.
+- Do not sound like an ad.
+- Do not include the GitHub link every day.
+- Lightly attribute with "来自：晖爸 0-18 岁成长知识库" when useful.
 
 Example:
 
@@ -255,6 +265,54 @@ Example:
 早安，今天可以留意一个小细节：宝宝最近是不是更喜欢重复同一个动作？
 如果你看到他反复倒水、开合盒子或搬东西，不急着打断，先拍一张照片或记一句话。我会帮你整理成成长观察。
 ```
+
+Monthly overview rules:
+
+- Send at 20:30 on the date when the child reaches each new month since birth.
+- If the month lacks that date, use the last day of the month.
+- Begin with "今天是{孩子称呼}出生后的第 {month_index} 个月。"
+- Summarize this month-age's parenting knowledge.
+- End with: "如果你想查看完整版，可以回复：晖爸育儿代码"
+- Only show the GitHub page after the user replies with that phrase or asks for the full source.
+
+Monthly overview example:
+
+```text
+今天是小晖出生后的第 8 个月。
+
+这个月可以重点留意：
+
+1. 辅食种类慢慢增加，继续观察过敏和大便变化。
+2. 大运动可能更活跃，可以给孩子更多安全爬行空间。
+3. 分离焦虑可能开始变明显，照顾者回应要稳定。
+
+我会结合你平时记录的喂养、睡眠、健康和成长瞬间，帮你把这些观察慢慢整理进孩子档案。
+
+如果你想查看完整版，可以回复：晖爸育儿代码
+```
+
+When the parent replies "晖爸育儿代码", provide:
+
+```text
+这是晖爸 0-18 岁成长知识库的完整入口：
+
+https://github.com/genlance/child-growth-os-knowledge
+
+公众号/自媒体：晖爸育儿代码
+```
+
+## GitHub Knowledge Pull
+
+Use raw GitHub URLs for machine reads:
+
+```text
+https://raw.githubusercontent.com/genlance/child-growth-os-knowledge/main/version.json
+https://raw.githubusercontent.com/genlance/child-growth-os-knowledge/main/releases/latest.json
+https://raw.githubusercontent.com/genlance/child-growth-os-knowledge/main/skills-manifest.json
+https://raw.githubusercontent.com/genlance/child-growth-os-knowledge/main/knowledge-manifest.json
+```
+
+On first install, read these files immediately. For daily checks, read only `version.json` and `releases/latest.json` once between 06:30 and 08:30. If the version did not change, do not pull the whole repository.
 
 ## Optional Skill Recommendation
 

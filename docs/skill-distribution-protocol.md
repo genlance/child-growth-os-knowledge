@@ -2,6 +2,12 @@
 
 本协议用于 child-growth-os 主控技能从 GitHub 仓库发现、推荐、安装和更新子技能。
 
+知识拉取 raw 地址、每日推送、月龄概览和用户修改推送时间规则见：
+
+```text
+docs/knowledge-update-and-push-schedule.md
+```
+
 ## 分层
 
 ```text
@@ -46,6 +52,15 @@ docs/onboarding-and-data-continuity.md
 - 检查 `releases/latest.json`。
 - 拉取知识卡片、月龄索引、敏感期索引。
 - 在飞书记录“发现了新版本/新技能”。
+
+自动检查时应优先读取 raw 地址：
+
+```text
+https://raw.githubusercontent.com/genlance/child-growth-os-knowledge/main/version.json
+https://raw.githubusercontent.com/genlance/child-growth-os-knowledge/main/releases/latest.json
+https://raw.githubusercontent.com/genlance/child-growth-os-knowledge/main/knowledge-manifest.json
+https://raw.githubusercontent.com/genlance/child-growth-os-knowledge/main/skills-manifest.json
+```
 
 必须用户确认：
 
@@ -98,7 +113,7 @@ docs/onboarding-and-data-continuity.md
 
 ## 更新流程
 
-1. 每月或用户手动触发时读取 `releases/latest.json`。
+1. 每月或用户手动触发时读取 raw 版本的 `releases/latest.json`。
 2. 对比本地/飞书记录里的已安装技能版本。
 3. 如果有新版，先展示 changelog。
 4. 用户确认后再更新。

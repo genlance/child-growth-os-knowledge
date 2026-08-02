@@ -41,13 +41,33 @@ https://github.com/genlance/child-growth-os-knowledge/tree/main/skills/child-gro
 
 ## 使用方式
 
-安装 child-growth-os 主控技能后，技能会定期读取本仓库的 `version.json` 和知识文件。
+安装 child-growth-os 主控技能后，技能会优先使用 raw 地址读取本仓库的 `version.json` 和知识文件。
+
+机器读取入口：
+
+```text
+https://raw.githubusercontent.com/genlance/child-growth-os-knowledge/main/version.json
+https://raw.githubusercontent.com/genlance/child-growth-os-knowledge/main/releases/latest.json
+https://raw.githubusercontent.com/genlance/child-growth-os-knowledge/main/skills-manifest.json
+https://raw.githubusercontent.com/genlance/child-growth-os-knowledge/main/knowledge-manifest.json
+```
 
 推荐推送节奏：
 
-- 每日：月龄 + 敏感期 + 今日建议
+- 每日 08:30：1 条轻量育儿知识，不推大段内容
 - 每周：本周养育重点 + 适龄活动
-- 每月：月龄发展报告 + 下个月关注点 + 仓库更新提醒
+- 每月：按孩子出生日期每满一个月当天 20:30 推送“本月育儿知识概览”
+- 每日 21:00：当天成长日记复盘
+
+用户可以通过微信渠道修改推送时间，例如“以后每天育儿知识改成早上9点发”。
+
+月龄概览最后一句固定为：
+
+```text
+如果你想查看完整版，可以回复：晖爸育儿代码
+```
+
+用户回复后，再展示 GitHub 页面和公众号/自媒体名称。
 
 ## 子技能机制
 

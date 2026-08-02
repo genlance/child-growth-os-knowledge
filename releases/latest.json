@@ -9,6 +9,7 @@
     "files": [
       "version.json",
       "knowledge-manifest.json",
+      "docs/knowledge-update-and-push-schedule.md",
       "docs/local-lite-storage-plan.md",
       "docs/onboarding-and-data-continuity.md",
       "docs/child-growth-data-schema.md",
@@ -65,6 +66,13 @@
     ]
   },
   "changelog": [
+    "新增知识拉取与推送节奏协议，明确 agent 使用 raw.githubusercontent.com 地址读取版本、发布、技能和知识清单。",
+    "明确首次安装后立即拉取 version、release、knowledge manifest，日常仅在 06:30-08:30 轻量检查版本。",
+    "明确每日 08:30 只推 1 条轻量育儿知识，内容不做广告、不每天放 GitHub 链接。",
+    "明确每日 21:00 做当天成长日记复盘。",
+    "明确月龄育儿知识概览按孩子出生日期每满一个月当天 20:30 推送，并以“今天是XX出生后的第X个月”开头。",
+    "明确月龄概览结尾为“如果你想查看完整版，可以回复：晖爸育儿代码”，用户回复后再展示 GitHub 页面和公众号/自媒体名称。",
+    "明确客户可通过微信渠道修改每日知识、晚间复盘和月龄概览推送时间。",
     "新增旧资料导入协议，覆盖旧照片文件夹、微信导出、旧日记、Excel/CSV、飞书导出、手机相册整理包和其他育儿App导出。",
     "明确旧资料导入必须先扫描生成待确认清单，用户可修改日期、标题、说明、人物、地点、标签、目标表和是否导入。",
     "照片导入要求读取EXIF、文件名、文件夹年月和文件修改时间，并生成AI描述、建议标签、事件类型和置信度。",

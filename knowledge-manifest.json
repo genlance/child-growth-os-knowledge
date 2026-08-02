@@ -98,6 +98,11 @@
       "usage": "Explain WeChat recommendation, confirmation, installation, and update workflows."
     },
     {
+      "path": "docs/knowledge-update-and-push-schedule.md",
+      "kind": "push_schedule",
+      "usage": "Explain raw GitHub knowledge URLs, first-install pull, daily lightweight version checks, 08:30 daily parenting tips, 21:00 diary review, monthly birth-date knowledge overview, user-customizable push times, and the 晖爸育儿代码 full-view command."
+    },
+    {
       "path": "docs/local-lite-storage-plan.md",
       "kind": "storage_plan",
       "usage": "Explain the local Excel/photo-folder storage mode for non-technical users."
