@@ -101,9 +101,17 @@
       "description": "首次安装引导、备份同步选择、旧资料夹识别、换电脑恢复、本地同步飞书和技能更新数据保护协议"
     },
     {
+      "path": "docs/archive-operator-and-import-export.md",
+      "description": "育儿资料操作与导入导出协议：本地档案结构、旧照片/旧日记批量导入、HTML时间轴、专题照片墙、年度报告和飞书同步"
+    },
+    {
       "path": "templates/ChildGrowthOS-local-lite-template.xlsx",
       "description": "本地轻量版Excel模板"
+    },
+    {
+      "path": "skills/archive-operator/SKILL.md",
+      "description": "child-growth-os 育儿资料操作员预览版，适合资料导入、时间轴、照片墙、迁移恢复和飞书同步"
     }
   ],
-  "changelog": "完善首次安装引导和数据连续性：支持新用户新建本地档案、老用户沿用旧资料夹、本地后期同步飞书、换电脑复制文件夹恢复、技能更新不覆盖用户数据。"
+  "changelog": "新增育儿资料操作员和导入导出协议：支持 agent 识别本地档案结构、批量导入旧照片/日记、生成HTML时间轴、专题照片墙、年度报告和本地同步飞书。"
 }

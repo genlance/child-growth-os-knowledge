@@ -108,6 +108,11 @@
       "usage": "Explain first-install guidance, storage choice, existing archive recovery, local-to-Feishu migration, computer migration, and data protection during skill updates."
     },
     {
+      "path": "docs/archive-operator-and-import-export.md",
+      "kind": "archive_protocol",
+      "usage": "Explain the ChildGrowthOS archive data interface, batch import, HTML timeline, topic photo wall, report export, and local-to-Feishu sync workflows for agents."
+    },
+    {
       "path": "templates/ChildGrowthOS-local-lite-template.xlsx",
       "kind": "template",
       "usage": "Local Lite Excel workbook template with sheets and clickable photo-link formulas."
@@ -121,6 +126,11 @@
       "path": "skills/huiba-parenting-os/SKILL.md",
       "kind": "optional_skill",
       "usage": "Huiba parenting knowledge operating system and knowledge-control layer."
+    },
+    {
+      "path": "skills/archive-operator/SKILL.md",
+      "kind": "optional_skill",
+      "usage": "Archive data operator for import, export, visualization, repair, migration, and sync."
     },
     {
       "path": "skills/english/SKILL.md",

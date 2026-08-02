@@ -18,6 +18,7 @@
 - 家庭英语启蒙、通才成长蓝图等可选子技能
 - 晖爸育儿知识操作系统：四层地图、五层判断、CEO四层和知识卡标准
 - 本地轻量版 Excel 模板、照片目录规范和 HTML 时间轴预留结构
+- Agent 读取育儿资料、批量导入旧照片/旧日记、生成时间轴和专题照片墙
 
 ## 首次安装
 
@@ -54,6 +55,7 @@ https://github.com/genlance/child-growth-os-knowledge/tree/main/skills/child-gro
 
 - `skills/child-growth-os/`：晖爸 child-growth-os 育儿成长助手，推荐第一个安装
 - `skills/huiba-parenting-os/`：晖爸育儿知识操作系统，适合需要系统分析时再安装
+- `skills/archive-operator/`：child-growth-os 育儿资料操作员，适合批量导入、时间轴、照片墙、迁移恢复和飞书同步时再安装
 - `skills/english/`：家庭英语启蒙规划与管理教练
 - `skills/blueprint/`：AI时代通才成长蓝图教练
 - `skills/montessori/`：家庭蒙氏观察与环境教练
@@ -121,6 +123,33 @@ templates/ChildGrowthOS-local-lite-template.xlsx
 - `dual_backup`：先写本地，再同步飞书。
 
 照片必须按 `photos/YYYY/MM/` 归档，原始下载文件按 `photos/originals/YYYY/MM/` 暂存。本地 Excel 使用相对路径和 `HYPERLINK()` 打开照片，后续可以生成 HTML 成长时间轴。
+
+## 资料操作与可视化
+
+如果用户希望让 agent 调用已有育儿资料，生成成长时间轴、专题照片墙、年度报告，或把旧照片/旧日记批量导入，可以按需安装：
+
+```text
+请安装 child-growth-os 育儿资料操作员：
+https://github.com/genlance/child-growth-os-knowledge/tree/main/skills/archive-operator
+```
+
+典型用法：
+
+```text
+这是我的育儿资料文件夹：D:\ChildGrowthOS。请读取里面的数据，帮我生成 2026 年成长时间轴网站。
+```
+
+```text
+这是我以前整理的宝宝照片文件夹：D:\OldBabyPhotos。请先扫描，不要直接导入，给我一份待确认清单。
+```
+
+```text
+帮我做一个“第一次合集”照片墙，只包含成长时间轴里标记为第一次的事件。
+```
+
+数据接口与导入导出协议：
+
+- `docs/archive-operator-and-import-export.md`
 
 ## 维护者
 

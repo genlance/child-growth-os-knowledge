@@ -11,6 +11,7 @@
       "knowledge-manifest.json",
       "docs/local-lite-storage-plan.md",
       "docs/onboarding-and-data-continuity.md",
+      "docs/archive-operator-and-import-export.md",
       "templates/ChildGrowthOS-local-lite-template.xlsx",
       "monthly/month-00-36-index.json",
       "sensitive-periods/sensitive-periods-index.json",
@@ -40,6 +41,11 @@
         "status": "preview"
       },
       {
+        "id": "archive-operator",
+        "version": "0.1.0",
+        "status": "preview"
+      },
+      {
         "id": "english",
         "version": "0.1.0",
         "status": "preview"
@@ -57,6 +63,9 @@
     ]
   },
   "changelog": [
+    "新增 child-growth-os 育儿资料操作员，负责档案识别、批量导入、可视化导出、迁移恢复和飞书同步。",
+    "新增育儿资料操作与导入导出协议，定义 ChildGrowthOS 本地数据结构、JSONL 文件、照片资产、HTML时间轴和专题照片墙输出。",
+    "支持旧照片文件夹、旧日记、Excel/CSV、微信导出资料进入 staging 后确认导入。",
     "新增首次安装引导与数据连续性协议。",
     "新增新用户/老用户分流：新用户新建本地档案，老用户提供旧资料夹路径并继续沿用。",
     "明确本地资料可在后期整体同步到飞书，照片必须作为真实附件上传。",
