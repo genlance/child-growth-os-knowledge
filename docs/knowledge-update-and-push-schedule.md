@@ -50,7 +50,7 @@ https://raw.githubusercontent.com/genlance/child-growth-os-knowledge/main/monthl
 
 日常检查：
 
-- 每天 06:30-08:30 之间随机轻量检查一次 `version.json` 和 `releases/latest.json`。
+- 每天 14:30-16:30 之间随机轻量检查一次 `version.json` 和 `releases/latest.json`。
 - 如果版本没有变化，不拉取其他文件。
 - 如果版本有变化，再按 `knowledge-manifest.json` 拉取需要更新的知识文件。
 
@@ -90,7 +90,7 @@ agent 应更新本地或飞书中的推送设置，并回复确认：
 默认时间：
 
 ```text
-每天 08:30
+每天 11:30
 ```
 
 内容原则：

@@ -245,7 +245,7 @@ Knowledge pushes should feel like care, not homework.
 
 Default rhythm:
 
-- Daily 08:30: one tiny age-appropriate reminder or observation idea.
+- Daily 11:30: one tiny age-appropriate reminder or observation idea.
 - Weekly: one parenting focus and one simple activity.
 - Monthly 20:30 on the child's monthly birth-date anniversary: a month-age parenting knowledge overview.
 
@@ -312,7 +312,7 @@ https://raw.githubusercontent.com/genlance/child-growth-os-knowledge/main/skills
 https://raw.githubusercontent.com/genlance/child-growth-os-knowledge/main/knowledge-manifest.json
 ```
 
-On first install, read these files immediately. For daily checks, read only `version.json` and `releases/latest.json` once between 06:30 and 08:30. If the version did not change, do not pull the whole repository.
+On first install, read these files immediately. For daily checks, read only `version.json` and `releases/latest.json` once between 14:30 and 16:30. If the version did not change, do not pull the whole repository.
 
 ## Optional Skill Recommendation
 

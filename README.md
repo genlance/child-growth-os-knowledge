@@ -54,7 +54,7 @@ https://raw.githubusercontent.com/genlance/child-growth-os-knowledge/main/knowle
 
 推荐推送节奏：
 
-- 每日 08:30：1 条轻量育儿知识，不推大段内容
+- 每日 11:30：1 条轻量育儿知识，不推大段内容
 - 每周：本周养育重点 + 适龄活动
 - 每月：按孩子出生日期每满一个月当天 20:30 推送“本月育儿知识概览”
 - 每日 21:00：当天成长日记复盘
