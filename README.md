@@ -2,11 +2,13 @@
 
 > 每天说一句话，AI 帮你保存孩子 18 年的成长故事。
 
-这是 **child-growth-os / 育儿AI成长系统** 的公开知识源，仓库名建议使用 `child-growth-os-knowledge`。它用于给 QClaw/OpenClaw/WorkBuddy 技能提供持续更新的 0-18 岁育儿知识推送，也可以分发按年龄阶段逐步启用的子技能。
+这是 **child-growth-os / 育儿AI成长系统** 的公开知识源，仓库名建议使用 `child-growth-os-knowledge`。它用于给 QClaw/OpenClaw/WorkBuddy 技能提供一个温暖的育儿成长助手，也提供持续更新的 0-18 岁育儿知识推送和按年龄阶段逐步启用的子技能。
 
 ## 内容范围
 
 - 0-18 岁阶段性成长知识
+- 温暖的新手爸妈育儿成长助手
+- 微信式自然语言记录、照片归档和每日成长日记
 - 0-36 个月月龄知识推送
 - 蒙台梭利敏感期提醒
 - 喂养、睡眠、尿片、健康、早教、亲子活动
@@ -17,9 +19,26 @@
 - 晖爸育儿知识操作系统：四层地图、五层判断、CEO四层和知识卡标准
 - 本地轻量版 Excel 模板、照片目录规范和 HTML 时间轴预留结构
 
+## 首次安装
+
+第一次建议安装的是主控助手，而不是知识分析技能：
+
+```text
+请安装晖爸 child-growth-os 育儿成长助手：
+https://github.com/genlance/child-growth-os-knowledge/tree/main/skills/child-growth-os
+```
+
+安装后，用户可以直接像发微信一样记录：
+
+```text
+今天宝宝第一次吃西瓜，笑得很开心，还拍了两张照片。
+```
+
+主控助手会先做成长记录、照片归档、每日育儿日记和轻量知识推送。后续用户真的需要系统分析、蒙氏、英语启蒙或成长蓝图时，再推荐安装对应子技能。
+
 ## 使用方式
 
-安装 child-growth-os 技能后，技能会定期读取本仓库的 `version.json` 和知识文件。
+安装 child-growth-os 主控技能后，技能会定期读取本仓库的 `version.json` 和知识文件。
 
 推荐推送节奏：
 
@@ -33,7 +52,8 @@
 
 当前预览子技能：
 
-- `skills/huiba-parenting-os/`：晖爸育儿知识操作系统
+- `skills/child-growth-os/`：晖爸 child-growth-os 育儿成长助手，推荐第一个安装
+- `skills/huiba-parenting-os/`：晖爸育儿知识操作系统，适合需要系统分析时再安装
 - `skills/english/`：家庭英语启蒙规划与管理教练
 - `skills/blueprint/`：AI时代通才成长蓝图教练
 - `skills/montessori/`：家庭蒙氏观察与环境教练

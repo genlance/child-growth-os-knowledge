@@ -85,6 +85,10 @@
       "description": "家庭蒙氏观察与环境教练预览版"
     },
     {
+      "path": "skills/child-growth-os/SKILL.md",
+      "description": "晖爸 child-growth-os 育儿成长助手主控技能，适合作为客户首次安装入口"
+    },
+    {
       "path": "skills/huiba-parenting-os/SKILL.md",
       "description": "晖爸育儿知识操作系统预览版"
     },
@@ -97,5 +101,5 @@
       "description": "本地轻量版Excel模板"
     }
   ],
-  "changelog": "新增晖爸育儿知识操作系统，补充四层地图、五层判断、CEO四层、0-18岁知识地图、知识卡Schema和观点评估Schema。"
+  "changelog": "新增晖爸 child-growth-os 育儿成长助手主控技能，作为客户首次安装入口；知识操作系统调整为按需安装的系统分析能力。"
 }

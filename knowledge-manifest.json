@@ -108,6 +108,11 @@
       "usage": "Local Lite Excel workbook template with sheets and clickable photo-link formulas."
     },
     {
+      "path": "skills/child-growth-os/SKILL.md",
+      "kind": "starter_skill",
+      "usage": "Warm parenting companion and growth-recording starter skill for new parents."
+    },
+    {
       "path": "skills/huiba-parenting-os/SKILL.md",
       "kind": "optional_skill",
       "usage": "Huiba parenting knowledge operating system and knowledge-control layer."

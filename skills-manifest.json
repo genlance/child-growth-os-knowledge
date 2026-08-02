@@ -13,6 +13,25 @@
   },
   "skills": [
     {
+      "id": "child-growth-os",
+      "name": "晖爸 child-growth-os 育儿成长助手",
+      "path": "skills/child-growth-os",
+      "entry": "skills/child-growth-os/SKILL.md",
+      "version": "0.1.0",
+      "status": "preview",
+      "role": "starter",
+      "recommended_age": {
+        "min_months": 0,
+        "max_months": 216,
+        "label": "0-18岁"
+      },
+      "triggers": ["育儿助手", "成长记录", "宝宝日记", "记录照片", "微信记录", "每日育儿提醒", "成长档案", "child-growth-os"],
+      "wechat_recommendation": "欢迎使用「晖爸 child-growth-os 育儿成长助手」。你可以像发微信一样记录孩子成长：发一句话、发照片，我会帮你整理成成长日记和照片档案。",
+      "permissions": ["read_child_profile", "write_growth_records", "write_photo_assets", "write_daily_diary", "send_daily_push", "recommend_optional_skills"],
+      "requires": [],
+      "attribution": "由晖爸 0-18 岁成长知识库提供"
+    },
+    {
       "id": "huiba-parenting-os",
       "name": "晖爸育儿知识操作系统",
       "path": "skills/huiba-parenting-os",
@@ -25,7 +44,7 @@
         "label": "0-18岁"
       },
       "triggers": ["育儿知识操作系统", "四层地图", "五层判断", "CEO四层", "育儿知识卡", "观点评估", "书籍内化", "0-18知识地图"],
-      "wechat_recommendation": "如果你想把零散育儿问题系统化，可以启用「晖爸育儿知识操作系统」。回复：安装晖爸育儿OS",
+      "wechat_recommendation": "如果你想把某个育儿问题分析得更系统，可以启用「晖爸育儿知识操作系统」。回复：安装晖爸育儿OS",
       "permissions": ["read_child_profile", "read_growth_records", "write_knowledge_cards", "write_observation_notes"],
       "requires": ["child-growth-os"],
       "attribution": "由晖爸 0-18 岁成长知识库提供"

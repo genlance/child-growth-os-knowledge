@@ -18,6 +18,7 @@
       "knowledge/maps/age-band-four-layer-map.json",
       "knowledge/schemas/knowledge-card.schema.json",
       "knowledge/schemas/viewpoint-evaluation.schema.json",
+      "skills/child-growth-os/SKILL.md",
       "knowledge/domains/montessori.json",
       "knowledge/development/montessori-periods-00-36.json",
       "knowledge/push-cards/montessori-00-06.json"
@@ -26,6 +27,12 @@
   "skills": {
     "manifest": "skills-manifest.json",
     "available": [
+      {
+        "id": "child-growth-os",
+        "version": "0.1.0",
+        "status": "preview",
+        "role": "starter"
+      },
       {
         "id": "huiba-parenting-os",
         "version": "0.1.0",
@@ -49,6 +56,9 @@
     ]
   },
   "changelog": [
+    "新增晖爸 child-growth-os 育儿成长助手，作为客户首次安装入口。",
+    "明确首次体验以微信式记录、照片归档、每日成长日记、21点复盘和轻量知识推送为主。",
+    "晖爸育儿知识操作系统调整为按需安装的系统分析能力，不再作为默认第一入口。",
     "新增晖爸育儿知识操作系统预览版，作为知识总控层。",
     "新增四层地图、五层判断、CEO四层、证据等级和0-18岁知识地图。",
     "新增知识卡Schema和育儿观点评估Schema，方便后续从书籍、文章、案例沉淀结构化知识。",
