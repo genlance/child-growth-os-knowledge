@@ -12,6 +12,7 @@
       "docs/local-lite-storage-plan.md",
       "docs/onboarding-and-data-continuity.md",
       "docs/child-growth-data-schema.md",
+      "docs/legacy-import-protocol.md",
       "docs/archive-operator-and-import-export.md",
       "templates/ChildGrowthOS-local-lite-template.xlsx",
       "monthly/month-00-36-index.json",
@@ -64,6 +65,11 @@
     ]
   },
   "changelog": [
+    "新增旧资料导入协议，覆盖旧照片文件夹、微信导出、旧日记、Excel/CSV、飞书导出、手机相册整理包和其他育儿App导出。",
+    "明确旧资料导入必须先扫描生成待确认清单，用户可修改日期、标题、说明、人物、地点、标签、目标表和是否导入。",
+    "照片导入要求读取EXIF、文件名、文件夹年月和文件修改时间，并生成AI描述、建议标签、事件类型和置信度。",
+    "其他育儿App导出要求先做字段映射和单位确认，不能在奶量、体重、身高等单位不明时直接导入。",
+    "新增导入确认清单表，用于本地Excel中承接扫描结果和人工确认。",
     "完善首次安装引导剧本：安装后先温暖说明、再做新老用户分流、资料夹识别、保存方式选择和第一条记录邀请。",
     "新增孩子成长数据表设计说明，解释每个子表的作用、字段结构和照片资产关联方式。",
     "明确飞书已有旧数据表时必须优先沿用旧表、生成字段差异清单，确认后再补字段或新建缺失子表。",

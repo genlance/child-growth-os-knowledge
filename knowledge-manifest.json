@@ -113,6 +113,11 @@
       "usage": "Explain ChildGrowthOS local Excel and Feishu table purposes, fields, photo-linking rules, and legacy table upgrade rules such as 宝宝档案 to 孩子档案."
     },
     {
+      "path": "docs/legacy-import-protocol.md",
+      "kind": "import_protocol",
+      "usage": "Explain safe legacy import workflows for old photo folders, WeChat exports, diaries, Excel/CSV, Feishu exports, phone album packages, and parenting app exports using scan-first review lists."
+    },
+    {
       "path": "docs/archive-operator-and-import-export.md",
       "kind": "archive_protocol",
       "usage": "Explain the ChildGrowthOS archive data interface, batch import, HTML timeline, topic photo wall, report export, and local-to-Feishu sync workflows for agents."

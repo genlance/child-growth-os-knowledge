@@ -118,22 +118,30 @@ agent 打开用户提供的资料夹时，应先查找 `data/archive-manifest.js
 
 ## 批量导入
 
+详细导入规则见：
+
+```text
+docs/legacy-import-protocol.md
+```
+
 支持导入来源：
 
 - 旧照片文件夹。
 - 微信导出的聊天图片、视频、文本。
 - Markdown、TXT、Word、Excel、CSV 格式的旧日记。
 - 飞书多维表格导出内容。
-- 其他宝宝相册或网盘整理资料。
+- 手机相册整理包。
+- 其他育儿 App 导出的喂养、睡眠、尿片、身高体重、健康或相册数据。
 
 导入流程：
 
 1. 把原始资料复制或记录到 `imports/raw/`，不直接改动原文件。
 2. 扫描文件，生成 `imports/staging/import-{timestamp}.jsonl`。
 3. 根据 EXIF 时间优先判断照片日期；没有 EXIF 时使用文件修改时间、文件夹年月、文件名日期或用户提供日期。
-4. 对低置信度项目生成确认清单，放到 `imports/reports/`。
-5. 用户确认后，才写入 `data/*.jsonl`、`ChildGrowthOS.xlsx` 和 `photos/YYYY/MM/`。
-6. 每次导入都写入 `data/import-tasks.jsonl`。
+4. 对所有项目生成待确认清单，放到 `imports/staging/` 和 `imports/reports/`。
+5. 用户可补充日期、标题、说明、人物、地点、标签、目标表、是否第一次、是否导入等字段。
+6. 用户确认后，才写入 `data/*.jsonl`、`ChildGrowthOS.xlsx`、`photos/YYYY/MM/` 或飞书正式表。
+7. 每次导入都写入 `data/import-tasks.jsonl`。
 
 低置信度情况包括：日期不确定、同名重复、孩子身份不确定、图片内容疑似单据但无法识别类型、日记文本无法确定日期。
 

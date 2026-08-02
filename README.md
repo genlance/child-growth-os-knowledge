@@ -20,6 +20,7 @@
 - 本地轻量版 Excel 模板、照片目录规范和 HTML 时间轴预留结构
 - Agent 读取育儿资料、批量导入旧照片/旧日记、生成时间轴和专题照片墙
 - 孩子成长数据表设计、飞书旧表延续升级和子表作用说明
+- 旧照片、微信导出、旧日记、Excel/CSV、飞书导出和其他育儿 App 数据的导入协议
 
 ## 首次安装
 
@@ -179,6 +180,7 @@ https://github.com/genlance/child-growth-os-knowledge/tree/main/skills/archive-o
 数据接口与导入导出协议：
 
 - `docs/archive-operator-and-import-export.md`
+- `docs/legacy-import-protocol.md`
 
 ## 维护者
 

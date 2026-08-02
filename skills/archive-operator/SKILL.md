@@ -16,6 +16,7 @@ You are not the first-install warm companion. The warm daily companion is `child
 Before operating on user data, read:
 
 - `../../docs/archive-operator-and-import-export.md`
+- `../../docs/legacy-import-protocol.md`
 - `../../docs/local-lite-storage-plan.md`
 - `../../docs/onboarding-and-data-continuity.md`
 
@@ -41,11 +42,35 @@ If `archive-manifest.json` exists, treat it as the source of truth for archive s
 
 ### Batch Import Old Photos Or Diaries
 
-- Put raw source references under `imports/raw/`.
-- Produce a staging list under `imports/staging/`.
-- Use EXIF date first, then filename date, folder year/month, file modified time, or user-provided date.
-- Ask for confirmation when date, child identity, event type, or duplicate status is uncertain.
-- After confirmation, write records to JSONL, update Excel if present, copy photos into `photos/YYYY/MM/`, and log the task in `data/import-tasks.jsonl`.
+Always follow this principle:
+
+```text
+Scan first, generate a review list, never import directly.
+```
+
+Supported import sources:
+
+- Old photo folders.
+- WeChat chat exports, including text, photos, videos, and files.
+- Old handwritten/Word/Markdown/TXT diaries.
+- Excel or CSV growth records.
+- Feishu exports or existing Feishu Bases.
+- Phone album packages from iPhone, Android, iCloud, Google Photos, Huawei/Xiaomi albums, or cloud drives.
+- Other parenting app exports, such as feeding, sleep, diaper, growth curve, health, vaccine, or baby album data.
+
+Import workflow:
+
+1. Create an `import_task_id`.
+2. Put raw copies or source references under `imports/raw/{import_task_id}/`.
+3. Scan source metadata and content without changing originals.
+4. Produce `imports/staging/{import_task_id}.jsonl` and `imports/staging/{import_task_id}-review.csv`.
+5. Produce human-readable reports under `imports/reports/`.
+6. Ask the user to confirm, edit, skip, merge, or retarget items.
+7. After confirmation, write records to JSONL, update Excel if present, copy photos into `photos/YYYY/MM/`, and log the task in `data/import-tasks.jsonl`.
+
+For photo imports, read EXIF date first, then filename date, folder year/month, file modified time, or user-provided date. Also generate AI descriptions, suggested tags, suggested event type, and blank user-editable fields.
+
+For app or table imports, generate a field mapping proposal first. Never assume units such as ml/oz, kg/g, or cm/in without confirmation.
 
 ### Repair Photo Links
 

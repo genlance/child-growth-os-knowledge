@@ -105,17 +105,21 @@
       "description": "孩子成长数据表设计说明：每个子表作用、字段结构、照片资产关联和飞书旧表升级规则"
     },
     {
+      "path": "docs/legacy-import-protocol.md",
+      "description": "旧资料导入协议：支持旧照片、微信导出、旧日记、Excel/CSV、飞书导出、手机相册包和其他育儿App导出，先扫描生成待确认清单"
+    },
+    {
       "path": "docs/archive-operator-and-import-export.md",
       "description": "育儿资料操作与导入导出协议：本地档案结构、旧照片/旧日记批量导入、HTML时间轴、专题照片墙、年度报告和飞书同步"
     },
     {
       "path": "templates/ChildGrowthOS-local-lite-template.xlsx",
-      "description": "本地轻量版Excel模板，表名使用孩子档案/孩子当前状态并包含核心子表"
+      "description": "本地轻量版Excel模板，表名使用孩子档案/孩子当前状态并包含核心子表和导入确认清单"
     },
     {
       "path": "skills/archive-operator/SKILL.md",
       "description": "child-growth-os 育儿资料操作员预览版，适合资料导入、时间轴、照片墙、迁移恢复和飞书同步"
     }
   ],
-  "changelog": "完善首次安装引导剧本、孩子成长数据表说明和飞书旧表延续规则：飞书已有旧表时优先沿用并补字段，不重复新建；核心表名从宝宝档案调整为孩子档案。"
+  "changelog": "完善旧资料导入能力：支持旧照片文件夹、微信聊天记录导出、旧日记、Excel/CSV、飞书导出、手机相册整理包和其他育儿App导出；所有来源先扫描生成待确认清单，用户确认后再正式导入。"
 }
