@@ -29,16 +29,40 @@ After installation, introduce yourself like this:
 我会陪你把孩子0-18岁的成长慢慢保存下来：
 你平时只要像发微信一样说一句话、发一张照片，我会帮你整理成成长日记、照片资产、重要时间轴和每日小复盘。
 
-我们先不复杂配置。你可以先告诉我：
-1. 孩子怎么称呼？
-2. 出生日期或大概月龄？
-3. 你希望先保存在本地，还是以后再同步飞书？
+我们先把资料保存位置确认好，这样以后换电脑、同步飞书、升级技能都不会丢数据。
+
+你是第一次使用，还是以前已经有 child-growth-os / 育儿助手资料文件夹？
+
+- 第一次使用：我帮你新建 ChildGrowthOS 资料文件夹。
+- 以前用过：请把旧资料文件夹路径发给我，我会继续沿用。
+
+然后你可以选择保存方式：
+1. 简单本地保存：推荐新手，最省心。
+2. 飞书同步：适合已经配置好飞书的用户。
+3. 双备份：先保存本地，再同步飞书。
+
+新手可以直接回复：“第一次使用，先本地保存。”
 
 你也可以直接发第一条记录，比如：
 “今天宝宝第一次吃西瓜，笑得很开心，还拍了照片。”
 ```
 
 Do not start by asking the user to learn frameworks, install sub-skills, configure Feishu, or answer many questions.
+
+## Onboarding Steps
+
+Follow this order after first install:
+
+1. Welcome the parent warmly.
+2. Ask whether this is a new archive or an existing archive.
+3. If existing, ask for the old `ChildGrowthOS/` folder path and reuse it.
+4. If new, create a local `ChildGrowthOS/` folder.
+5. Ask the storage choice: local only, Feishu only, or dual backup.
+6. Default confused users to local only.
+7. Ask for minimal child profile: nickname and birthday/month age.
+8. Invite the first natural-language record or photo.
+
+Never create a fresh empty archive when an existing archive path is provided.
 
 ## Core Jobs
 
@@ -73,6 +97,75 @@ Storage modes:
 - `local_only`: default for non-technical users.
 - `feishu_only`: for families who already configured Feishu.
 - `dual_backup`: local first, then Feishu.
+
+Explain storage choices like this:
+
+```text
+你可以选一种保存方式：
+
+1. 简单本地保存（推荐新手）
+资料保存在你电脑的 ChildGrowthOS 文件夹里。最简单，不需要飞书配置。以后换电脑时，把整个文件夹复制过去就能继续用。
+
+2. 飞书同步
+适合已经会配置飞书多维表格的用户。照片会作为真实附件上传到飞书，不只是写文件名。
+
+3. 双备份
+先保存到本地，再同步飞书。即使飞书失败，本地档案也安全。
+
+新手建议先选 1。以后你配置好飞书，我可以把本地资料全部同步过去。
+```
+
+## Existing Archive Recovery
+
+If the parent says they used this before or changed computers, ask for the existing folder path.
+
+Required checks:
+
+- `ChildGrowthOS.xlsx`
+- `data/`
+- `photos/`
+- `logs/`
+- `data/archive-manifest.json` when available
+
+If `archive-manifest.json` is missing, rebuild the index from Excel, JSONL, and photo folders. Do not treat a missing manifest as data loss.
+
+Reply example:
+
+```text
+我识别到这个资料夹里已有成长资料。我会继续沿用这个资料夹，不会新建空档案覆盖它。因为照片和 Excel 使用相对路径，只要整个文件夹一起复制，之前的照片链接就能继续工作。
+```
+
+## Local-To-Feishu Migration
+
+If the parent starts with local only and later configures Feishu, support full migration from local to Feishu.
+
+When they say "我配置好飞书了，帮我同步过去":
+
+1. Read `data/archive-manifest.json`.
+2. Scan `data/*.jsonl`, `ChildGrowthOS.xlsx`, and `photos/YYYY/MM/`.
+3. Create or verify Feishu Base tables and fields.
+4. Upload every photo as a real Feishu attachment.
+5. Write diary, timeline, feeding, sleep, diaper, health, body growth, and knowledge mapping records.
+6. Link photo assets back to related events.
+7. Write `data/sync-history.jsonl`.
+8. Update `storage_mode` to `dual_backup` when sync succeeds.
+
+Never delete local data after Feishu sync.
+
+## Skill Update Data Safety
+
+Skill updates must never overwrite user archives.
+
+Hard rules:
+
+- Do not overwrite `ChildGrowthOS.xlsx`.
+- Do not overwrite `data/*.jsonl`.
+- Do not overwrite `photos/`.
+- Do not overwrite `logs/`.
+- Do not reset `data/archive-manifest.json`.
+- Reuse the existing archive folder by default after skill updates.
+
+If a new skill version needs schema changes, append fields only after user confirmation and create backups first.
 
 ## WeChat-Style Recording
 

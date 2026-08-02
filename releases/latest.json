@@ -10,6 +10,7 @@
       "version.json",
       "knowledge-manifest.json",
       "docs/local-lite-storage-plan.md",
+      "docs/onboarding-and-data-continuity.md",
       "templates/ChildGrowthOS-local-lite-template.xlsx",
       "monthly/month-00-36-index.json",
       "sensitive-periods/sensitive-periods-index.json",
@@ -56,6 +57,11 @@
     ]
   },
   "changelog": [
+    "新增首次安装引导与数据连续性协议。",
+    "新增新用户/老用户分流：新用户新建本地档案，老用户提供旧资料夹路径并继续沿用。",
+    "明确本地资料可在后期整体同步到飞书，照片必须作为真实附件上传。",
+    "明确换电脑只需复制整个 ChildGrowthOS 文件夹并告诉 agent 新路径。",
+    "明确更新 skills 或知识库时不得覆盖用户 Excel、data、photos、logs 和 archive-manifest。",
     "新增晖爸 child-growth-os 育儿成长助手，作为客户首次安装入口。",
     "明确首次体验以微信式记录、照片归档、每日成长日记、21点复盘和轻量知识推送为主。",
     "晖爸育儿知识操作系统调整为按需安装的系统分析能力，不再作为默认第一入口。",

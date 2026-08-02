@@ -103,6 +103,11 @@
       "usage": "Explain the local Excel/photo-folder storage mode for non-technical users."
     },
     {
+      "path": "docs/onboarding-and-data-continuity.md",
+      "kind": "onboarding_protocol",
+      "usage": "Explain first-install guidance, storage choice, existing archive recovery, local-to-Feishu migration, computer migration, and data protection during skill updates."
+    },
+    {
       "path": "templates/ChildGrowthOS-local-lite-template.xlsx",
       "kind": "template",
       "usage": "Local Lite Excel workbook template with sheets and clickable photo-link formulas."

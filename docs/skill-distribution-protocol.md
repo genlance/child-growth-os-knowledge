@@ -24,11 +24,19 @@ https://github.com/genlance/child-growth-os-knowledge/tree/main/skills/child-gro
 安装后的第一体验应该是：
 
 - 欢迎新手爸妈。
-- 简单询问孩子昵称、生日/月龄、默认保存方式。
+- 先判断新用户还是老用户：新用户新建资料夹，老用户提供旧资料夹路径并继续沿用。
+- 引导用户选择备份同步方案：简单本地保存、飞书同步、双备份。
+- 简单询问孩子昵称、生日/月龄。
 - 鼓励用户直接发一句成长记录或照片。
-- 默认创建本地轻量档案。
+- 新手默认创建本地轻量档案。
 - 每天做温和育儿知识推送和21点日记复盘。
 - 只有在用户需要时才推荐知识分析、蒙氏、英语、成长蓝图等子技能。
+
+首次引导完整协议见：
+
+```text
+docs/onboarding-and-data-continuity.md
+```
 
 ## 自动与确认边界
 
@@ -45,6 +53,23 @@ https://github.com/genlance/child-growth-os-knowledge/tree/main/skills/child-gro
 - 升级已安装技能。
 - 启用会新增表字段、自动任务或外部权限的能力。
 - 迁移旧数据结构。
+- 从本地档案批量同步到飞书。
+
+## 用户数据保护边界
+
+安装或更新技能时，默认只更新技能和知识文件，不触碰用户资料文件夹。
+
+禁止覆盖：
+
+- `ChildGrowthOS.xlsx`
+- `data/*.jsonl`
+- `photos/`
+- `logs/`
+- `data/archive-manifest.json`
+
+如果用户已经有旧资料文件夹，新版本技能必须继续沿用该文件夹。
+
+如果用户换电脑，只需要复制整个 `ChildGrowthOS/` 文件夹，并告诉 agent 新路径。
 
 ## 微信推荐模板
 

@@ -24,6 +24,69 @@ ChildGrowthOS/
 - `feishu_only`：只保存飞书，适合会配置飞书的人。
 - `dual_backup`：先写本地，再同步飞书，适合进阶用户。
 
+## 新用户与老用户
+
+首次安装时必须先判断用户是否已有资料文件夹：
+
+- 新用户：自动新建 `ChildGrowthOS/`。
+- 老用户：让用户提供旧资料文件夹路径，并继续沿用。
+
+老用户路径示例：
+
+```text
+D:\ChildGrowthOS
+```
+
+识别旧资料夹时优先检查：
+
+- `ChildGrowthOS.xlsx`
+- `data/`
+- `photos/`
+- `logs/`
+- `data/archive-manifest.json`
+
+如果没有 `archive-manifest.json`，Agent 应根据 Excel、JSONL 和照片目录重建索引，不要直接创建空档案覆盖旧资料。
+
+## 换电脑恢复
+
+用户换电脑时，只需要把整个 `ChildGrowthOS/` 文件夹复制到新电脑，然后把路径告诉 Agent。
+
+因为 Excel 和照片链接使用相对路径，只要整个文件夹一起复制，之前的照片链接就能继续使用。
+
+用户可以这样说：
+
+```text
+我换电脑了，这是以前的育儿资料文件夹路径：D:\ChildGrowthOS，请继续使用这个档案。
+```
+
+## 后期同步到飞书
+
+用户初期选择 `local_only` 后，后期如果配置好了飞书，可以把本地资料整体同步过去。
+
+同步时：
+
+1. 读取 `data/*.jsonl` 和 `ChildGrowthOS.xlsx`。
+2. 扫描 `photos/YYYY/MM/`。
+3. 在飞书创建或检查对应表字段。
+4. 将照片作为真实附件上传到飞书。
+5. 将照片资产链接到成长日记、成长时间轴、健康、喂养、睡眠等对应记录。
+6. 写入 `data/sync-history.jsonl`。
+7. 同步成功后可把模式改为 `dual_backup`。
+
+同步飞书后也不能删除本地资料。本地文件夹仍然是用户的数据主权备份。
+
+## 技能更新与数据保护
+
+更新 `skills/` 或知识库时，不得覆盖用户数据：
+
+- 不覆盖 `ChildGrowthOS.xlsx`
+- 不覆盖 `data/*.jsonl`
+- 不覆盖 `photos/`
+- 不覆盖 `logs/`
+- 不重置 `data/archive-manifest.json`
+
+如果新版本要新增字段，必须先备份，再追加字段，不删除用户已有列和记录。
+
 ## 为什么 Excel 适合大众
 
 - 双击就能打开。
