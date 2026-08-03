@@ -47,8 +47,10 @@ https://github.com/genlance/child-growth-os-knowledge/tree/main/skills/child-gro
 新用户也可以直接发送：
 
 ```text
-第一次使用，先本地保存。
+1，D盘
 ```
+
+用户也可以回复 `1，E盘` 或 `1，F盘`。如果只回复 `1`，agent 应继续询问盘符，不得先在 C 盘或 agent workspace 创建临时资料夹。
 
 微信/ClawBot 不作为第一步门槛。推荐顺序是：
 

@@ -28,6 +28,9 @@ If the user says any of the following after installation, immediately start the 
 - "开始使用晖爸 child-growth-os 育儿成长助手"
 - "我是第一次使用，先帮我建立孩子成长档案"
 - "第一次使用，先本地保存"
+- "1，D盘"
+- "1，E盘"
+- "1，F盘"
 - "启动育儿成长助手"
 - "开始记录孩子成长"
 
@@ -64,13 +67,13 @@ If asked how to start after QClaw installation, tell the user:
 
 如果你是新用户，也可以直接发送：
 
-第一次使用，先本地保存。
+1，D盘
 ```
 
 Explain that connecting WeChat/ClawBot is optional after the local archive is created. The recommended order is:
 
 ```text
-安装技能 -> 发送启动指令 -> 选择第一次使用/旧资料夹 -> 先本地保存 -> 填孩子称呼和生日 -> 再连接微信 ClawBot
+安装技能 -> 发送启动指令 -> 选择第一次使用/旧资料夹 -> 回复保存方案和盘符，例如 1，D盘 -> 填孩子称呼和生日 -> 再连接微信 ClawBot
 ```
 
 ## Onboarding Steps
@@ -94,7 +97,17 @@ Never create folders before the parent confirms both:
 - storage mode: local only, Feishu only, or dual backup
 - archive path, such as `D:\ChildGrowthOS`
 
-If the parent says "第一次使用，先本地保存", treat it as choosing `local_only` only. It is not permission to create a folder yet. First propose a safe path and ask for confirmation.
+If the parent says "第一次使用，先本地保存", treat it as choosing `local_only` only. It is not permission to create a folder yet. First ask which non-system drive to use.
+
+This includes temporary folders. Do not create a temporary archive under C drive and then move or delete it after the parent chooses D/E/F. Before confirmation, only discuss the path.
+
+If the parent says "1，D盘", "1，E盘", or "1，F盘", treat it as:
+
+- storage mode: `local_only`
+- preferred drive: D/E/F
+- proposed archive path: `D:\ChildGrowthOS`, `E:\ChildGrowthOS`, or `F:\ChildGrowthOS`
+
+Then confirm the exact path before creating any folder.
 
 Important: distinguish skill installation path from child archive path. QClaw may install the skill itself under `C:\Users\...\qclaw\skills\`, but the child's archive data should not default to the C/system drive. For new local archives, prefer a non-system drive such as `D:\ChildGrowthOS` or `E:\ChildGrowthOS`. Use C drive only when no non-system drive is available or when the parent explicitly chooses it.
 
@@ -166,6 +179,7 @@ Explain storage choices like this:
 
 1. 简单本地保存（推荐新手）
 资料保存在你电脑的 ChildGrowthOS 文件夹里。最简单，不需要飞书配置。以后换电脑时，把整个文件夹复制过去就能继续用。
+请选择一个空间比较大的非系统盘一起回复，例如：1，D盘 / 1，E盘 / 1，F盘。
 
 2. 飞书同步
 适合已经会配置飞书多维表格的用户。照片会作为真实附件上传到飞书，不只是写文件名。
@@ -173,8 +187,10 @@ Explain storage choices like this:
 3. 双备份
 先保存到本地，再同步飞书。即使飞书失败，本地档案也安全。
 
-新手建议先选 1。以后你配置好飞书，我可以把本地资料全部同步过去。
+新手建议回复类似：1，D盘。以后你配置好飞书，我可以把本地资料全部同步过去。
 ```
+
+If the parent only replies "1" without a drive or path, ask which drive to use. Do not create anything yet.
 
 After the parent chooses a storage mode, do not say "资料夹已经建好了" until the folder is actually created after path confirmation. Before confirmation, say "我建议保存到..." or "待你确认后我再创建".
 
