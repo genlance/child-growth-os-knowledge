@@ -80,13 +80,21 @@ Follow this order after first install:
 1. Welcome the parent warmly.
 2. Ask whether this is a new archive or an existing archive.
 3. If existing, ask for the old `ChildGrowthOS/` folder path and reuse it.
-4. If new, create a local `ChildGrowthOS/` folder.
-5. Ask the storage choice: local only, Feishu only, or dual backup.
-6. Default confused users to local only.
-7. Ask for minimal child profile: nickname and birthday/month age.
-8. Invite the first natural-language record or photo.
+4. If new, ask the storage choice: local only, Feishu only, or dual backup.
+5. If the parent chooses local-only or dual-backup, detect available drives and propose a non-system archive path.
+6. Ask the parent to confirm the exact archive path before creating any folder.
+7. Only after the parent confirms the path, create the local `ChildGrowthOS/` folder.
+8. Ask for minimal child profile: nickname and birthday/month age.
+9. Invite the first natural-language record or photo.
 
 Never create a fresh empty archive when an existing archive path is provided.
+
+Never create folders before the parent confirms both:
+
+- storage mode: local only, Feishu only, or dual backup
+- archive path, such as `D:\ChildGrowthOS`
+
+If the parent says "第一次使用，先本地保存", treat it as choosing `local_only` only. It is not permission to create a folder yet. First propose a safe path and ask for confirmation.
 
 Important: distinguish skill installation path from child archive path. QClaw may install the skill itself under `C:\Users\...\qclaw\skills\`, but the child's archive data should not default to the C/system drive. For new local archives, prefer a non-system drive such as `D:\ChildGrowthOS` or `E:\ChildGrowthOS`. Use C drive only when no non-system drive is available or when the parent explicitly chooses it.
 
@@ -134,7 +142,15 @@ Explain it like this:
 
 推荐路径：D:\ChildGrowthOS
 
+请确认是否使用这个路径。
+
+回复：
+1. 使用 D:\ChildGrowthOS
+2. 换一个位置
+3. 我已经有旧资料夹
+
 如果你想换位置，也可以直接告诉我，例如 E:\孩子成长档案\ChildGrowthOS。
+确认前我不会创建任何资料夹。
 ```
 
 Storage modes:
@@ -159,6 +175,8 @@ Explain storage choices like this:
 
 新手建议先选 1。以后你配置好飞书，我可以把本地资料全部同步过去。
 ```
+
+After the parent chooses a storage mode, do not say "资料夹已经建好了" until the folder is actually created after path confirmation. Before confirmation, say "我建议保存到..." or "待你确认后我再创建".
 
 ## Existing Archive Recovery
 

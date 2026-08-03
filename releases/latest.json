@@ -66,6 +66,10 @@
     ]
   },
   "changelog": [
+    "修正首次使用执行顺序：选择“第一次使用，先本地保存”只代表选择本地方案，不代表同意创建文件夹。",
+    "明确确认保存方案和资料夹路径之前，agent 不得创建任何资料夹。",
+    "明确必须先推荐非系统盘路径并等待确认，例如 D:\\ChildGrowthOS。",
+    "新增用户纠偏话术：不要放 C 盘，请改到 D:\\ChildGrowthOS。",
     "完善本地资料保存位置规则：技能文件可以安装在C盘，但孩子成长资料不能默认放C盘。",
     "新建本地档案时优先推荐 D:\\ChildGrowthOS、E:\\ChildGrowthOS 或 F:\\ChildGrowthOS。",
     "明确不得静默把孩子资料创建在 .openclaw\\workspace、.qclaw\\workspace 或其他 agent 工作区。",

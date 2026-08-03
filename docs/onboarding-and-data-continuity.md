@@ -16,6 +16,14 @@
 
 QClaw/OpenClaw 可能把 skill 文件安装到 C 盘用户目录，这是正常的程序文件位置。但孩子的成长资料、照片、Excel 和 JSONL 数据应优先保存在非系统盘，例如 `D:\ChildGrowthOS` 或 `E:\ChildGrowthOS`。不要默认把孩子资料放进 C 盘的 agent workspace。
 
+执行硬规则：
+
+```text
+确认保存方案 + 确认资料夹路径 之前，不得创建任何资料夹。
+```
+
+用户说“第一次使用，先本地保存”只表示选择 `local_only`，不表示同意使用某个路径。agent 必须先推荐路径并等待确认。
+
 ## 首次安装目标
 
 客户第一次安装后，不要先进入复杂配置，也不要先讲知识框架。
@@ -82,8 +90,10 @@ E:\孩子成长档案\ChildGrowthOS
 
 如果用户说第一次使用：
 
-1. 默认创建本地资料文件夹。
-2. 推荐路径优先使用非系统盘：
+1. 不要立刻创建资料文件夹。
+2. 先让用户选择保存方案：本地、飞书、双备份。
+3. 如果用户选择本地或双备份，再推荐资料夹路径。
+4. 推荐路径优先使用非系统盘：
 
 ```text
 D:\ChildGrowthOS
@@ -97,7 +107,7 @@ F:\ChildGrowthOS
 用户文档/ChildGrowthOS/
 ```
 
-3. 不要静默创建在 agent workspace 中，例如：
+5. 不要静默创建在 agent workspace 中，例如：
 
 ```text
 C:\Users\...\ .openclaw\workspace\ChildGrowthOS
@@ -106,7 +116,23 @@ C:\Users\...\ .qclaw\workspace\ChildGrowthOS
 
 除非用户明确指定该路径。
 
-4. 创建基础结构：
+6. 明确询问用户是否确认使用推荐路径：
+
+```text
+我建议把孩子资料保存到：
+D:\ChildGrowthOS
+
+这样不在 C 盘，重装系统时更安全。
+
+请确认：
+1. 使用 D:\ChildGrowthOS
+2. 换一个位置
+3. 我已经有旧资料夹
+
+确认前我不会创建任何资料夹。
+```
+
+7. 用户确认路径后，才创建基础结构：
 
 ```text
 ChildGrowthOS/
@@ -119,15 +145,15 @@ ChildGrowthOS/
 └── logs/
 ```
 
-5. 创建或复制 Excel 模板。
-6. 写入一个本地档案配置文件。
+8. 创建或复制 Excel 模板。
+9. 写入一个本地档案配置文件。
 
 新用户说明话术：
 
 ```text
 好的，那我们先给孩子建立一个本地成长档案。
 
-默认我会在电脑里创建一个 ChildGrowthOS 资料文件夹，里面会包含：
+等你确认保存位置后，我会在电脑里创建一个 ChildGrowthOS 资料文件夹，里面会包含：
 - 一个成长记录表格
 - 一个按年份/月分好的照片文件夹
 - 一份给 agent 读取的数据文件

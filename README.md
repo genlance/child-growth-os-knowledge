@@ -61,7 +61,7 @@ https://github.com/genlance/child-growth-os-knowledge/tree/main/skills/child-gro
 第一次使用，先本地保存。
 ```
 
-这样不用配置飞书，也不用懂技术，资料会先保存在你自己的电脑文件夹里。
+这样只是告诉助手你想先用本地保存。助手接下来应该先推荐一个非系统盘路径，比如 `D:\ChildGrowthOS`，等你确认后才创建资料夹。
 
 微信/ClawBot 可以等本地档案建好后再连接。你可以对助手说：
 
@@ -91,7 +91,7 @@ https://github.com/genlance/child-growth-os-knowledge/tree/main/skills/child-gro
 
 ## 资料保存在哪里
 
-默认会创建一个 `ChildGrowthOS` 文件夹，里面放你的成长记录、照片和数据文件。
+确认保存位置后，助手会创建一个 `ChildGrowthOS` 文件夹，里面放你的成长记录、照片和数据文件。
 
 注意：技能本身可能会安装在 QClaw 的 C 盘目录里，这只是程序文件；真正重要的是孩子的成长资料。成长资料不要默认放 C 盘，建议放在非系统盘，比如：
 
@@ -101,6 +101,12 @@ E:\ChildGrowthOS
 ```
 
 如果你的电脑有 D 盘或 E 盘，助手会优先建议放到非系统盘。只有电脑没有其他盘，或你明确同意，才放到 C 盘。
+
+确认保存位置前，助手不应该创建任何资料夹。如果你看到它直接创建到了 C 盘，可以让它停止，并回复：
+
+```text
+不要放 C 盘，请改到 D:\ChildGrowthOS。
+```
 
 大致结构是：
 
