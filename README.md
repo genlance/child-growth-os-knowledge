@@ -33,7 +33,19 @@
 https://github.com/genlance/child-growth-os-knowledge/tree/main/skills/child-growth-os
 ```
 
-安装后，助手会先问你：
+安装成功后，如果 QClaw 没有自动进入引导流程，请在对话框里继续发送这一句：
+
+```text
+开始使用晖爸 child-growth-os 育儿成长助手
+```
+
+或者发送更口语一点的：
+
+```text
+我是第一次使用，先帮我建立孩子成长档案。
+```
+
+然后助手会问你：
 
 ```text
 你是第一次使用，还是以前已经有 ChildGrowthOS 育儿资料文件夹？
@@ -43,7 +55,19 @@ https://github.com/genlance/child-growth-os-knowledge/tree/main/skills/child-gro
 2. 我已经有旧资料文件夹
 ```
 
-如果你是第一次使用，建议先选本地轻量版。这样不用配置飞书，也不用懂技术，资料会先保存在你自己的电脑文件夹里。
+如果你是第一次使用，建议回复：
+
+```text
+第一次使用，先本地保存。
+```
+
+这样不用配置飞书，也不用懂技术，资料会先保存在你自己的电脑文件夹里。
+
+微信/ClawBot 可以等本地档案建好后再连接。你可以对助手说：
+
+```text
+我想通过微信记录孩子成长，请帮我连接 ClawBot。
+```
 
 ## 你可以这样记录
 
