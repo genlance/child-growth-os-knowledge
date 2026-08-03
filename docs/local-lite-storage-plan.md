@@ -2,10 +2,32 @@
 
 本地轻量版是 child-growth-os 面向普通用户的默认方案。
 
+## 默认保存位置
+
+技能安装位置和孩子资料保存位置必须分开理解。
+
+- 技能文件可能安装在 QClaw/OpenClaw 的 C 盘用户目录，这是程序文件。
+- 孩子的成长资料应优先保存在非系统盘，避免重装系统时误删。
+
+推荐路径：
+
+```text
+D:\ChildGrowthOS
+E:\ChildGrowthOS
+F:\ChildGrowthOS
+```
+
+选择规则：
+
+1. 优先检测 D/E/F 等非系统盘。
+2. 如果有多个非系统盘，优先推荐剩余空间更大的盘。
+3. 只有没有非系统盘，或用户明确同意，才使用 C 盘用户文档目录。
+4. 不要默认放在 `.openclaw\workspace`、`.qclaw\workspace` 或其他 agent 工作区里。
+
 ## 默认结构
 
 ```text
-ChildGrowthOS/
+D:\ChildGrowthOS/
 ├── ChildGrowthOS.xlsx
 ├── data/
 ├── photos/

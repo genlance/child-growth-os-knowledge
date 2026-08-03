@@ -93,10 +93,19 @@ https://github.com/genlance/child-growth-os-knowledge/tree/main/skills/child-gro
 
 默认会创建一个 `ChildGrowthOS` 文件夹，里面放你的成长记录、照片和数据文件。
 
+注意：技能本身可能会安装在 QClaw 的 C 盘目录里，这只是程序文件；真正重要的是孩子的成长资料。成长资料不要默认放 C 盘，建议放在非系统盘，比如：
+
+```text
+D:\ChildGrowthOS
+E:\ChildGrowthOS
+```
+
+如果你的电脑有 D 盘或 E 盘，助手会优先建议放到非系统盘。只有电脑没有其他盘，或你明确同意，才放到 C 盘。
+
 大致结构是：
 
 ```text
-ChildGrowthOS/
+D:\ChildGrowthOS/
 ├── ChildGrowthOS.xlsx
 ├── data/
 ├── photos/

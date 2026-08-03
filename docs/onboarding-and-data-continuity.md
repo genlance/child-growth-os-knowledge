@@ -8,6 +8,14 @@
 技能可以更新，用户数据不能丢。
 ```
 
+补充原则：
+
+```text
+技能安装位置不等于孩子资料保存位置。
+```
+
+QClaw/OpenClaw 可能把 skill 文件安装到 C 盘用户目录，这是正常的程序文件位置。但孩子的成长资料、照片、Excel 和 JSONL 数据应优先保存在非系统盘，例如 `D:\ChildGrowthOS` 或 `E:\ChildGrowthOS`。不要默认把孩子资料放进 C 盘的 agent workspace。
+
 ## 首次安装目标
 
 客户第一次安装后，不要先进入复杂配置，也不要先讲知识框架。
@@ -75,13 +83,30 @@ E:\孩子成长档案\ChildGrowthOS
 如果用户说第一次使用：
 
 1. 默认创建本地资料文件夹。
-2. 推荐路径：
+2. 推荐路径优先使用非系统盘：
 
 ```text
-文档/ChildGrowthOS/
+D:\ChildGrowthOS
+E:\ChildGrowthOS
+F:\ChildGrowthOS
 ```
 
-3. 创建基础结构：
+如果没有 D/E/F 等非系统盘，或者用户明确选择 C 盘，才使用：
+
+```text
+用户文档/ChildGrowthOS/
+```
+
+3. 不要静默创建在 agent workspace 中，例如：
+
+```text
+C:\Users\...\ .openclaw\workspace\ChildGrowthOS
+C:\Users\...\ .qclaw\workspace\ChildGrowthOS
+```
+
+除非用户明确指定该路径。
+
+4. 创建基础结构：
 
 ```text
 ChildGrowthOS/
@@ -94,8 +119,8 @@ ChildGrowthOS/
 └── logs/
 ```
 
-4. 创建或复制 Excel 模板。
-5. 写入一个本地档案配置文件。
+5. 创建或复制 Excel 模板。
+6. 写入一个本地档案配置文件。
 
 新用户说明话术：
 
@@ -109,6 +134,17 @@ ChildGrowthOS/
 - 后续生成时间轴、照片墙和成长报告的导出文件夹
 
 你以后换电脑时，只要把整个 ChildGrowthOS 文件夹复制走，就能继续使用。
+```
+
+路径选择话术：
+
+```text
+技能本身可能安装在 C 盘，但孩子资料我建议不要放 C 盘。
+我会优先帮你放到非系统盘，方便以后重装电脑或迁移。
+
+推荐路径：D:\ChildGrowthOS
+
+如果你想换成 E 盘或其他位置，可以直接告诉我。
 ```
 
 只问最少必要信息：

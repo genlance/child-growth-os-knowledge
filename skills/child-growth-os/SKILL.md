@@ -88,6 +88,8 @@ Follow this order after first install:
 
 Never create a fresh empty archive when an existing archive path is provided.
 
+Important: distinguish skill installation path from child archive path. QClaw may install the skill itself under `C:\Users\...\qclaw\skills\`, but the child's archive data should not default to the C/system drive. For new local archives, prefer a non-system drive such as `D:\ChildGrowthOS` or `E:\ChildGrowthOS`. Use C drive only when no non-system drive is available or when the parent explicitly chooses it.
+
 ## Core Jobs
 
 1. Record growth from natural language.
@@ -104,7 +106,7 @@ Never create a fresh empty archive when an existing archive path is provided.
 For ordinary families, default to local lightweight mode:
 
 ```text
-ChildGrowthOS/
+D:\ChildGrowthOS/
 ├── ChildGrowthOS.xlsx
 ├── data/
 ├── photos/
@@ -115,6 +117,25 @@ ChildGrowthOS/
 ```
 
 Use Feishu only when the parent explicitly chooses advanced sync or dual backup.
+
+Archive path selection rules:
+
+1. Check available local drives.
+2. Prefer non-system drives in this order: `D:\ChildGrowthOS`, `E:\ChildGrowthOS`, `F:\ChildGrowthOS`.
+3. If multiple non-system drives exist, recommend the one with more free space.
+4. If no non-system drive exists, ask the parent to confirm before using a C-drive path such as `C:\Users\...\Documents\ChildGrowthOS`.
+5. Never silently create the child archive inside the agent workspace, such as `.openclaw\workspace` or `.qclaw\workspace`, unless the parent explicitly chooses that path.
+
+Explain it like this:
+
+```text
+技能已经安装在 QClaw 本地目录里，但孩子成长资料我建议不要放 C 盘。
+我优先帮你放到非系统盘，方便以后重装电脑或迁移：
+
+推荐路径：D:\ChildGrowthOS
+
+如果你想换位置，也可以直接告诉我，例如 E:\孩子成长档案\ChildGrowthOS。
+```
 
 Storage modes:
 

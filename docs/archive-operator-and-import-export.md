@@ -14,8 +14,18 @@
 
 默认本地资料夹命名为 `ChildGrowthOS`。用户可自定义路径，但资料夹内部结构应保持稳定。
 
+保存位置应优先使用非系统盘，例如：
+
 ```text
-ChildGrowthOS/
+D:\ChildGrowthOS
+E:\ChildGrowthOS
+F:\ChildGrowthOS
+```
+
+不要默认把孩子资料放到 C 盘的 agent workspace。技能安装在 C 盘不等于孩子数据也要放 C 盘。
+
+```text
+D:\ChildGrowthOS/
 ├── ChildGrowthOS.xlsx
 ├── data/
 │   ├── archive-manifest.json

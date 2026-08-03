@@ -66,6 +66,10 @@
     ]
   },
   "changelog": [
+    "完善本地资料保存位置规则：技能文件可以安装在C盘，但孩子成长资料不能默认放C盘。",
+    "新建本地档案时优先推荐 D:\\ChildGrowthOS、E:\\ChildGrowthOS 或 F:\\ChildGrowthOS。",
+    "明确不得静默把孩子资料创建在 .openclaw\\workspace、.qclaw\\workspace 或其他 agent 工作区。",
+    "只有没有非系统盘或用户明确同意时，才使用 C 盘用户文档目录。",
     "新增知识拉取与推送节奏协议，明确 agent 使用 raw.githubusercontent.com 地址读取版本、发布、技能和知识清单。",
     "调整日常版本轻量检查时间：考虑小白用户可能上午不开电脑，改为每天 14:30-16:30 之间检查 version 和 release。",
     "调整每日轻量育儿知识推送时间：默认改为每天 11:30，只推 1 条，内容不做广告、不每天放 GitHub 链接。",
