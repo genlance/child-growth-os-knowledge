@@ -83,6 +83,16 @@ D:\ChildGrowthOS/
 
 agent 打开用户提供的资料夹时，应先查找 `data/archive-manifest.json`。如果不存在，但发现 `ChildGrowthOS.xlsx`、`data/`、`photos/` 等结构，应提示用户这是疑似旧档案，并询问是否补建 manifest。
 
+如果发现 `data/` 里已有 JSON/JSONL 记录，但根目录没有 `ChildGrowthOS.xlsx`，应优先执行“补建家长可视 Excel”：
+
+1. 从 `data/*.jsonl`、兼容 JSON 文件和 `photos/` 读取已有记录。
+2. 创建根目录 `ChildGrowthOS.xlsx`。
+3. 按标准子表写入可读数据。
+4. 写入照片相对路径和 `HYPERLINK()` 查看入口。
+5. 再补建或更新 `data/archive-manifest.json`。
+
+不要让普通家长只面对 JSON 文件夹。
+
 ## 核心数据
 
 `daily-journal.jsonl` 每行是一条成长日记。

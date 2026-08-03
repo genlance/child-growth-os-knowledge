@@ -142,6 +142,19 @@ D:\ChildGrowthOS/
 └── logs/
 ```
 
+Local lightweight mode must always have two readable layers:
+
+- `ChildGrowthOS.xlsx` in the archive root: for parents to double-click, browse, filter, and check photos.
+- `data/*.jsonl` or compatible JSON files: for agents to read and write reliably.
+
+Never treat JSON-only storage as a complete local archive for ordinary parents. If the local archive is missing `ChildGrowthOS.xlsx`, create or repair the workbook before saying setup or saving is fully complete.
+
+Workbook source:
+
+- Prefer copying/downloading `templates/ChildGrowthOS-local-lite-template.xlsx` from this repository.
+- Raw template URL: `https://raw.githubusercontent.com/genlance/child-growth-os-knowledge/main/templates/ChildGrowthOS-local-lite-template.xlsx`
+- If the template cannot be downloaded, create a minimal `ChildGrowthOS.xlsx` with at least these sheets: `孩子档案`, `每日成长日记`, `照片资产库`, `成长时间轴`, `喂养记录`, `睡眠记录`, `尿片记录`, `健康档案`, `同步日志`.
+
 Use Feishu only when the parent explicitly chooses advanced sync or dual backup.
 
 Archive path selection rules:
@@ -295,9 +308,17 @@ When the parent sends a message or photo:
 2. Save the original input task.
 3. Save photos into `photos/originals/YYYY/MM/`.
 4. Rename/copy photos into `photos/YYYY/MM/`.
-5. Write structured records.
-6. Update Excel/photo links or Feishu attachments.
-7. Reply with a short completion summary.
+5. Write structured records to agent-readable data.
+6. Update `ChildGrowthOS.xlsx` for the parent to view, including photo links when relevant.
+7. Update Feishu attachments when Feishu or dual backup is enabled.
+8. Reply with a short completion summary.
+
+Local write rule:
+
+- For `local_only`, every new growth record must be written to both agent-readable data and `ChildGrowthOS.xlsx`.
+- For `dual_backup`, write local agent data + `ChildGrowthOS.xlsx` first, then sync Feishu.
+- If JSON/data write succeeds but Excel update fails, do not say "全部存好了". Tell the parent that the record is safe but the visible table still needs repair, then repair or ask for permission.
+- If `ChildGrowthOS.xlsx` is missing but `data/` already contains records, create the workbook and backfill it from existing records before the next completion report.
 
 Timing rule:
 
@@ -317,7 +338,7 @@ Completion example:
 ```text
 根哥，存好了。
 
-今天这条我已经帮你放进小晖的成长记录里了：第一次吃西瓜，照片也和这件事放在一起了。
+今天这条我已经帮你放进小晖的成长记录表里了：第一次吃西瓜，照片也和这件事放在一起了。
 
 今晚9点我会提醒你看看要不要补一句当时的小细节。
 ```
@@ -331,7 +352,7 @@ If the saved item is feeding:
 ```text
 根哥，存好了。
 
-今晚这次喝奶已经记进去了，照片也和这条记录放在一起了。以后你回看这一天，就能看到爸爸第一次抱着喂奶这个画面。
+今晚这次喝奶已经记进小晖的表格里了，照片也和这条记录放在一起了。以后你回看这一天，就能看到爸爸第一次抱着喂奶这个画面。
 
 需要的话我也可以把保存明细发你。
 ```

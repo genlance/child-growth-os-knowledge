@@ -42,6 +42,45 @@ D:\ChildGrowthOS/
 └── logs/
 ```
 
+`ChildGrowthOS.xlsx` 必须在资料夹根目录，不能只放在 `data/` 里，也不能省略。
+
+本地轻量版必须同时满足两类读者：
+
+- 家长：打开 `ChildGrowthOS.xlsx` 直接看孩子资料、筛选记录、点击照片。
+- agent：读取 `data/*.jsonl` 或兼容 JSON 文件，稳定处理同步、导入、时间轴和照片墙。
+
+因此，普通用户的本地档案不允许只有 JSON。只有 `data/records.json`、`data/milestones.json`、`data/profile.json` 这类文件时，只能算“agent 内部数据已写入”，不能算“本地档案完整完成”。
+
+首次创建本地档案时：
+
+1. 创建资料夹结构。
+2. 立刻复制或下载 Excel 模板到根目录，命名为 `ChildGrowthOS.xlsx`。
+3. 创建 `data/archive-manifest.json`，其中 `workbook` 指向 `ChildGrowthOS.xlsx`。
+4. 之后每次写入记录，都同时更新 agent 数据和 Excel。
+
+Excel 模板来源：
+
+```text
+templates/ChildGrowthOS-local-lite-template.xlsx
+https://raw.githubusercontent.com/genlance/child-growth-os-knowledge/main/templates/ChildGrowthOS-local-lite-template.xlsx
+```
+
+如果无法下载模板，agent 必须创建一个最小可用 Excel，至少包含：
+
+```text
+孩子档案
+每日成长日记
+照片资产库
+成长时间轴
+喂养记录
+睡眠记录
+尿片记录
+健康档案
+同步日志
+```
+
+如果发现旧档案里已有 `data/` 和照片，但没有 `ChildGrowthOS.xlsx`，应自动进入“修复可视表格”流程：先从 JSON/JSONL 和照片目录生成 Excel，再告诉用户“表格已经补好了”。
+
 ## 三种同步模式
 
 - `local_only`：只保存本地，默认给小白用户。
@@ -119,7 +158,7 @@ D:\ChildGrowthOS
 
 同步时：
 
-1. 读取 `data/*.jsonl` 和 `ChildGrowthOS.xlsx`。
+1. 读取 `data/*.jsonl`、兼容 JSON 和 `ChildGrowthOS.xlsx`。
 2. 扫描 `photos/YYYY/MM/`。
 3. 先检查用户是否已经有飞书多维表格和旧子表。
 4. 如果已有旧表，优先沿用旧表，不新建一套空表。
@@ -151,6 +190,8 @@ D:\ChildGrowthOS
 - 多张表能表达孩子档案、日记、照片、健康、喂养、睡眠等关系。
 - 可以用 `HYPERLINK()` 点击本地照片。
 - 后续可由 Agent 读取并生成 HTML 时间轴、年度报告或飞书同步。
+
+Excel 是给家长看的主界面，不是可选附件。JSON/JSONL 是给 agent 的内部结构，不能替代 Excel。
 
 ## 照片命名
 

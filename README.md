@@ -131,6 +131,19 @@ D:\ChildGrowthOS/
 └── logs/
 ```
 
+其中 `ChildGrowthOS.xlsx` 是给你看的表格，应该在资料夹根目录，双击就能打开。`data/` 里的 JSON 文件是给 AI 助手读取的内部数据，不是让家长每天去看的。
+
+每次你通过微信记录孩子，助手都应该同时更新两份：
+
+- `ChildGrowthOS.xlsx`：给你打开查看。
+- `data/`：给 agent 后续分析、同步、生成时间轴使用。
+
+如果你发现资料夹里只有 `data/` 和 JSON，没有 `ChildGrowthOS.xlsx`，可以直接对助手说：
+
+```text
+请帮我补建 ChildGrowthOS.xlsx，并把已有记录同步进去。
+```
+
 你不用一开始理解这些文件。只要记住一件事：
 
 ```text

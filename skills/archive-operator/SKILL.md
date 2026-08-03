@@ -31,6 +31,8 @@ When the user gives a folder path, first look for:
 
 If `archive-manifest.json` exists, treat it as the source of truth for archive structure. If it does not exist but the folder looks like a ChildGrowthOS archive, ask whether to create one before writing.
 
+If `data/` contains JSON/JSONL records but the archive root is missing `ChildGrowthOS.xlsx`, treat this as an incomplete local-lite archive. Offer to rebuild the parent-visible workbook from existing records and photos before doing other optional exports.
+
 ## Core Tasks
 
 ### Read Archive
@@ -66,7 +68,9 @@ Import workflow:
 4. Produce `imports/staging/{import_task_id}.jsonl` and `imports/staging/{import_task_id}-review.csv`.
 5. Produce human-readable reports under `imports/reports/`.
 6. Ask the user to confirm, edit, skip, merge, or retarget items.
-7. After confirmation, write records to JSONL, update Excel if present, copy photos into `photos/YYYY/MM/`, and log the task in `data/import-tasks.jsonl`.
+7. After confirmation, write records to JSONL, update `ChildGrowthOS.xlsx`, copy photos into `photos/YYYY/MM/`, and log the task in `data/import-tasks.jsonl`.
+
+For local-lite archives, Excel is not optional. If `ChildGrowthOS.xlsx` is missing, create it from the template or a minimal workbook, then write confirmed records to both JSONL and Excel.
 
 For photo imports, read EXIF date first, then filename date, folder year/month, file modified time, or user-provided date. Also generate AI descriptions, suggested tags, suggested event type, and blank user-editable fields.
 
