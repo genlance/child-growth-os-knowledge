@@ -1,4 +1,4 @@
-# 晖爸 0-18 岁成长知识库
+# 晖爸 0-18 岁 AI 育儿成长助手知识库
 
 > 每天说一句话，AI 帮你保存孩子 18 年的成长故事。
 
@@ -92,12 +92,6 @@ https://github.com/genlance/child-growth-os-knowledge/tree/main/skills/child-gro
 
 助手会先回复收到，再慢慢整理和保存，不会让你一直等着没反应。
 
-平时它会尽量像一个热心的育儿助手一样说话，不会动不动把文件路径、JSON、校验值这些技术细节发给你。你想看保存明细时，可以单独说：
-
-```text
-把保存明细发我看看。
-```
-
 ## 资料保存在哪里
 
 确认保存位置后，助手会创建一个 `ChildGrowthOS` 文件夹，里面放你的成长记录、照片和数据文件。
@@ -136,7 +130,7 @@ D:\ChildGrowthOS/
 每次你通过微信记录孩子，助手都应该同时更新两份：
 
 - `ChildGrowthOS.xlsx`：给你打开查看。
-- `data/`：给 agent 后续分析、同步、生成时间轴使用。
+- `data/`：给助手后续整理、同步、生成时间轴使用。
 
 如果你发现资料夹里只有 `data/` 和 JSON，没有 `ChildGrowthOS.xlsx`，可以直接对助手说：
 
@@ -199,8 +193,6 @@ D:\ChildGrowthOS/
 
 如果你想查看完整版，可以回复：晖爸育儿代码
 ```
-
-你回复 `晖爸育儿代码` 后，助手会给你完整入口和公开知识库页面。
 
 ## 旧资料可以导入吗
 
@@ -265,18 +257,3 @@ D:\ChildGrowthOS/
 - GitHub: https://github.com/genlance/child-growth-os-knowledge
 - 公众号/自媒体: 晖爸育儿代码
 - 微信: huibayuerdaima
-
-## 给 agent 或开发者看的文件
-
-普通家长不用看这一节。
-
-- `docs/knowledge-update-and-push-schedule.md`：知识拉取和推送节奏
-- `docs/onboarding-and-data-continuity.md`：首次安装和数据连续性
-- `docs/local-lite-storage-plan.md`：本地轻量版存储方案
-- `docs/child-growth-data-schema.md`：孩子成长数据表设计
-- `docs/legacy-import-protocol.md`：旧资料导入协议
-- `docs/archive-operator-and-import-export.md`：导入导出、时间轴和照片墙
-- `docs/skill-distribution-protocol.md`：子技能安装和更新规则
-- `version.json`、`releases/latest.json`、`skills-manifest.json`、`knowledge-manifest.json`：机器读取清单
-
-使用或二次分发本知识库时，请保留来源署名和仓库链接。

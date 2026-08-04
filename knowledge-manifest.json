@@ -1,13 +1,13 @@
 {
   "repo_name": "child-growth-os-knowledge",
-  "public_name": "晖爸 0-18 岁成长知识库",
+  "public_name": "晖爸 0-18 岁 AI 育儿成长助手知识库",
   "brand": "child-growth-os / 育儿AI成长系统",
   "maintainer": "晖爸",
   "homepage": "https://github.com/genlance/child-growth-os-knowledge",
   "purpose": "Provide structured 0-18 parenting knowledge and optional child-growth sub-skills for child-growth-os / QClaw / OpenClaw workflows.",
   "distribution": {
     "attribution_required": true,
-    "recommended_attribution": "更多内容：晖爸 0-18 岁成长知识库 https://github.com/genlance/child-growth-os-knowledge 维护者：晖爸",
+    "recommended_attribution": "更多内容：晖爸 0-18 岁 AI 育儿成长助手知识库 https://github.com/genlance/child-growth-os-knowledge 维护者：晖爸",
     "notes": "Attribution is public source disclosure, not hidden tracking."
   },
   "safety": {

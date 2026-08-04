@@ -1,6 +1,6 @@
 {
   "repo_name": "child-growth-os-knowledge",
-  "public_name": "晖爸 0-18 岁成长知识库",
+  "public_name": "晖爸 0-18 岁 AI 育儿成长助手知识库",
   "release": "2026.08.02-preview",
   "released_at": "2026-08-02",
   "minimum_starter_skill_version": "1.1.0",
@@ -66,6 +66,7 @@
     ]
   },
   "changelog": [
+    "优化 README 新用户阅读体验：统一名称为“晖爸 0-18 岁 AI 育儿成长助手知识库”，删除开发者文件清单和多余技术说明。",
     "修正本地轻量版保存规则：普通用户本地档案必须生成根目录 ChildGrowthOS.xlsx，不能只写 data 里的 JSON。",
     "明确每次微信记录必须同时更新家长可看的 Excel 和 agent 可读写的数据层。",
     "新增缺失 Excel 的修复流程：如果已有 data/ 和照片但没有 ChildGrowthOS.xlsx，agent 应补建表格并把已有记录同步进去。",

@@ -1,6 +1,6 @@
 {
   "repo_name": "child-growth-os-knowledge",
-  "public_name": "晖爸 0-18 岁成长知识库",
+  "public_name": "晖爸 0-18 岁 AI 育儿成长助手知识库",
   "manifest_version": "2026.08.02",
   "updated_at": "2026-08-02",
   "canonical_repo": "https://github.com/genlance/child-growth-os-knowledge",
@@ -29,7 +29,7 @@
       "wechat_recommendation": "欢迎使用「晖爸 child-growth-os 育儿成长助手」。你可以像发微信一样记录孩子成长：发一句话、发照片，我会帮你整理成成长日记和照片档案。",
       "permissions": ["read_child_profile", "write_growth_records", "write_photo_assets", "write_daily_diary", "send_daily_push", "recommend_optional_skills"],
       "requires": [],
-      "attribution": "由晖爸 0-18 岁成长知识库提供"
+      "attribution": "由晖爸 0-18 岁 AI 育儿成长助手知识库提供"
     },
     {
       "id": "huiba-parenting-os",
@@ -47,7 +47,7 @@
       "wechat_recommendation": "如果你想把某个育儿问题分析得更系统，可以启用「晖爸育儿知识操作系统」。回复：安装晖爸育儿OS",
       "permissions": ["read_child_profile", "read_growth_records", "write_knowledge_cards", "write_observation_notes"],
       "requires": ["child-growth-os"],
-      "attribution": "由晖爸 0-18 岁成长知识库提供"
+      "attribution": "由晖爸 0-18 岁 AI 育儿成长助手知识库提供"
     },
     {
       "id": "archive-operator",
@@ -65,7 +65,7 @@
       "wechat_recommendation": "如果你想用已有育儿资料生成时间轴、照片墙，或批量导入旧照片/旧日记，可以启用「child-growth-os 育儿资料操作员」。回复：安装资料操作员",
       "permissions": ["read_archive_folder", "read_photo_assets", "write_import_tasks", "write_exports", "write_sync_history"],
       "requires": ["child-growth-os"],
-      "attribution": "由晖爸 0-18 岁成长知识库提供"
+      "attribution": "由晖爸 0-18 岁 AI 育儿成长助手知识库提供"
     },
     {
       "id": "english",
@@ -83,7 +83,7 @@
       "wechat_recommendation": "孩子已经适合开始家庭英语启蒙了。是否安装「家庭英语启蒙规划与管理教练」？回复：安装英语启蒙",
       "permissions": ["read_child_profile", "read_growth_records", "write_plans"],
       "requires": ["child-growth-os"],
-      "attribution": "由晖爸 0-18 岁成长知识库提供"
+      "attribution": "由晖爸 0-18 岁 AI 育儿成长助手知识库提供"
     },
     {
       "id": "blueprint",
@@ -101,7 +101,7 @@
       "wechat_recommendation": "孩子进入更丰富的探索阶段后，可以启用「AI时代通才成长蓝图教练」。回复：安装成长蓝图",
       "permissions": ["read_child_profile", "read_growth_records", "write_growth_blueprint"],
       "requires": ["child-growth-os"],
-      "attribution": "由晖爸 0-18 岁成长知识库提供"
+      "attribution": "由晖爸 0-18 岁 AI 育儿成长助手知识库提供"
     },
     {
       "id": "montessori",
@@ -119,7 +119,7 @@
       "wechat_recommendation": "孩子开始出现秩序感、独立探索、反复练习和敏感期信号时，可以启用「家庭蒙氏观察与环境教练」。回复：安装蒙氏观察",
       "permissions": ["read_child_profile", "read_growth_records", "write_observation_notes"],
       "requires": ["child-growth-os"],
-      "attribution": "由晖爸 0-18 岁成长知识库提供"
+      "attribution": "由晖爸 0-18 岁 AI 育儿成长助手知识库提供"
     }
   ]
 }
