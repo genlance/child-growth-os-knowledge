@@ -159,11 +159,22 @@ docs/legacy-import-protocol.md
 2. 扫描文件，生成 `imports/staging/import-{timestamp}.jsonl`。
 3. 根据 EXIF 时间优先判断照片日期；没有 EXIF 时使用文件修改时间、文件夹年月、文件名日期或用户提供日期。
 4. 对所有项目生成待确认清单，放到 `imports/staging/` 和 `imports/reports/`。
-5. 用户可补充日期、标题、说明、人物、地点、标签、目标表、是否第一次、是否导入等字段。
-6. 用户确认后，才写入 `data/*.jsonl`、`ChildGrowthOS.xlsx`、`photos/YYYY/MM/` 或飞书正式表。
-7. 每次导入都写入 `data/import-tasks.jsonl`。
+5. 旧照片文件夹和手机相册包必须优先生成本地照片故事填写页：`imports/review/{import_task_id}/index.html`。
+6. 用户在网页中一边看照片一边补充日期、故事、人物、地点、标签、情绪、目标表、是否第一次、是否导入等字段。
+7. 用户导出或保存 `reviewed-items.json` 后，agent 再生成导入摘要并请求最后确认。
+8. 用户确认后，才写入 `data/*.jsonl`、`ChildGrowthOS.xlsx`、`photos/YYYY/MM/` 或飞书正式表。
+9. 每次导入都写入 `data/import-tasks.jsonl`。
 
 低置信度情况包括：日期不确定、同名重复、孩子身份不确定、图片内容疑似单据但无法识别类型、日记文本无法确定日期。
+
+本地照片故事填写页要求：
+
+- 左侧展示照片/视频缩略图和原文件信息。
+- 右侧展示可编辑表单。
+- 日期、孩子年龄、相册名、AI 识别描述可预填。
+- 故事、地点、标签、情绪、重要等级、是否第一次、是否导入必须可编辑。
+- 支持浏览器本地缓存、导出 JSON、可选导出 CSV。
+- 页面只在用户本机打开，不上传私人照片。
 
 ## 可视化导出
 

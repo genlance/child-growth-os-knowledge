@@ -66,13 +66,23 @@ Import workflow:
 2. Put raw copies or source references under `imports/raw/{import_task_id}/`.
 3. Scan source metadata and content without changing originals.
 4. Produce `imports/staging/{import_task_id}.jsonl` and `imports/staging/{import_task_id}-review.csv`.
-5. Produce human-readable reports under `imports/reports/`.
-6. Ask the user to confirm, edit, skip, merge, or retarget items.
-7. After confirmation, write records to JSONL, update `ChildGrowthOS.xlsx`, copy photos into `photos/YYYY/MM/`, and log the task in `data/import-tasks.jsonl`.
+5. For old photo folders and phone album packages, produce a local browser review page at `imports/review/{import_task_id}/index.html`.
+6. Produce human-readable reports under `imports/reports/`.
+7. Ask the user to fill or confirm items in the review page, then export/save `reviewed-items.json`.
+8. After the user confirms the reviewed list, write records to JSONL, update `ChildGrowthOS.xlsx`, copy photos into `photos/YYYY/MM/`, and log the task in `data/import-tasks.jsonl`.
 
 For local-lite archives, Excel is not optional. If `ChildGrowthOS.xlsx` is missing, create it from the template or a minimal workbook, then write confirmed records to both JSONL and Excel.
 
 For photo imports, read EXIF date first, then filename date, folder year/month, file modified time, or user-provided date. Also generate AI descriptions, suggested tags, suggested event type, and blank user-editable fields.
+
+For album/photo review pages:
+
+- Do not ask ordinary parents to edit JSON or CSV directly.
+- Show the photo on the left and editable memory fields on the right.
+- Pre-fill date, child age, filename, album/folder clues, and AI description when available.
+- Let the parent edit story, people, place, tags, mood, importance, first-time marker, target table, and import/skip/later.
+- Save progress in browser local storage and allow export to JSON and optionally CSV.
+- Do not formally import until the parent confirms the exported reviewed list.
 
 For app or table imports, generate a field mapping proposal first. Never assume units such as ml/oz, kg/g, or cm/in without confirmation.
 
@@ -127,6 +137,10 @@ Select photos by tags, date range, event type, linked records, people, place, or
 
 ```text
 这是我以前整理的宝宝照片文件夹：D:\OldBabyPhotos。请先扫描，不要直接导入，给我一份待确认清单。
+```
+
+```text
+这是一个旧相册文件夹：D:\OldBabyPhotos。请生成本地照片故事填写页，我想一边看照片一边补故事，填完后再导入。
 ```
 
 ```text
