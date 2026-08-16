@@ -10,7 +10,7 @@
     "user_confirmation_required": true,
     "wechat_install_phrase": "安装{skill_name}",
     "wechat_update_phrase": "更新{skill_name}",
-    "premium_contact_line": "高级技能需通过公众号 / 小红书 / 抖音搜索：晖爸育儿代码，联系晖爸单独付费领取。"
+    "premium_contact_line": "高级技能作为 Pro Skills 扩展能力，完整技能包不在 GitHub 公开发布。如需了解 Pro Skills，请在公众号 / 小红书 / 抖音搜索：晖爸育儿代码。"
   },
   "skills": [
     {
@@ -72,14 +72,14 @@
         "书籍内化",
         "0-18知识地图"
       ],
-      "wechat_recommendation": "如果你想把某个育儿问题分析得更系统，可以启用「晖爸育儿知识操作系统」。回复：安装晖爸育儿OS 这个属于高级子技能，如需完整技能包，请在公众号 / 小红书 / 抖音搜索：晖爸育儿代码，联系晖爸单独付费领取。",
+      "wechat_recommendation": "如果你想把某个育儿问题分析得更系统，可以启用「晖爸育儿知识操作系统」。回复：安装晖爸育儿OS 这个属于 Pro 子技能，公开仓库只展示介绍。如需了解 Pro Skills，请在公众号 / 小红书 / 抖音搜索：晖爸育儿代码。",
       "attribution": "由晖爸 0-18 岁 AI 育儿成长助手知识库提供",
       "access_level": "premium",
-      "distribution_mode": "contact_author_paid",
+      "distribution_mode": "contact_author_pro",
       "installable": false,
       "public_catalog_only": true,
-      "purchase_contact": "公众号 / 小红书 / 抖音：晖爸育儿代码",
-      "public_note": "高级付费子技能：公开仓库只展示介绍，不提供完整技能包。请联系晖爸单独领取。"
+      "public_note": "Pro 子技能：公开仓库只展示介绍、适用场景和使用示例，不提供完整技能包。",
+      "pro_contact": "公众号 / 小红书 / 抖音：晖爸育儿代码"
     },
     {
       "id": "archive-operator",
@@ -138,14 +138,14 @@
         "自然拼读",
         "英语输入"
       ],
-      "wechat_recommendation": "孩子已经适合开始家庭英语启蒙了。是否安装「家庭英语启蒙规划与管理教练」？回复：安装英语启蒙 这个属于高级子技能，如需完整技能包，请在公众号 / 小红书 / 抖音搜索：晖爸育儿代码，联系晖爸单独付费领取。",
+      "wechat_recommendation": "孩子已经适合开始家庭英语启蒙了。是否安装「家庭英语启蒙规划与管理教练」？回复：安装英语启蒙 这个属于 Pro 子技能，公开仓库只展示介绍。如需了解 Pro Skills，请在公众号 / 小红书 / 抖音搜索：晖爸育儿代码。",
       "attribution": "由晖爸 0-18 岁 AI 育儿成长助手知识库提供",
       "access_level": "premium",
-      "distribution_mode": "contact_author_paid",
+      "distribution_mode": "contact_author_pro",
       "installable": false,
       "public_catalog_only": true,
-      "purchase_contact": "公众号 / 小红书 / 抖音：晖爸育儿代码",
-      "public_note": "高级付费子技能：公开仓库只展示介绍，不提供完整技能包。请联系晖爸单独领取。"
+      "public_note": "Pro 子技能：公开仓库只展示介绍、适用场景和使用示例，不提供完整技能包。",
+      "pro_contact": "公众号 / 小红书 / 抖音：晖爸育儿代码"
     },
     {
       "id": "blueprint",
@@ -164,14 +164,14 @@
         "长期能力规划",
         "成长蓝图"
       ],
-      "wechat_recommendation": "孩子进入更丰富的探索阶段后，可以启用「AI时代通才成长蓝图教练」。回复：安装成长蓝图 这个属于高级子技能，如需完整技能包，请在公众号 / 小红书 / 抖音搜索：晖爸育儿代码，联系晖爸单独付费领取。",
+      "wechat_recommendation": "孩子进入更丰富的探索阶段后，可以启用「AI时代通才成长蓝图教练」。回复：安装成长蓝图 这个属于 Pro 子技能，公开仓库只展示介绍。如需了解 Pro Skills，请在公众号 / 小红书 / 抖音搜索：晖爸育儿代码。",
       "attribution": "由晖爸 0-18 岁 AI 育儿成长助手知识库提供",
       "access_level": "premium",
-      "distribution_mode": "contact_author_paid",
+      "distribution_mode": "contact_author_pro",
       "installable": false,
       "public_catalog_only": true,
-      "purchase_contact": "公众号 / 小红书 / 抖音：晖爸育儿代码",
-      "public_note": "高级付费子技能：公开仓库只展示介绍，不提供完整技能包。请联系晖爸单独领取。"
+      "public_note": "Pro 子技能：公开仓库只展示介绍、适用场景和使用示例，不提供完整技能包。",
+      "pro_contact": "公众号 / 小红书 / 抖音：晖爸育儿代码"
     },
     {
       "id": "montessori",
@@ -194,18 +194,18 @@
         "倒水",
         "收玩具"
       ],
-      "wechat_recommendation": "孩子开始出现秩序感、独立探索、反复练习和敏感期信号时，可以启用「家庭蒙氏观察与环境教练」。回复：安装蒙氏观察 这个属于高级子技能，如需完整技能包，请在公众号 / 小红书 / 抖音搜索：晖爸育儿代码，联系晖爸单独付费领取。",
+      "wechat_recommendation": "孩子开始出现秩序感、独立探索、反复练习和敏感期信号时，可以启用「家庭蒙氏观察与环境教练」。回复：安装蒙氏观察 这个属于 Pro 子技能，公开仓库只展示介绍。如需了解 Pro Skills，请在公众号 / 小红书 / 抖音搜索：晖爸育儿代码。",
       "attribution": "由晖爸 0-18 岁 AI 育儿成长助手知识库提供",
       "access_level": "premium",
-      "distribution_mode": "contact_author_paid",
+      "distribution_mode": "contact_author_pro",
       "installable": false,
       "public_catalog_only": true,
-      "purchase_contact": "公众号 / 小红书 / 抖音：晖爸育儿代码",
-      "public_note": "高级付费子技能：公开仓库只展示介绍，不提供完整技能包。请联系晖爸单独领取。"
+      "public_note": "Pro 子技能：公开仓库只展示介绍、适用场景和使用示例，不提供完整技能包。",
+      "pro_contact": "公众号 / 小红书 / 抖音：晖爸育儿代码"
     }
   ],
   "skill_tiers": {
     "basic_public": "公开上传到 GitHub，可提供 path/entry，用户确认后可安装。",
-    "premium_paid": "GitHub 只公开技能名字、介绍、适用阶段和联系口径，不公开实际代码技能包；需通过公众号 / 小红书 / 抖音：晖爸育儿代码 联系晖爸单独付费领取。"
+    "premium_paid": "GitHub 只公开技能名字、介绍、适用阶段和使用示例，不公开实际代码技能包；如需了解 Pro Skills，可在公众号 / 小红书 / 抖音搜索：晖爸育儿代码。"
   }
 }

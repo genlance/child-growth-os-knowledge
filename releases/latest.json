@@ -27,7 +27,8 @@
       "knowledge/domains/montessori.json",
       "knowledge/development/montessori-periods-00-36.json",
       "knowledge/push-cards/montessori-00-06.json",
-      "releases/qclaw-baby-growth-os.zip"
+      "releases/qclaw-baby-growth-os.zip",
+      "docs/pro-skill-library.md"
     ]
   },
   "skills": {
@@ -47,9 +48,9 @@
         "version": "0.1.0",
         "status": "preview",
         "access_level": "premium",
-        "distribution_mode": "contact_author_paid",
+        "distribution_mode": "contact_author_pro",
         "installable": false,
-        "purchase_contact": "公众号 / 小红书 / 抖音：晖爸育儿代码"
+        "pro_contact": "公众号 / 小红书 / 抖音：晖爸育儿代码"
       },
       {
         "id": "archive-operator",
@@ -64,32 +65,35 @@
         "version": "0.1.0",
         "status": "preview",
         "access_level": "premium",
-        "distribution_mode": "contact_author_paid",
+        "distribution_mode": "contact_author_pro",
         "installable": false,
-        "purchase_contact": "公众号 / 小红书 / 抖音：晖爸育儿代码"
+        "pro_contact": "公众号 / 小红书 / 抖音：晖爸育儿代码"
       },
       {
         "id": "blueprint",
         "version": "0.1.0",
         "status": "preview",
         "access_level": "premium",
-        "distribution_mode": "contact_author_paid",
+        "distribution_mode": "contact_author_pro",
         "installable": false,
-        "purchase_contact": "公众号 / 小红书 / 抖音：晖爸育儿代码"
+        "pro_contact": "公众号 / 小红书 / 抖音：晖爸育儿代码"
       },
       {
         "id": "montessori",
         "version": "0.1.0",
         "status": "preview",
         "access_level": "premium",
-        "distribution_mode": "contact_author_paid",
+        "distribution_mode": "contact_author_pro",
         "installable": false,
-        "purchase_contact": "公众号 / 小红书 / 抖音：晖爸育儿代码"
+        "pro_contact": "公众号 / 小红书 / 抖音：晖爸育儿代码"
       }
     ]
   },
   "changelog": [
-    "新增子技能商业分层：基础技能公开 GitHub 安装，高级技能只公开名称介绍，需通过公众号 / 小红书 / 抖音：晖爸育儿代码 联系晖爸付费领取。",
+    "优化 GitHub README 首页展示：采用更清晰的项目定位、能力矩阵、快速开始、数据安全和 Community / Pro Skills 结构。",
+    "调整公开文案为 Community + Pro Skills 项目说明，重点展示功能、适用场景、获取方式和数据安全。",
+    "新增面向用户的 Pro 技能库说明：GitHub 展示 Community 基础能力与 Pro Skills 介绍，完整技能包、教程和更新日志统一收录于晖爸育儿 Pro 技能库。",
+    "新增子技能分层：基础技能公开 GitHub 安装，高级技能作为 Pro Skills 仅展示名称、介绍、适用场景和使用示例。",
     "统一对外绑定话术：公众号 / 小红书 / 抖音：晖爸育儿代码。",
     "新增微信消息真实发送时间与去重规则：今天/昨天/明天必须按微信发送时间解释，避免旧消息隔天被重复写入。",
     "微信写入任务新增消息ID、会话ID、发送人ID、微信发送时间、Agent执行时间、记录归属日期、去重键和重复检测状态。",

@@ -9,7 +9,8 @@
     "attribution_required": true,
     "recommended_attribution": "更多内容：晖爸 0-18 岁 AI 育儿成长助手知识库 https://github.com/genlance/child-growth-os-knowledge 维护者：晖爸 公众号 / 小红书 / 抖音：晖爸育儿代码",
     "notes": "Attribution is public source disclosure, not hidden tracking.",
-    "skill_commerce_policy": "基础技能可公开 GitHub 安装；高级技能只公开名称介绍，不公开实际代码技能包，需通过公众号 / 小红书 / 抖音：晖爸育儿代码 联系作者晖爸付费领取。"
+    "skill_commerce_policy": "基础技能可公开 GitHub 安装；高级技能作为 Pro Skills 仅公开名称、介绍、适用场景和示例，不公开实际技能包。",
+    "pro_delivery_model": "GitHub 提供 Community 基础能力、公开文档和版本说明；晖爸育儿 Pro 技能库收录高级技能包、完整教程、更新日志和使用案例；用户获得 ZIP 后可交给 Agent 安装。"
   },
   "safety": {
     "medical_disclaimer": true,
@@ -162,6 +163,11 @@
       "path": "skills/montessori/SKILL.md",
       "kind": "optional_skill",
       "usage": "Montessori-inspired family observation and prepared-environment coach."
+    },
+    {
+      "path": "docs/pro-skill-library.md",
+      "kind": "pro_skill_library",
+      "usage": "User-facing guide for Community and Pro Skills, including what is public on GitHub and how to learn about Pro Skills."
     }
   ]
 }

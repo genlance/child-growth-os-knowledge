@@ -14,11 +14,11 @@ docs/knowledge-update-and-push-schedule.md
 首次入口：`skills/child-growth-os/`，QClaw / WorkBuddy 初次安装，用于温暖陪伴、微信式记录、照片归档、每日成长日记、21点复盘和轻量知识推送。
 GitHub Hub：child-growth-os-knowledge，存放知识、版本、子技能 manifest。
 知识分析技能：`huiba-parenting-os`，当用户需要系统分析、书籍内化、观点评估或知识卡时再推荐。
-子技能分为两层：基础技能公开到 GitHub，可直接安装；高级技能只在 GitHub 展示技能名字、适用阶段、能力介绍和联系作者方式，不公开实际代码技能包。
+子技能分为两层：基础技能公开到 GitHub，可直接安装；高级技能只在 GitHub 展示技能名字、适用阶段、能力介绍和使用示例，不公开实际代码技能包。高级技能包、完整使用教程及后续更新统一收录于「晖爸育儿 Pro 技能库」。
 微信触达：通知用户有新知识、新技能或技能更新。
 ```
 
-## 子技能商业分层
+## 子技能分层
 
 基础技能：
 
@@ -31,19 +31,57 @@ GitHub Hub：child-growth-os-knowledge，存放知识、版本、子技能 manif
 
 - GitHub 上只公开技能名称、适用年龄、解决的问题、能力介绍和示例成果。
 - 不在公开 `skills-manifest.json` 中提供真实 `path`、`entry`、压缩包地址或 raw 安装地址。
-- `installable` 必须为 `false`，`access_level` 使用 `premium`，`distribution_mode` 使用 `contact_author_paid`。
-- 当用户想安装高级技能时，agent 不能假装下载或安装，应引导用户通过自媒体渠道联系作者晖爸单独付费领取。
+- `installable` 必须为 `false`，`access_level` 使用 `premium`，`distribution_mode` 使用 `contact_author_pro`。
+- 当用户想安装高级技能时，agent 不能假装下载或安装，应说明公开仓库仅展示介绍，并引导用户查看「晖爸育儿 Pro 技能库」获取方式。
+- 用户获得 ZIP 技能包后，可以把 ZIP 发给 agent 安装。
 - 统一联系口径：
 
 ```text
 这个属于晖爸高级育儿子技能，公开仓库只展示介绍，不提供完整技能包。
-如需单独领取/付费开通，请在公众号 / 小红书 / 抖音搜索：晖爸育儿代码，联系晖爸。
+高级技能包、完整使用教程及后续更新统一收录于「晖爸育儿 Pro 技能库」。
+如需了解 Pro Skills，请在公众号 / 小红书 / 抖音搜索：晖爸育儿代码。
 ```
 
 建议分层：
 
 - 基础公开：`child-growth-os`、`archive-operator`。
-- 高级付费：`huiba-parenting-os`、`english`、`montessori`、`blueprint`，以及后续主题课、能力规划、学习系统类子技能。
+- 高级 Pro：`huiba-parenting-os`、`english`、`montessori`、`blueprint`，以及后续主题课、能力规划、学习系统类子技能。
+
+## Pro 技能库获取流程
+
+推荐用户流程：
+
+```text
+GitHub 公开 Community 基础技能
+    ↓
+用户体验 Community 能力
+    ↓
+README / 微信推荐展示 Pro Skills
+    ↓
+用户通过公众号 / 小红书 / 抖音了解 Pro Skills
+    ↓
+进入「晖爸育儿 Pro 技能库」
+    ↓
+在飞书知识库下载 ZIP 技能包、查看教程和更新日志
+    ↓
+把 ZIP 发给 Agent
+    ↓
+Agent 执行安装并检查是否成功
+```
+
+面向小白用户的安装话术：
+
+```text
+把这个 ZIP 发给你的 Agent，然后说：
+“帮我安装这个技能包，并检查是否安装成功。”
+```
+
+公开说明原则：
+
+- GitHub 负责 Community 基础能力、公开文档和版本说明。
+- Pro 技能库负责收录高级技能包、完整教程、更新日志和使用案例。
+- Agent 负责帮助用户安装已获得的技能包。
+- 公开文档保持用户视角，重点说明功能、适用场景、安装方式、数据安全和版本更新。
 
 ## 首次安装口径
 
@@ -154,10 +192,10 @@ https://raw.githubusercontent.com/genlance/child-growth-os-knowledge/main/skills
 3. 根据宝宝月龄、当前状态、用户问题匹配可推荐技能。
 4. 微信发送推荐，等待用户确认。
 5. 如果是基础公开技能，用户确认后下载对应 `skills/{id}/`。
-6. 如果是高级付费技能，不得下载或安装；发送联系作者/付费领取提示，并写入 `已安装子技能` 为 `待付费领取`。
+6. 如果是高级 Pro 技能，不得下载或安装；发送 Pro Skills 了解方式，并写入 `已安装子技能` 为 `待获取Pro技能`。
 7. 基础公开技能安装到目标平台的技能目录或按平台要求导入。
 8. 写入本地/飞书 `已安装子技能` 记录。
-9. 发送安装完成提示和示例用法；高级付费技能只发送领取方式和适用说明。
+9. 发送安装完成提示和示例用法；高级 Pro 技能只发送获取方式和适用说明。
 
 ## 更新流程
 
