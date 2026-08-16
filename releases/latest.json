@@ -1,11 +1,11 @@
 {
   "repo_name": "child-growth-os-knowledge",
   "public_name": "晖爸 0-18 岁 AI 育儿成长助手知识库",
-  "release": "2026.08.02-preview",
-  "released_at": "2026-08-02",
+  "release": "2026.08.16-preview",
+  "released_at": "2026-08-16",
   "minimum_starter_skill_version": "1.1.0",
   "knowledge": {
-    "version": "2026.08.02",
+    "version": "2026.08.16",
     "files": [
       "version.json",
       "knowledge-manifest.json",
@@ -26,7 +26,8 @@
       "skills/child-growth-os/SKILL.md",
       "knowledge/domains/montessori.json",
       "knowledge/development/montessori-periods-00-36.json",
-      "knowledge/push-cards/montessori-00-06.json"
+      "knowledge/push-cards/montessori-00-06.json",
+      "releases/qclaw-baby-growth-os.zip"
     ]
   },
   "skills": {
@@ -66,6 +67,12 @@
     ]
   },
   "changelog": [
+    "新增微信消息真实发送时间与去重规则：今天/昨天/明天必须按微信发送时间解释，避免旧消息隔天被重复写入。",
+    "微信写入任务新增消息ID、会话ID、发送人ID、微信发送时间、Agent执行时间、记录归属日期、去重键和重复检测状态。",
+    "新增育儿待办提醒能力：支持购买奶粉、宝宝衣服、尿片、预约疫苗体检、观察大便/睡眠等跟进事项。",
+    "知识推送支持转待办：推送里可提示“帮我记为待办，明天提醒一下”，但不会未经用户确认自动创建待办。",
+    "更新本地轻量版 Excel 模板，新增“育儿待办提醒”和“微信写入任务”工作表。",
+    "新增可直接导入 QClaw 的技能包 releases/qclaw-baby-growth-os.zip。",
     "新增旧相册导入的本地照片故事填写页流程：扫描相册后生成 imports/review/{import_task_id}/index.html。",
     "照片故事填写页采用左图右表单：左侧看照片，右侧补日期、人物、地点、故事、标签、情绪、重要等级、是否第一次和是否导入。",
     "明确相册导入不让普通家长直接编辑 JSON/CSV；网页填写结果导出 reviewed-items.json，经用户确认后才正式导入。",

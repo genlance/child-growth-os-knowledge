@@ -1,8 +1,8 @@
 {
   "repo_name": "child-growth-os-knowledge",
   "public_name": "晖爸 0-18 岁 AI 育儿成长助手知识库",
-  "knowledge_version": "2026.08.02",
-  "last_updated": "2026-08-02",
+  "knowledge_version": "2026.08.16",
+  "last_updated": "2026-08-16",
   "author": {
     "name": "晖爸",
     "brand": "child-growth-os / 育儿AI成长系统",
@@ -123,7 +123,11 @@
     {
       "path": "skills/archive-operator/SKILL.md",
       "description": "child-growth-os 育儿资料操作员预览版，适合资料导入、时间轴、照片墙、迁移恢复和飞书同步"
+    },
+    {
+      "path": "releases/qclaw-baby-growth-os.zip",
+      "description": "QClaw 本地导入技能包，包含微信消息日期防重、育儿待办提醒和本地轻量版模板"
     }
   ],
-  "changelog": "新增旧相册导入的本地照片故事填写页流程：扫描相册后生成本地网页，左侧看照片，右侧补故事、地点、标签、情绪和是否导入，用户确认后才正式写入育儿档案。"
+  "changelog": "新增微信消息真实发送时间与去重规则，避免昨天消息被当成今天重复记录；新增育儿待办提醒，支持买奶粉/宝宝衣服/疫苗体检/知识推送跟进；更新本地轻量版Excel模板和QClaw导入包。"
 }

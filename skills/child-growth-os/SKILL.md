@@ -126,6 +126,7 @@ Important: distinguish skill installation path from child archive path. QClaw ma
 6. Send gentle age-appropriate parenting knowledge pushes.
 7. Run a 21:00 daily diary review.
 8. Recommend optional sub-skills only when useful.
+9. Create practical parenting todos/reminders when the parent explicitly asks.
 
 ## Default Storage
 
@@ -305,13 +306,33 @@ If a new skill version needs schema changes, append fields only after user confi
 When the parent sends a message or photo:
 
 1. Reply quickly before slow writes. This is mandatory on WeChat/ClawBot.
-2. Save the original input task.
-3. Save photos into `photos/originals/YYYY/MM/`.
-4. Rename/copy photos into `photos/YYYY/MM/`.
-5. Write structured records to agent-readable data.
-6. Update `ChildGrowthOS.xlsx` for the parent to view, including photo links when relevant.
-7. Update Feishu attachments when Feishu or dual backup is enabled.
-8. Reply with a short completion summary.
+2. Read and store WeChat metadata before parsing: message id, session id, sender id, sent time, and media ids.
+3. Compute the record date from the WeChat sent time. If the parent says "今天", "昨天", or "明天", interpret it relative to the WeChat sent time, not the agent execution time.
+4. Build a dedupe key before writing:
+
+```text
+source_channel + source_message_id
+```
+
+If there is no stable message id, use:
+
+```text
+sender_id + sent_at + normalized_text_hash + media_id_hash
+```
+
+5. Search existing write tasks by dedupe key. If the same message was already completed or partially completed, do not write duplicate diary/event records. Reply warmly:
+
+```text
+这条微信我之前已经帮你记过了，这次不会重复写入。
+```
+
+6. Save the original input task with WeChat sent time, agent execution time, record date, dedupe key, and duplicate status.
+7. Save photos into `photos/originals/YYYY/MM/`.
+8. Rename/copy photos into `photos/YYYY/MM/`.
+9. Write structured records to agent-readable data.
+10. Update `ChildGrowthOS.xlsx` for the parent to view, including photo links when relevant.
+11. Update Feishu attachments when Feishu or dual backup is enabled.
+12. Reply with a short completion summary.
 
 Local write rule:
 
@@ -367,6 +388,55 @@ milestone 字段已写入
 ```
 
 Only show technical details when the parent explicitly asks for "保存明细", "路径", "技术详情", "debug", or "文件在哪".
+
+## WeChat Date and Duplicate Safety
+
+This is a hard rule because WeChat/ClawBot may replay old messages or process yesterday's messages today.
+
+- Do not use the agent runtime date as the record date for WeChat messages.
+- `今天/昨天/明天` must be interpreted relative to `微信发送时间`.
+- If a message sent on 2026-08-15 says "今天第一次吃西瓜", the record date is 2026-08-15 even if the agent processes it on 2026-08-16.
+- Every WeChat write task should store: `微信消息ID`, `微信发送时间`, `Agent执行时间`, `记录归属日期`, `去重键`, and `重复检测状态`.
+- If the dedupe key already exists and the old task is complete, skip duplicate writes.
+
+Parent-facing reply should stay simple:
+
+```text
+这条微信我之前已经帮你记过了，不会重复写入。
+```
+
+## Parenting Todos and Reminders
+
+Use todos for practical family follow-ups:
+
+- Buy formula, diapers, wipes, baby clothes, medicine, toys, books.
+- Book vaccination, checkup, parent-child activity, or doctor appointment.
+- Follow up on a knowledge-push action, such as observing diaper changes for 1-2 days.
+- Prepare items for travel, daycare, seasonal changes, or photo exports.
+
+Create a todo only when the parent explicitly asks, such as:
+
+- "帮我记为待办"
+- "明天提醒一下"
+- "提醒我买奶粉"
+- "记得买宝宝衣服"
+- "两天后提醒我观察大便"
+
+If the instruction comes from WeChat, calculate relative reminder time from WeChat sent time.
+
+Confirmation example:
+
+```text
+好，我帮你记下：
+待办：购买奶粉
+提醒：明天 09:00
+```
+
+When a parenting knowledge push contains an action suggestion, do not create a todo automatically. Add an optional line:
+
+```text
+需要的话，你可以回复“帮我记为待办，明天提醒一下”。
+```
 
 ## Daily 21:00 Review
 
