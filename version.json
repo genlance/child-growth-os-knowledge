@@ -8,7 +8,10 @@
     "brand": "child-growth-os / 育儿AI成长系统",
     "github": "https://github.com/genlance/child-growth-os-knowledge",
     "wechat_public_account": "晖爸育儿代码",
-    "wechat_id": "huibayuerdaima"
+    "wechat_id": "huibayuerdaima",
+    "xiaohongshu": "晖爸育儿代码",
+    "douyin": "晖爸育儿代码",
+    "public_brand_line": "公众号 / 小红书 / 抖音：晖爸育儿代码"
   },
   "min_skill_version": "1.0.0",
   "files": [

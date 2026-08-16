@@ -261,5 +261,5 @@ D:\ChildGrowthOS/
 专注 AI 育儿系统、儿童成长数据资产、0-18 岁育儿知识体系。
 
 - GitHub: https://github.com/genlance/child-growth-os-knowledge
-- 公众号/自媒体: 晖爸育儿代码
+- 公众号 / 小红书 / 抖音: 晖爸育儿代码
 - 微信: huibayuerdaima

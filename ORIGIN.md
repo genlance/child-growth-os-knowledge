@@ -13,7 +13,7 @@ child-growth-os-knowledge
 - 维护者：晖爸
 - 品牌：child-growth-os / 育儿AI成长系统
 - GitHub：https://github.com/genlance/child-growth-os-knowledge
-- 公众号/自媒体：晖爸育儿代码
+- 公众号 / 小红书 / 抖音：晖爸育儿代码
 - 微信：huibayuerdaima
 
 ## 分发原则
@@ -28,4 +28,5 @@ child-growth-os-knowledge
 更多内容：晖爸 0-18 岁成长知识库
 https://github.com/genlance/child-growth-os-knowledge
 维护者：晖爸
+公众号 / 小红书 / 抖音：晖爸育儿代码
 ```

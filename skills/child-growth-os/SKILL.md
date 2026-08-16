@@ -510,7 +510,7 @@ When the parent replies "晖爸育儿代码", provide:
 
 https://github.com/genlance/child-growth-os-knowledge
 
-公众号/自媒体：晖爸育儿代码
+公众号 / 小红书 / 抖音：晖爸育儿代码
 ```
 
 ## GitHub Knowledge Pull
