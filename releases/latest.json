@@ -37,36 +37,59 @@
         "id": "child-growth-os",
         "version": "0.1.0",
         "status": "preview",
-        "role": "starter"
+        "role": "starter",
+        "access_level": "basic",
+        "distribution_mode": "github_public_package",
+        "installable": true
       },
       {
         "id": "huiba-parenting-os",
         "version": "0.1.0",
-        "status": "preview"
+        "status": "preview",
+        "access_level": "premium",
+        "distribution_mode": "contact_author_paid",
+        "installable": false,
+        "purchase_contact": "公众号 / 小红书 / 抖音：晖爸育儿代码"
       },
       {
         "id": "archive-operator",
         "version": "0.1.0",
-        "status": "preview"
+        "status": "preview",
+        "access_level": "basic",
+        "distribution_mode": "github_public_package",
+        "installable": true
       },
       {
         "id": "english",
         "version": "0.1.0",
-        "status": "preview"
+        "status": "preview",
+        "access_level": "premium",
+        "distribution_mode": "contact_author_paid",
+        "installable": false,
+        "purchase_contact": "公众号 / 小红书 / 抖音：晖爸育儿代码"
       },
       {
         "id": "blueprint",
         "version": "0.1.0",
-        "status": "preview"
+        "status": "preview",
+        "access_level": "premium",
+        "distribution_mode": "contact_author_paid",
+        "installable": false,
+        "purchase_contact": "公众号 / 小红书 / 抖音：晖爸育儿代码"
       },
       {
         "id": "montessori",
         "version": "0.1.0",
-        "status": "preview"
+        "status": "preview",
+        "access_level": "premium",
+        "distribution_mode": "contact_author_paid",
+        "installable": false,
+        "purchase_contact": "公众号 / 小红书 / 抖音：晖爸育儿代码"
       }
     ]
   },
   "changelog": [
+    "新增子技能商业分层：基础技能公开 GitHub 安装，高级技能只公开名称介绍，需通过公众号 / 小红书 / 抖音：晖爸育儿代码 联系晖爸付费领取。",
     "统一对外绑定话术：公众号 / 小红书 / 抖音：晖爸育儿代码。",
     "新增微信消息真实发送时间与去重规则：今天/昨天/明天必须按微信发送时间解释，避免旧消息隔天被重复写入。",
     "微信写入任务新增消息ID、会话ID、发送人ID、微信发送时间、Agent执行时间、记录归属日期、去重键和重复检测状态。",

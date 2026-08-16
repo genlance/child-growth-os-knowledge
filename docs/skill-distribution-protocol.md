@@ -14,9 +14,36 @@ docs/knowledge-update-and-push-schedule.md
 首次入口：`skills/child-growth-os/`，QClaw / WorkBuddy 初次安装，用于温暖陪伴、微信式记录、照片归档、每日成长日记、21点复盘和轻量知识推送。
 GitHub Hub：child-growth-os-knowledge，存放知识、版本、子技能 manifest。
 知识分析技能：`huiba-parenting-os`，当用户需要系统分析、书籍内化、观点评估或知识卡时再推荐。
-子技能：english、blueprint、montessori 等按年龄/场景启用。
+子技能分为两层：基础技能公开到 GitHub，可直接安装；高级技能只在 GitHub 展示技能名字、适用阶段、能力介绍和联系作者方式，不公开实际代码技能包。
 微信触达：通知用户有新知识、新技能或技能更新。
 ```
+
+## 子技能商业分层
+
+基础技能：
+
+- 可公开上传到 GitHub。
+- `skills-manifest.json` 中可以提供 `path`、`entry`、`version` 和权限说明。
+- 用户确认后，agent 可以按公开路径下载和安装。
+- 适合作为信任入口、基础记录、导入导出和系统体验。
+
+高级技能：
+
+- GitHub 上只公开技能名称、适用年龄、解决的问题、能力介绍和示例成果。
+- 不在公开 `skills-manifest.json` 中提供真实 `path`、`entry`、压缩包地址或 raw 安装地址。
+- `installable` 必须为 `false`，`access_level` 使用 `premium`，`distribution_mode` 使用 `contact_author_paid`。
+- 当用户想安装高级技能时，agent 不能假装下载或安装，应引导用户通过自媒体渠道联系作者晖爸单独付费领取。
+- 统一联系口径：
+
+```text
+这个属于晖爸高级育儿子技能，公开仓库只展示介绍，不提供完整技能包。
+如需单独领取/付费开通，请在公众号 / 小红书 / 抖音搜索：晖爸育儿代码，联系晖爸。
+```
+
+建议分层：
+
+- 基础公开：`child-growth-os`、`archive-operator`。
+- 高级付费：`huiba-parenting-os`、`english`、`montessori`、`blueprint`，以及后续主题课、能力规划、学习系统类子技能。
 
 ## 首次安装口径
 
@@ -126,10 +153,11 @@ https://raw.githubusercontent.com/genlance/child-growth-os-knowledge/main/skills
 2. 主控助手读取 `skills-manifest.json`。
 3. 根据宝宝月龄、当前状态、用户问题匹配可推荐技能。
 4. 微信发送推荐，等待用户确认。
-5. 用户确认后，下载对应 `skills/{id}/`。
-6. 安装到目标平台的技能目录或按平台要求导入。
-7. 写入本地/飞书 `已安装子技能` 记录。
-8. 发送安装完成提示和示例用法。
+5. 如果是基础公开技能，用户确认后下载对应 `skills/{id}/`。
+6. 如果是高级付费技能，不得下载或安装；发送联系作者/付费领取提示，并写入 `已安装子技能` 为 `待付费领取`。
+7. 基础公开技能安装到目标平台的技能目录或按平台要求导入。
+8. 写入本地/飞书 `已安装子技能` 记录。
+9. 发送安装完成提示和示例用法；高级付费技能只发送领取方式和适用说明。
 
 ## 更新流程
 
@@ -146,6 +174,10 @@ https://raw.githubusercontent.com/genlance/child-growth-os-knowledge/main/skills
 - 技能ID
 - 技能名称
 - 当前版本
+- 技能层级
+- 分发方式
+- 是否可公开安装
+- 获取方式
 - 推荐年龄
 - 安装状态
 - 安装时间
