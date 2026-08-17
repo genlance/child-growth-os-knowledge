@@ -1,11 +1,11 @@
 {
   "repo_name": "child-growth-os-knowledge",
-  "public_name": "晖爸 0-18 岁 AI 育儿成长助手知识库",
+  "public_name": "晖爸育儿系统｜AI驱动的孩子成长记录与家庭育儿 Skills 平台",
   "knowledge_version": "2026.08.16",
   "last_updated": "2026-08-16",
   "author": {
     "name": "晖爸",
-    "brand": "child-growth-os / 育儿AI成长系统",
+    "brand": "晖爸育儿系统 / child-growth-os",
     "github": "https://github.com/genlance/child-growth-os-knowledge",
     "wechat_public_account": "晖爸育儿代码",
     "wechat_id": "huibayuerdaima",
@@ -89,7 +89,7 @@
     },
     {
       "path": "skills/child-growth-os/SKILL.md",
-      "description": "晖爸 child-growth-os 育儿成长助手主控技能，适合作为客户首次安装入口"
+      "description": "晖爸育儿系统 Community 主控技能，适合作为客户首次安装入口"
     },
     {
       "path": "skills/huiba-parenting-os/SKILL.md",
@@ -125,7 +125,7 @@
     },
     {
       "path": "skills/archive-operator/SKILL.md",
-      "description": "child-growth-os 育儿资料操作员预览版，适合资料导入、时间轴、照片墙、迁移恢复和飞书同步"
+      "description": "晖爸育儿系统资料操作员预览版，适合资料导入、时间轴、照片墙、迁移恢复和飞书同步"
     },
     {
       "path": "releases/qclaw-baby-growth-os.zip",

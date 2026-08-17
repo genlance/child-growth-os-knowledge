@@ -1,17 +1,17 @@
 # 来源说明
 
-本仓库是 **晖爸 0-18 岁成长知识库** 的公开知识源，建议 GitHub 仓库名为：
+本仓库是 **晖爸育儿系统** 的公开知识源与 Community 技能入口，建议 GitHub 仓库名为：
 
 ```text
 child-growth-os-knowledge
 ```
 
-它服务于 **child-growth-os / 育儿AI成长系统**，用于给 QClaw/OpenClaw/WorkBuddy 技能提供可持续更新的育儿知识推送，也用于公开分发按年龄阶段逐步启用的家庭成长子技能。
+它服务于 **晖爸育儿系统 / child-growth-os**，用于给 QClaw/OpenClaw/WorkBuddy 技能提供可持续更新的育儿知识推送，也用于公开分发 Community 技能，并展示按年龄/场景逐步启用的 Pro Skills。
 
 ## 维护者
 
 - 维护者：晖爸
-- 品牌：child-growth-os / 育儿AI成长系统
+- 品牌：晖爸育儿系统 / child-growth-os
 - GitHub：https://github.com/genlance/child-growth-os-knowledge
 - 公众号 / 小红书 / 抖音：晖爸育儿代码
 - 微信：huibayuerdaima
@@ -25,7 +25,7 @@ child-growth-os-knowledge
 ## 推荐署名
 
 ```text
-更多内容：晖爸 0-18 岁成长知识库
+更多内容：晖爸育儿系统
 https://github.com/genlance/child-growth-os-knowledge
 维护者：晖爸
 公众号 / 小红书 / 抖音：晖爸育儿代码

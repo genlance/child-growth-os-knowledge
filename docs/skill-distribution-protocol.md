@@ -85,10 +85,10 @@ Agent 执行安装并检查是否成功
 
 ## 首次安装口径
 
-对客户不要先推荐“知识操作系统”。第一句话应该推荐温暖的育儿成长助手：
+对客户不要先推荐“知识操作系统”。第一句话应该推荐「晖爸育儿系统」Community 主控助手：
 
 ```text
-请安装晖爸 child-growth-os 育儿成长助手：
+请安装晖爸育儿系统主控助手：
 https://github.com/genlance/child-growth-os-knowledge/tree/main/skills/child-growth-os
 ```
 
@@ -106,7 +106,7 @@ https://github.com/genlance/child-growth-os-knowledge/tree/main/skills/child-gro
 注意：QClaw 等平台的“安装成功”页面可能只是展示技能简介，不会自动触发首次引导对话。因此安装成功后，应提示用户继续发送启动指令：
 
 ```text
-开始使用晖爸 child-growth-os 育儿成长助手
+开始使用晖爸育儿系统
 ```
 
 新用户也可以直接发送：

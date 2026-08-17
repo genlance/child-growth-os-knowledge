@@ -1,6 +1,6 @@
 {
   "repo_name": "child-growth-os-knowledge",
-  "public_name": "晖爸 0-18 岁 AI 育儿成长助手知识库",
+  "public_name": "晖爸育儿系统｜AI驱动的孩子成长记录与家庭育儿 Skills 平台",
   "release": "2026.08.16-preview",
   "released_at": "2026-08-16",
   "minimum_starter_skill_version": "1.1.0",
@@ -39,9 +39,9 @@
         "version": "0.1.0",
         "status": "preview",
         "role": "starter",
-        "access_level": "basic",
         "distribution_mode": "github_public_package",
-        "installable": true
+        "installable": true,
+        "access_level": "basic"
       },
       {
         "id": "huiba-parenting-os",
@@ -56,9 +56,9 @@
         "id": "archive-operator",
         "version": "0.1.0",
         "status": "preview",
-        "access_level": "basic",
         "distribution_mode": "github_public_package",
-        "installable": true
+        "installable": true,
+        "access_level": "basic"
       },
       {
         "id": "english",
@@ -90,6 +90,7 @@
     ]
   },
   "changelog": [
+    "统一品牌命名为“晖爸育儿系统”，明确成长记录/成长档案是基础模块，GitHub 当前实际可安装 Community 技能为 child-growth-os 和 archive-operator。",
     "优化 GitHub README 首页展示：采用更清晰的项目定位、能力矩阵、快速开始、数据安全和 Community / Pro Skills 结构。",
     "调整公开文案为 Community + Pro Skills 项目说明，重点展示功能、适用场景、获取方式和数据安全。",
     "新增面向用户的 Pro 技能库说明：GitHub 展示 Community 基础能力与 Pro Skills 介绍，完整技能包、教程和更新日志统一收录于晖爸育儿 Pro 技能库。",
@@ -104,7 +105,7 @@
     "新增旧相册导入的本地照片故事填写页流程：扫描相册后生成 imports/review/{import_task_id}/index.html。",
     "照片故事填写页采用左图右表单：左侧看照片，右侧补日期、人物、地点、故事、标签、情绪、重要等级、是否第一次和是否导入。",
     "明确相册导入不让普通家长直接编辑 JSON/CSV；网页填写结果导出 reviewed-items.json，经用户确认后才正式导入。",
-    "优化 README 新用户阅读体验：统一名称为“晖爸 0-18 岁 AI 育儿成长助手知识库”，删除开发者文件清单和多余技术说明。",
+    "优化 README 新用户阅读体验：统一名称为“晖爸育儿系统”，删除开发者文件清单和多余技术说明。",
     "修正本地轻量版保存规则：普通用户本地档案必须生成根目录 ChildGrowthOS.xlsx，不能只写 data 里的 JSON。",
     "明确每次微信记录必须同时更新家长可看的 Excel 和 agent 可读写的数据层。",
     "新增缺失 Excel 的修复流程：如果已有 data/ 和照片但没有 ChildGrowthOS.xlsx，agent 应补建表格并把已有记录同步进去。",
@@ -147,7 +148,7 @@
     "明确本地资料可在后期整体同步到飞书，照片必须作为真实附件上传。",
     "明确换电脑只需复制整个 ChildGrowthOS 文件夹并告诉 agent 新路径。",
     "明确更新 skills 或知识库时不得覆盖用户 Excel、data、photos、logs 和 archive-manifest。",
-    "新增晖爸 child-growth-os 育儿成长助手，作为客户首次安装入口。",
+    "新增晖爸育儿系统 Community 主控助手，作为客户首次安装入口。",
     "明确首次体验以微信式记录、照片归档、每日成长日记、21点复盘和轻量知识推送为主。",
     "晖爸育儿知识操作系统调整为按需安装的系统分析能力，不再作为默认第一入口。",
     "新增晖爸育儿知识操作系统预览版，作为知识总控层。",

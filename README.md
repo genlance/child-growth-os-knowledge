@@ -1,10 +1,10 @@
-# 晖爸 0-18 岁 AI 育儿成长助手
+# 晖爸育儿系统
 
 <div align="center">
 
-**每天说一句话，AI 帮你保存孩子 18 年的成长故事。**
+**从每天一句话记录孩子成长开始，帮家庭搭建一套可持续扩展的 AI 育儿系统。**
 
-一个本地优先、AI 驱动、可迁移的家庭育儿记录与成长档案系统。
+AI 驱动的孩子成长记录与家庭育儿 Skills 平台。
 
 [![Community](https://img.shields.io/badge/Community-GitHub公开-2ea44f)](#community)
 [![Pro Skills](https://img.shields.io/badge/Pro%20Skills-扩展能力-blueviolet)](#pro-skills)
@@ -19,16 +19,16 @@
 
 ## 这是什么
 
-这是给家长和育儿 Agent 使用的成长档案系统。你可以像发微信一样记录孩子的日常、照片、喂养、睡眠、尿片、健康和成长瞬间，AI 会帮你整理成：
+这是给家长和育儿 Agent 使用的家庭育儿系统。你可以先从成长记录开始：像发微信一样记录孩子的日常、照片、喂养、睡眠、尿片、健康和成长瞬间，AI 会帮你整理成：
 
 - 每日成长日记
 - 照片资产库
 - 成长时间轴
 - 喂养 / 睡眠 / 尿片 / 健康记录
 - 月龄育儿知识推送
-- 可导出的长期家庭成长档案
+- 可导出的长期家庭成长资料
 
-它不是替代父母，也不是替代医生。它更像一个耐心的家庭记录员，把那些容易散落的小瞬间保存下来。
+它不是替代父母，也不是替代医生。它更像一个耐心的家庭育儿助手：先把容易散落的小瞬间保存下来，再通过更多 Skills 扩展出照片墙、成长报告、育儿知识、用品选择和学习建议等能力。
 
 ## 适合谁
 
@@ -51,28 +51,27 @@
 | 育儿知识推送 | 按月龄和敏感期推送轻量知识，并映射到自己孩子身上 |
 | 待办提醒 | 记录买奶粉、买尿片、预约体检、观察大便等育儿待办 |
 | 旧资料导入 | 旧照片、旧日记、Excel、飞书、其他育儿 App 导出先扫描再确认 |
+| 扩展 Skills | 后续可扩展宝宝用品选购、孩子学习建议、成长报告、照片墙等能力 |
 | 本地 / 飞书 | 可先本地保存，以后再同步到飞书多维表格或双备份 |
 
 ## Community
 
-Community 基础技能会公开在 GitHub，用户确认后可以直接安装。
+Community 基础技能会公开在 GitHub，用户确认后可以直接安装。当前 GitHub 仓库里实际带完整技能包的公开技能有 2 个：
 
-当前公开能力：
-
-- `child-growth-os`：主控育儿成长助手
+- `child-growth-os`：晖爸育儿系统主控助手
 - `archive-operator`：育儿资料操作员，用于旧资料导入、照片整理、时间轴和导出
 
 安装主控助手：
 
 ```text
-请安装晖爸 child-growth-os 育儿成长助手：
+请安装晖爸育儿系统主控助手：
 https://github.com/genlance/child-growth-os-knowledge/tree/main/skills/child-growth-os
 ```
 
 安装成功后，如果 Agent 没有自动开始引导，请继续发送：
 
 ```text
-开始使用晖爸 child-growth-os 育儿成长助手
+开始使用晖爸育儿系统
 ```
 
 第一次使用也可以直接说：
@@ -152,7 +151,7 @@ D:\ChildGrowthOS/
 ```text
 微信 / ClawBot
     ↓
-QClaw 育儿成长助手
+QClaw 晖爸育儿系统
     ↓
 本地 ChildGrowthOS 档案
     ↓
@@ -212,6 +211,8 @@ Pro Skills 是 Community 基础能力的扩展。GitHub 仅展示功能介绍、
 - 宝宝月度 / 年度成长报告
 - 宝宝成长视频
 - 高级照片整理
+- 宝宝用品选购
+- 孩子学习建议
 - 英语启蒙规划
 - 蒙氏观察与家庭环境建议
 - 3-18 岁成长蓝图
@@ -237,7 +238,7 @@ Pro Skills 是 Community 基础能力的扩展。GitHub 仅展示功能介绍、
 
 | 路径 | 说明 |
 |---|---|
-| `skills/child-growth-os/` | Community 主控育儿成长助手 |
+| `skills/child-growth-os/` | Community 晖爸育儿系统主控助手 |
 | `skills/archive-operator/` | Community 育儿资料操作员 |
 | `docs/skill-distribution-protocol.md` | 子技能发现、推荐、安装和更新规则 |
 | `docs/pro-skill-library.md` | Pro Skills 说明 |
@@ -251,7 +252,7 @@ Pro Skills 是 Community 基础能力的扩展。GitHub 仅展示功能介绍、
 
 ## 维护者
 
-**晖爸 / child-growth-os**
+**晖爸 / 晖爸育儿系统 / child-growth-os**
 
 专注 AI 育儿系统、儿童成长数据资产、0-18 岁育儿知识体系。
 

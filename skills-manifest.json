@@ -1,6 +1,6 @@
 {
   "repo_name": "child-growth-os-knowledge",
-  "public_name": "晖爸 0-18 岁 AI 育儿成长助手知识库",
+  "public_name": "晖爸育儿系统｜AI驱动的孩子成长记录与家庭育儿 Skills 平台",
   "manifest_version": "2026.08.17",
   "updated_at": "2026-08-17",
   "canonical_repo": "https://github.com/genlance/child-growth-os-knowledge",
@@ -15,7 +15,7 @@
   "skills": [
     {
       "id": "child-growth-os",
-      "name": "晖爸 child-growth-os 育儿成长助手",
+      "name": "晖爸育儿系统主控助手",
       "path": "skills/child-growth-os",
       "entry": "skills/child-growth-os/SKILL.md",
       "version": "0.1.0",
@@ -34,9 +34,10 @@
         "微信记录",
         "每日育儿提醒",
         "成长档案",
-        "child-growth-os"
+        "child-growth-os",
+        "晖爸育儿系统"
       ],
-      "wechat_recommendation": "欢迎使用「晖爸 child-growth-os 育儿成长助手」。你可以像发微信一样记录孩子成长：发一句话、发照片，我会帮你整理成成长日记和照片档案。",
+      "wechat_recommendation": "欢迎使用「晖爸育儿系统」。你可以像发微信一样记录孩子成长：发一句话、发照片，我会帮你整理成成长日记、照片档案，并逐步扩展更多育儿 Skills。",
       "permissions": [
         "read_child_profile",
         "write_growth_records",
@@ -46,7 +47,7 @@
         "recommend_optional_skills"
       ],
       "requires": [],
-      "attribution": "由晖爸 0-18 岁 AI 育儿成长助手知识库提供",
+      "attribution": "由晖爸育儿系统提供",
       "access_level": "basic",
       "distribution_mode": "github_public_package",
       "installable": true,
@@ -73,7 +74,7 @@
         "0-18知识地图"
       ],
       "wechat_recommendation": "如果你想把某个育儿问题分析得更系统，可以启用「晖爸育儿知识操作系统」。回复：安装晖爸育儿OS 这个属于 Pro 子技能，公开仓库只展示介绍。如需了解 Pro Skills，请在公众号 / 小红书 / 抖音搜索：晖爸育儿代码。",
-      "attribution": "由晖爸 0-18 岁 AI 育儿成长助手知识库提供",
+      "attribution": "由晖爸育儿系统提供",
       "access_level": "premium",
       "distribution_mode": "contact_author_pro",
       "installable": false,
@@ -83,7 +84,7 @@
     },
     {
       "id": "archive-operator",
-      "name": "child-growth-os 育儿资料操作员",
+      "name": "晖爸育儿系统资料操作员",
       "path": "skills/archive-operator",
       "entry": "skills/archive-operator/SKILL.md",
       "version": "0.1.0",
@@ -104,7 +105,7 @@
         "同步飞书",
         "换电脑恢复"
       ],
-      "wechat_recommendation": "如果你想用已有育儿资料生成时间轴、照片墙，或批量导入旧照片/旧日记，可以启用「child-growth-os 育儿资料操作员」。回复：安装资料操作员",
+      "wechat_recommendation": "如果你想用已有育儿资料生成时间轴、照片墙，或批量导入旧照片/旧日记，可以启用「晖爸育儿系统资料操作员」。回复：安装资料操作员",
       "permissions": [
         "read_archive_folder",
         "read_photo_assets",
@@ -115,7 +116,7 @@
       "requires": [
         "child-growth-os"
       ],
-      "attribution": "由晖爸 0-18 岁 AI 育儿成长助手知识库提供",
+      "attribution": "由晖爸育儿系统提供",
       "access_level": "basic",
       "distribution_mode": "github_public_package",
       "installable": true,
@@ -139,7 +140,7 @@
         "英语输入"
       ],
       "wechat_recommendation": "孩子已经适合开始家庭英语启蒙了。是否安装「家庭英语启蒙规划与管理教练」？回复：安装英语启蒙 这个属于 Pro 子技能，公开仓库只展示介绍。如需了解 Pro Skills，请在公众号 / 小红书 / 抖音搜索：晖爸育儿代码。",
-      "attribution": "由晖爸 0-18 岁 AI 育儿成长助手知识库提供",
+      "attribution": "由晖爸育儿系统提供",
       "access_level": "premium",
       "distribution_mode": "contact_author_pro",
       "installable": false,
@@ -165,7 +166,7 @@
         "成长蓝图"
       ],
       "wechat_recommendation": "孩子进入更丰富的探索阶段后，可以启用「AI时代通才成长蓝图教练」。回复：安装成长蓝图 这个属于 Pro 子技能，公开仓库只展示介绍。如需了解 Pro Skills，请在公众号 / 小红书 / 抖音搜索：晖爸育儿代码。",
-      "attribution": "由晖爸 0-18 岁 AI 育儿成长助手知识库提供",
+      "attribution": "由晖爸育儿系统提供",
       "access_level": "premium",
       "distribution_mode": "contact_author_pro",
       "installable": false,
@@ -195,7 +196,7 @@
         "收玩具"
       ],
       "wechat_recommendation": "孩子开始出现秩序感、独立探索、反复练习和敏感期信号时，可以启用「家庭蒙氏观察与环境教练」。回复：安装蒙氏观察 这个属于 Pro 子技能，公开仓库只展示介绍。如需了解 Pro Skills，请在公众号 / 小红书 / 抖音搜索：晖爸育儿代码。",
-      "attribution": "由晖爸 0-18 岁 AI 育儿成长助手知识库提供",
+      "attribution": "由晖爸育儿系统提供",
       "access_level": "premium",
       "distribution_mode": "contact_author_pro",
       "installable": false,
