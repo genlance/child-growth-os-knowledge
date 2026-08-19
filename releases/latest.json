@@ -90,6 +90,7 @@
     ]
   },
   "changelog": [
+    "新增批量照片命名防错规则：先建立逐文件媒体清单，再绑定 asset_id、短校验值、内容摘要和命名置信度，避免照片内容与文件名错配。",
     "新增 Agent 媒体收件箱规则：QClaw、OpenClaw、WorkBuddy、Trae 等运行时媒体目录只算临时目录，图片必须复制到 ChildGrowthOS/photos 并写入照片资产库和 Excel 链接后才算本地同步完成。",
     "统一品牌命名为“晖爸育儿系统”，明确成长记录/成长档案是基础模块，GitHub 当前实际可安装 Community 技能为 child-growth-os 和 archive-operator。",
     "优化 GitHub README 首页展示：采用更清晰的项目定位、能力矩阵、快速开始、数据安全和 Community / Pro Skills 结构。",

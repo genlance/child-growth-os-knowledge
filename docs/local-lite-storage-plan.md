@@ -207,6 +207,30 @@ YYYYMMDD_AGE_EVENT_SUBJECT_EMOTION_ASSETID.ext
 20260802_7M1D_first-watermelon_baby_happy_P202608020001.jpg
 ```
 
+## 批量照片命名防错
+
+批量处理照片时，Agent 必须先生成“媒体清单”，再命名。清单至少包含：
+
+- `source_path` / `source_filename`
+- `source_order`
+- `file_size`
+- `modified_time` 或微信消息顺序
+- `checksum_short`
+- `asset_id`
+- `content_summary`
+- `proposed_filename`
+- `confidence`
+
+命名必须按清单逐张执行，不能先让 AI 输出一组照片描述，再把描述按列表顺序套回文件。Windows 文件夹、下载缓存和 Agent 运行时目录的排序可能不同，容易造成“文件名写的是小院散步，打开却是客厅照片”。
+
+如果识别或匹配置信度不足，宁可使用保守文件名：
+
+```text
+20260820_AGE_photo-baby_P202608200003.jpg
+```
+
+并在 `照片资产库.状态` 标记为 `待确认`。不要为了名字好看而编一个可能属于另一张照片的内容。
+
 ## 照片目录
 
 不要把所有照片直接塞进一个文件夹。默认按事件日期建年月目录：

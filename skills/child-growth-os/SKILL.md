@@ -328,12 +328,13 @@ sender_id + sent_at + normalized_text_hash + media_id_hash
 
 6. Save the original input task with WeChat sent time, agent execution time, record date, dedupe key, and duplicate status.
 7. Locate the actual media files. QClaw, OpenClaw, WorkBuddy, Trae, browser downloads, message attachment caches, or other agent environments may first place WeChat media in their own runtime inbox/cache; this is only a temporary handoff location, regardless of the exact path.
-8. Copy every received image/video/file from the temporary media source into the user's confirmed `ChildGrowthOS/photos/originals/YYYY/MM/`.
-9. Rename/copy photos into `ChildGrowthOS/photos/YYYY/MM/`.
-10. Write structured records to agent-readable data.
-11. Update `ChildGrowthOS.xlsx` for the parent to view, including photo links when relevant.
-12. Update Feishu attachments when Feishu or dual backup is enabled.
-13. Reply with a short completion summary.
+8. Create a per-file media manifest before any rename: source path/name, source order, file size, modified time when available, short checksum, generated asset_id, thumbnail/content summary, proposed filename, and confidence.
+9. Copy every received image/video/file from the temporary media source into the user's confirmed `ChildGrowthOS/photos/originals/YYYY/MM/`.
+10. Rename/copy photos into `ChildGrowthOS/photos/YYYY/MM/` only by reading each row from the manifest. Do not match AI descriptions back to files by list position alone.
+11. Write structured records to agent-readable data.
+12. Update `ChildGrowthOS.xlsx` for the parent to view, including photo links when relevant.
+13. Update Feishu attachments when Feishu or dual backup is enabled.
+14. Reply with a short completion summary.
 
 Agent media inbox rule:
 
@@ -342,6 +343,14 @@ Agent media inbox rule:
 - A local photo is considered saved only after the file exists under the confirmed `ChildGrowthOS/photos/originals/YYYY/MM/` and the organized copy exists under `ChildGrowthOS/photos/YYYY/MM/`, with a corresponding `照片资产库` row and Excel link.
 - If the archive path is unknown, ask for the ChildGrowthOS folder path before claiming success. You may say the photos have reached the QClaw temporary inbox, but not that they have been archived.
 - If media files arrive after the text acknowledgement, immediately continue the archive step in the same task; do not wait for the parent to remind you.
+
+Photo naming integrity rule:
+
+- Every photo/video/file must have one unique `asset_id`; never reuse the same sequence number for multiple files in the same batch.
+- The AI filename must be bound to the exact source file through the media manifest. Required binding fields are source path/name, size, modified time or message order, short checksum, asset_id, content summary, proposed filename, and confidence.
+- Never produce a list of descriptions and then apply them to a separately sorted file list. File explorers, download folders, and Agent media caches may sort files differently.
+- Before finalizing, verify that each organized file opens and visually matches its `AI文件名` / `照片资产库.内容描述`. If confidence is low, use a neutral filename such as `YYYYMMDD_AGE_photo-baby_ASSETID.ext` and mark the row as `待确认`.
+- If a mismatch is found after writing, stop further naming, keep originals, repair the affected filenames and Excel rows from the manifest, and tell the parent the photo names are being corrected.
 
 Local write rule:
 
