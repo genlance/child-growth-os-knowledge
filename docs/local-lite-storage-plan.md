@@ -229,6 +229,8 @@ photos/originals/2026/08/
 
 处理完成后，Agent 将照片复制或移动到 `photos/YYYY/MM/`，并在 Excel 的 `照片资产库.相对路径` 中写入归档后的相对路径。
 
+注意：QClaw、OpenClaw、WorkBuddy、Trae 等 Agent 可能先把微信图片放到自己的运行时媒体目录、消息附件缓存或浏览器下载目录。具体路径不固定，这些位置都只是临时收件箱，不是家庭正式档案。Agent 必须继续把图片复制到 `ChildGrowthOS/photos/originals/YYYY/MM/` 和 `ChildGrowthOS/photos/YYYY/MM/`，并更新 Excel 后，才算本地照片同步完成。
+
 ## Excel 照片链接
 
 照片资产库中保留：

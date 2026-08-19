@@ -318,6 +318,22 @@ data/archive-manifest.json
 需要的话我也可以把保存明细发你。
 ```
 
+图片/文件完成标准：
+
+- QClaw、OpenClaw、WorkBuddy、Trae 等 Agent 的运行时媒体目录、消息附件缓存或浏览器下载目录，无论具体路径是什么，都只能算临时收件箱，不能算正式保存位置。
+- 家庭正式照片目录必须是用户确认过的 `ChildGrowthOS/photos/`。
+- 如果只是发现“媒体文件已同步到某个 Agent 临时目录”，不能回复“图片已经全部同步到本地了”。
+- 只有同时满足以下条件，才可以说照片已经存好：
+  - 原图已复制到 `ChildGrowthOS/photos/originals/YYYY/MM/`。
+  - 已按规则生成归档文件并放入 `ChildGrowthOS/photos/YYYY/MM/`。
+  - `照片资产库` 已写入对应记录。
+  - `ChildGrowthOS.xlsx` 已写入可点击的相对路径链接。
+- 如果图片已到 Agent 临时目录，但还没进入 ChildGrowthOS，应该继续处理，不要等家长提醒。必要时回复：
+
+```text
+图片我已经收到，但现在还只是到了 Agent 的临时收件箱。我继续把它们放进你的 ChildGrowthOS 照片文件夹，存好后再告诉你。
+```
+
 普通完成汇报不展示：
 
 - 本地绝对路径

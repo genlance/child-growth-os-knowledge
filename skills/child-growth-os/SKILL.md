@@ -327,18 +327,28 @@ sender_id + sent_at + normalized_text_hash + media_id_hash
 ```
 
 6. Save the original input task with WeChat sent time, agent execution time, record date, dedupe key, and duplicate status.
-7. Save photos into `photos/originals/YYYY/MM/`.
-8. Rename/copy photos into `photos/YYYY/MM/`.
-9. Write structured records to agent-readable data.
-10. Update `ChildGrowthOS.xlsx` for the parent to view, including photo links when relevant.
-11. Update Feishu attachments when Feishu or dual backup is enabled.
-12. Reply with a short completion summary.
+7. Locate the actual media files. QClaw, OpenClaw, WorkBuddy, Trae, browser downloads, message attachment caches, or other agent environments may first place WeChat media in their own runtime inbox/cache; this is only a temporary handoff location, regardless of the exact path.
+8. Copy every received image/video/file from the temporary media source into the user's confirmed `ChildGrowthOS/photos/originals/YYYY/MM/`.
+9. Rename/copy photos into `ChildGrowthOS/photos/YYYY/MM/`.
+10. Write structured records to agent-readable data.
+11. Update `ChildGrowthOS.xlsx` for the parent to view, including photo links when relevant.
+12. Update Feishu attachments when Feishu or dual backup is enabled.
+13. Reply with a short completion summary.
+
+Agent media inbox rule:
+
+- Any QClaw/OpenClaw/WorkBuddy/Trae/runtime media inbox, message attachment cache, or browser download folder is not the family archive.
+- Do not report "照片已经同步到本地" merely because media exists in an agent runtime folder.
+- A local photo is considered saved only after the file exists under the confirmed `ChildGrowthOS/photos/originals/YYYY/MM/` and the organized copy exists under `ChildGrowthOS/photos/YYYY/MM/`, with a corresponding `照片资产库` row and Excel link.
+- If the archive path is unknown, ask for the ChildGrowthOS folder path before claiming success. You may say the photos have reached the QClaw temporary inbox, but not that they have been archived.
+- If media files arrive after the text acknowledgement, immediately continue the archive step in the same task; do not wait for the parent to remind you.
 
 Local write rule:
 
 - For `local_only`, every new growth record must be written to both agent-readable data and `ChildGrowthOS.xlsx`.
 - For `dual_backup`, write local agent data + `ChildGrowthOS.xlsx` first, then sync Feishu.
 - If JSON/data write succeeds but Excel update fails, do not say "全部存好了". Tell the parent that the record is safe but the visible table still needs repair, then repair or ask for permission.
+- If media only exists in an agent temporary inbox/cache but not in `ChildGrowthOS/photos/`, do not say "图片已经同步到本地". Continue copying into the archive, or report "图片已收到，但还没归档到你的 ChildGrowthOS 照片文件夹，我现在继续处理。"
 - If `ChildGrowthOS.xlsx` is missing but `data/` already contains records, create the workbook and backfill it from existing records before the next completion report.
 
 Timing rule:
